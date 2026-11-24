@@ -132,17 +132,18 @@ def call_gemini_vision(parts: List[Dict[str, Any]], api_key: str) -> Dict[str, A
     payload = {
         "contents": [{"parts": parts}],
         "generationConfig": {
-            "temperature": 0.0,
-            "response_mime_type": "application/json"
+            "temperature": 0.0
         }
     }
 
     headers = {"Content-Type": "application/json"}
     candidate_models = [
-        "gemini-2.0-flash",
-        "gemini-1.5-flash",
-        "gemini-2.0-flash-lite",
-        "gemini-1.5-flash-latest"
+        "gemini-flash-lite-latest",
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-flash-latest",
+        "gemini-3.8-flash",
+        "gemini-3.5-flash"
     ]
     last_error = None
     response = None
@@ -150,7 +151,7 @@ def call_gemini_vision(parts: List[Dict[str, Any]], api_key: str) -> Dict[str, A
     for model in candidate_models:
         endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
         try:
-            res = requests.post(endpoint, json=payload, headers=headers, timeout=60)
+            res = requests.post(endpoint, json=payload, headers=headers, timeout=45)
             if res.status_code == 200:
                 response = res
                 break
@@ -172,7 +173,14 @@ def call_gemini_vision(parts: List[Dict[str, Any]], api_key: str) -> Dict[str, A
         if content_text.endswith("```"):
             content_text = content_text[:-3]
         content_text = content_text.strip()
-        return json.loads(content_text)
+        try:
+            return json.loads(content_text)
+        except Exception:
+            start_idx = content_text.find("{")
+            end_idx = content_text.rfind("}")
+            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                return json.loads(content_text[start_idx:end_idx + 1])
+            raise
     except Exception as e:
         raise ValueError(f"Failed to parse Gemini response into JSON: {str(e)}")
 
