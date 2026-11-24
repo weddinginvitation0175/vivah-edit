@@ -129,10 +129,14 @@ Return ONLY the verified, perfected JSON object matching the exact same schema.
 
 def call_gemini_vision(parts: List[Dict[str, Any]], api_key: str) -> Dict[str, Any]:
     """Helper to call Gemini API with vision parts and parse JSON response."""
+    import time
+    if not api_key:
+        api_key = os.environ.get("GEMINI_API_KEY", "")
+
     payload = {
         "contents": [{"parts": parts}],
         "generationConfig": {
-            "temperature": 0.0
+            "temperature": 0.1
         }
     }
 
@@ -148,17 +152,22 @@ def call_gemini_vision(parts: List[Dict[str, Any]], api_key: str) -> Dict[str, A
     last_error = None
     response = None
 
-    for model in candidate_models:
-        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-        try:
-            res = requests.post(endpoint, json=payload, headers=headers, timeout=45)
-            if res.status_code == 200:
-                response = res
-                break
-            else:
-                last_error = f"{model} returned {res.status_code}: {res.text[:200]}"
-        except Exception as e:
-            last_error = f"{model} exception: {str(e)}"
+    for attempt in range(2):
+        for model in candidate_models:
+            endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+            try:
+                res = requests.post(endpoint, json=payload, headers=headers, timeout=35)
+                if res.status_code == 200:
+                    response = res
+                    break
+                else:
+                    last_error = f"{model} returned {res.status_code}: {res.text[:150]}"
+            except Exception as e:
+                last_error = f"{model} exception: {str(e)}"
+        if response and response.status_code == 200:
+            break
+        if attempt == 0:
+            time.sleep(1.2)
 
     if not response or response.status_code != 200:
         raise RuntimeError(f"Gemini API Error: {last_error}")
