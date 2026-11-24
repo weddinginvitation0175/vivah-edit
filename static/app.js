@@ -218,28 +218,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const inpApiKey = document.getElementById('inpApiKey');
   const btnSaveApiKey = document.getElementById('btnSaveApiKey');
 
-  // Load Saved API key or set configured default
-  const DEFAULT_KEY = 'AQ.Ab8RN6I1FOGe03vCUz0HTVuUIkX9kTRh2_qSUWwrpxBxVfG-yQ';
-  let savedKey = localStorage.getItem('gemini_api_key');
-  if (!savedKey) {
-    savedKey = DEFAULT_KEY;
-    localStorage.setItem('gemini_api_key', DEFAULT_KEY);
-  }
-  inpApiKey.value = savedKey;
+  // Load Saved API key if input exists
+  if (inpApiKey) {
+    let savedKey = localStorage.getItem('gemini_api_key');
+    if (savedKey) inpApiKey.value = savedKey;
 
-  // Toggle API Key visibility
-  const btnToggleKeyVis = document.getElementById('btnToggleKeyVis');
-  const eyeIcon = document.getElementById('eyeIcon');
-  if (btnToggleKeyVis) {
-    btnToggleKeyVis.addEventListener('click', () => {
-      if (inpApiKey.type === 'password') {
-        inpApiKey.type = 'text';
-        eyeIcon.className = 'fa-solid fa-eye-slash';
-      } else {
-        inpApiKey.type = 'password';
-        eyeIcon.className = 'fa-solid fa-eye';
-      }
-    });
+    const btnToggleKeyVis = document.getElementById('btnToggleKeyVis');
+    const eyeIcon = document.getElementById('eyeIcon');
+    if (btnToggleKeyVis) {
+      btnToggleKeyVis.addEventListener('click', () => {
+        if (inpApiKey.type === 'password') {
+          inpApiKey.type = 'text';
+          if (eyeIcon) eyeIcon.className = 'fa-solid fa-eye-slash';
+        } else {
+          inpApiKey.type = 'password';
+          if (eyeIcon) eyeIcon.className = 'fa-solid fa-eye';
+        }
+      });
+    }
   }
 
   // ==================== MULTI-EDITOR WORKSPACE CONTROLLER ====================
@@ -2803,17 +2799,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  btnSaveApiKey.addEventListener('click', () => {
-    const key = inpApiKey.value.trim();
-    if (key) {
-      localStorage.setItem('gemini_api_key', key);
-      showToast('Gemini API Key saved!', 'success');
-    } else {
-      localStorage.removeItem('gemini_api_key');
-      showToast('API Key removed', 'info');
-    }
-    window.closeSettingsModal();
+  // ==================== PWA INSTALL CONTROLLER ====================
+  let deferredPwaPrompt = null;
+  const btnInstallPwa = document.getElementById('btnInstallPwa');
+  const modalPwaInstallGuide = document.getElementById('modalPwaInstallGuide');
+  const btnClosePwaGuide = document.getElementById('btnClosePwaGuide');
+  const btnOkPwaGuide = document.getElementById('btnOkPwaGuide');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPwaPrompt = e;
   });
+
+  if (btnInstallPwa) {
+    btnInstallPwa.addEventListener('click', async () => {
+      if (deferredPwaPrompt) {
+        deferredPwaPrompt.prompt();
+        try {
+          const { outcome } = await deferredPwaPrompt.userChoice;
+          if (outcome === 'accepted') {
+            showToast('App installed successfully!', 'success');
+          }
+        } catch (err) {}
+        deferredPwaPrompt = null;
+      } else {
+        if (modalPwaInstallGuide) {
+          modalPwaInstallGuide.classList.remove('hidden');
+        } else {
+          showToast('Chrome के 3-डॉट (⋮) पर क्लिक करके "Install app" चुनें!', 'info');
+        }
+      }
+    });
+  }
+
+  if (btnClosePwaGuide && modalPwaInstallGuide) {
+    btnClosePwaGuide.addEventListener('click', () => {
+      modalPwaInstallGuide.classList.add('hidden');
+    });
+  }
+
+  if (btnOkPwaGuide && modalPwaInstallGuide) {
+    btnOkPwaGuide.addEventListener('click', () => {
+      modalPwaInstallGuide.classList.add('hidden');
+    });
+  }
 
   // Change Editor Passcode (Admin Protected)
   const inpNewEditorPass = document.getElementById('inpNewEditorPass');
