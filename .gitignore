@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+scanned_shadi_cards/*
+!scanned_shadi_cards/.gitkeep
+uploads/*
+!uploads/.gitkeep
+.vscode/
+.idea/
+*.log
