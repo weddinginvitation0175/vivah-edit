@@ -2800,34 +2800,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==================== PWA INSTALL CONTROLLER ====================
-  let deferredPwaPrompt = null;
   const btnInstallPwa = document.getElementById('btnInstallPwa');
   const modalPwaInstallGuide = document.getElementById('modalPwaInstallGuide');
   const btnClosePwaGuide = document.getElementById('btnClosePwaGuide');
   const btnOkPwaGuide = document.getElementById('btnOkPwaGuide');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPwaPrompt = e;
-  });
+  const btnCopyPwaLink = document.getElementById('btnCopyPwaLink');
 
   if (btnInstallPwa) {
     btnInstallPwa.addEventListener('click', async () => {
-      if (deferredPwaPrompt) {
-        deferredPwaPrompt.prompt();
+      const promptEvent = window.deferredPwaPrompt;
+      if (promptEvent) {
+        promptEvent.prompt();
         try {
-          const { outcome } = await deferredPwaPrompt.userChoice;
+          const { outcome } = await promptEvent.userChoice;
           if (outcome === 'accepted') {
             showToast('App installed successfully!', 'success');
           }
         } catch (err) {}
-        deferredPwaPrompt = null;
+        window.deferredPwaPrompt = null;
       } else {
         if (modalPwaInstallGuide) {
           modalPwaInstallGuide.classList.remove('hidden');
         } else {
           showToast('Chrome के 3-डॉट (⋮) पर क्लिक करके "Install app" चुनें!', 'info');
         }
+      }
+    });
+  }
+
+  if (btnCopyPwaLink) {
+    btnCopyPwaLink.addEventListener('click', async () => {
+      try {
+        const link = window.location.origin || 'https://vivah-edit.onrender.com';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(link);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = link;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        showToast('लिंक कॉपी हो गया! WhatsApp पर भेजें।', 'success');
+      } catch (e) {
+        showToast('लिंक कॉपी नहीं हो पाया', 'error');
       }
     });
   }
