@@ -1006,8 +1006,9 @@ async def generate_xml(
 
 
 
-# Mount static files
-app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
+# Mount static files (both /static and root for complete compatibility)
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static_dir")
+app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static_root")
 
 if __name__ == "__main__":
     import uvicorn
