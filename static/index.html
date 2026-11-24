@@ -945,6 +945,26 @@
         </button>
       </div>
 
+      <!-- Install Mobile App Card (PWA) -->
+      <div class="bg-gradient-to-r from-amber-500/15 via-rose-500/10 to-purple-500/15 border border-amber-500/35 rounded-2xl p-2.5 px-3 flex items-center justify-between text-left shadow-lg">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-rose-500 text-black font-bold flex items-center justify-center text-sm shadow-md shrink-0">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="text-xs font-bold text-white flex items-center gap-1.5">
+              <span>Install Mobile App</span>
+              <span class="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.2 rounded-full font-mono">PWA</span>
+            </div>
+            <div class="text-[10px] text-white/60 truncate">फोन में ऐप डाउनलोड करें</div>
+          </div>
+        </div>
+        <button type="button" id="btnInstallPwa" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-90 active:scale-95 text-black font-black text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/25 transition cursor-pointer shrink-0">
+          <i class="fa-solid fa-download text-[11px]"></i>
+          <span>Install</span>
+        </button>
+      </div>
+
       <!-- XML Templates (Compact) -->
       <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
         <div class="flex items-center justify-between">
@@ -963,48 +983,42 @@
         <div id="settingsTemplatesList" class="space-y-1.5 text-xs text-white/80 max-h-44 overflow-y-auto pr-0.5"></div>
       </div>
 
-      <!-- Gemini API Key (Compact Row) -->
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
-        <div class="flex items-center justify-between">
-          <label class="text-xs font-semibold text-white/90 flex items-center gap-1.5">
-            <i class="fa-solid fa-key text-amber-400 text-xs"></i>
-            <span>Gemini API Key</span>
-          </label>
-          <span id="apiKeyStatusBadge" class="text-[9px] text-emerald-400 font-mono">Active ✓</span>
-        </div>
-        <div class="flex gap-2">
-          <div class="relative flex-1 min-w-0">
-            <input type="password" id="inpApiKey" class="w-full input-clean pr-8 py-1.5 text-xs" placeholder="AIzaSy..." />
-            <button type="button" id="btnToggleKeyVis" class="absolute right-2 top-2 text-white/50 hover:text-white text-xs cursor-pointer">
-              <i class="fa-solid fa-eye" id="eyeIcon"></i>
-            </button>
-          </div>
-          <button type="button" id="btnSaveApiKey" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition border border-white/15 cursor-pointer shrink-0">
-            Save
-          </button>
-        </div>
-      </div>
+    </div>
+  </div>
 
-      <!-- Editor Passcode (Compact Row) -->
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
-        <div class="flex items-center justify-between">
-          <label class="text-xs font-semibold text-white/90 flex items-center gap-1.5">
-            <i class="fa-solid fa-lock text-rose-400 text-xs"></i>
-            <span>Editor Passcode</span>
-          </label>
-        </div>
-        <div class="flex gap-2">
-          <div class="relative flex-1 min-w-0">
-            <input type="password" id="inpNewEditorPass" class="w-full input-clean pr-8 py-1.5 font-mono text-white text-xs" placeholder="New Passcode" />
-            <button type="button" id="btnToggleNewPassEye" class="absolute right-2 top-2 text-white/50 hover:text-white text-xs cursor-pointer">
-              <i class="fa-solid fa-eye" id="newPassEyeIcon"></i>
-            </button>
+  <!-- ==================== PWA INSTALL GUIDE MODAL ==================== -->
+  <div id="modalPwaInstallGuide" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="glass-card bg-neutral-900/98 border border-amber-500/30 rounded-3xl p-5 max-w-sm w-full space-y-4 shadow-2xl text-left">
+      <div class="flex justify-between items-center border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <i class="fa-solid fa-mobile-screen-button"></i>
           </div>
-          <button type="button" id="btnSaveNewEditorPass" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition border border-white/15 cursor-pointer shrink-0">
-            Update
-          </button>
+          <h3 class="text-sm font-bold text-white">फोन में ऐप इंस्टॉल कैसे करें?</h3>
+        </div>
+        <button type="button" id="btnClosePwaGuide" class="text-white/50 hover:text-white p-1 rounded-lg cursor-pointer">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs text-white/80">
+        <div class="bg-white/5 p-3 rounded-2xl border border-white/10 space-y-1.5">
+          <div class="font-bold text-amber-400 flex items-center gap-1.5">
+            <i class="fa-brands fa-android text-emerald-400 text-sm"></i> Android (Chrome / Samsung):
+          </div>
+          <p class="text-white/70">1. ऊपर दाईं तरफ <b>⋮ (3-डॉट)</b> पर क्लिक करें।</p>
+          <p class="text-white/70">2. <b>"Install app"</b> या <b>"Add to Home screen"</b> चुनें।</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-2xl border border-white/10 space-y-1.5">
+          <div class="font-bold text-rose-400 flex items-center gap-1.5">
+            <i class="fa-brands fa-apple text-white text-sm"></i> iPhone (Safari):
+          </div>
+          <p class="text-white/70">1. नीचे <b>शेयर बटन (⎋)</b> दबाएँ।</p>
+          <p class="text-white/70">2. नीचे स्क्रॉल करके <b>"Add to Home Screen (+)"</b> चुनें।</p>
         </div>
       </div>
+      <button type="button" id="btnOkPwaGuide" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-90 active:scale-95 text-black font-black rounded-xl text-xs transition cursor-pointer">
+        समझ गया (OK)
+      </button>
     </div>
   </div>
 
