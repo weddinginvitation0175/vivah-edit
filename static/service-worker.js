@@ -1,10 +1,14 @@
-const CACHE_NAME = 'vivahedit-v16';
+const CACHE_NAME = 'vivahedit-v17';
 const urlsToCache = [
   '/',
   '/index.html',
   '/app.js',
   '/manifest.json',
-  '/icon.png'
+  '/icon.png',
+  '/icon-192.png',
+  '/icon-512.png',
+  '/apple-touch-icon.png',
+  '/favicon.png'
 ];
 
 self.addEventListener('install', event => {
