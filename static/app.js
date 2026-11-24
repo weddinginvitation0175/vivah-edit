@@ -2443,13 +2443,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Open Settings directly without secondary password prompt
-  btnSettings.addEventListener('click', () => {
-    modalSettings.classList.remove('hidden');
-    updateSettingsScannedCount();
-    if (window.history && window.history.pushState) {
-      window.history.pushState({ modal: 'settings' }, '');
-    }
-  });
+  if (btnSettings) {
+    btnSettings.addEventListener('click', () => {
+      if (modalSettings) modalSettings.classList.remove('hidden');
+      updateSettingsScannedCount();
+      if (window.history && window.history.pushState) {
+        window.history.pushState({ modal: 'settings' }, '');
+      }
+    });
+  }
 
   const btnSettingsOpenFolder = document.getElementById('btnSettingsOpenFolder');
   if (btnSettingsOpenFolder) {
@@ -2635,99 +2637,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load and manage Scanned Shadi Cards History
   function loadScannedCardsHistory() {
-    const listEl = document.getElementById('scannedCardsList');
-    if (!listEl) return;
-    listEl.innerHTML = '<div class="text-center py-2.5 text-[10px] text-white/40"><i class="fa-solid fa-spinner animate-spin"></i> Loading history...</div>';
-
-    authFetch('/api/scanned-cards')
-      .then(r => r.json())
-      .then(res => {
-        if (!res.success || !res.cards || res.cards.length === 0) {
-          listEl.innerHTML = '<div class="text-center py-3 text-[10px] text-white/40 border border-white/5 rounded-lg bg-black/20">No saved cards found</div>';
-          return;
-        }
-
-        listEl.innerHTML = '';
-        res.cards.forEach(card => {
-          const item = document.createElement('div');
-          item.className = 'flex items-center justify-between gap-2 p-1.5 rounded-xl bg-black/40 border border-white/10 hover:border-amber-400/30 transition';
-
-          const thumbHtml = card.has_thumbnail
-            ? `<img src="/api/scanned-cards/${encodeURIComponent(card.scan_id)}/thumbnail" class="w-9 h-9 object-cover rounded-lg shrink-0 border border-white/15" />`
-            : `<div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300 flex items-center justify-center shrink-0 text-xs"><i class="fa-solid fa-envelope-open-text"></i></div>`;
-
-          const gName = card.groom_name || 'Groom';
-          const bName = card.bride_name || 'Bride';
-          const pariwar = card.pariwar_name || '';
-
-          item.innerHTML = `
-            <div class="flex items-center gap-2 min-w-0">
-              ${thumbHtml}
-              <div class="min-w-0 text-left">
-                <div class="text-[11px] font-bold text-white truncate">${gName} & ${bName}</div>
-                <div class="text-[9px] text-white/50 truncate">${pariwar ? pariwar + ' • ' : ''}${card.date_formatted}</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-1 shrink-0">
-              <button type="button" class="btn-load-scan px-2 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-[10px] font-semibold flex items-center gap-1 border border-amber-500/30 transition" title="Load into Editor">
-                <i class="fa-solid fa-arrow-right-to-bracket text-[9px]"></i>
-                <span>Load</span>
-              </button>
-              <button type="button" class="btn-del-scan p-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 text-[10px] border border-rose-500/20 transition" title="Delete">
-                <i class="fa-solid fa-trash text-[9px]"></i>
-              </button>
-            </div>
-          `;
-
-          // Load into editor handler
-          item.querySelector('.btn-load-scan').addEventListener('click', () => {
-            if (card.data) {
-              populateForm(card.data);
-              weddingData = card.data;
-              if (card.has_thumbnail) {
-                externalThumbnailUrl = `/api/scanned-cards/${encodeURIComponent(card.scan_id)}/thumbnail`;
-                updateFloatingCardView();
-              }
-              modalSettings.classList.add('hidden');
-              showStep(2);
-              closeFloatingWidget();
-              showToast(`Loaded: ${gName} & ${bName}`, 'success');
-            }
-          });
-
-          // Delete scan handler
-          item.querySelector('.btn-del-scan').addEventListener('click', async () => {
-            if (!confirm(`Delete scan record for ${gName} & ${bName}?`)) return;
-            try {
-              const dRes = await authFetch(`/api/scanned-cards/${encodeURIComponent(card.scan_id)}`, { method: 'DELETE' });
-              const dJson = await dRes.json();
-              if (dJson.success) {
-                showToast('Record deleted', 'success');
-                loadScannedCardsHistory();
-              }
-            } catch (err) {
-              showToast('Failed to delete', 'error');
-            }
-          });
-
-          listEl.appendChild(item);
-        });
-      })
-      .catch(err => {
-        listEl.innerHTML = '<div class="text-center py-2 text-[10px] text-rose-400">Failed to load history</div>';
-      });
+    loadScannedCardsDetailed();
   }
 
-  btnConfirmAuth.addEventListener('click', verifyAdminAuth);
-  inpAdminPassword.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') verifyAdminAuth();
-  });
-  btnCancelAuth.addEventListener('click', () => {
-    modalAdminAuth.classList.add('hidden');
-  });
-  modalAdminAuth.addEventListener('click', (e) => {
-    if (e.target === modalAdminAuth) modalAdminAuth.classList.add('hidden');
-  });
+  if (btnConfirmAuth && typeof verifyAdminAuth === 'function') {
+    btnConfirmAuth.addEventListener('click', verifyAdminAuth);
+  }
+  if (inpAdminPassword && typeof verifyAdminAuth === 'function') {
+    inpAdminPassword.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') verifyAdminAuth();
+    });
+  }
+  if (btnCancelAuth && modalAdminAuth) {
+    btnCancelAuth.addEventListener('click', () => {
+      modalAdminAuth.classList.add('hidden');
+    });
+  }
+  if (modalAdminAuth) {
+    modalAdminAuth.addEventListener('click', (e) => {
+      if (e.target === modalAdminAuth) modalAdminAuth.classList.add('hidden');
+    });
+  }
 
   if (btnCloseSettings) btnCloseSettings.addEventListener('click', window.closeSettingsModal);
   const btnBottomCloseSettings = document.getElementById('btnBottomCloseSettings');
@@ -2867,14 +2797,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const newPassEyeIcon = document.getElementById('newPassEyeIcon');
   const btnSaveNewEditorPass = document.getElementById('btnSaveNewEditorPass');
 
-  if (btnToggleNewPassEye) {
+  if (btnToggleNewPassEye && inpNewEditorPass) {
     btnToggleNewPassEye.addEventListener('click', () => {
       if (inpNewEditorPass.type === 'password') {
         inpNewEditorPass.type = 'text';
-        newPassEyeIcon.className = 'fa-solid fa-eye-slash';
+        if (newPassEyeIcon) newPassEyeIcon.className = 'fa-solid fa-eye-slash';
       } else {
         inpNewEditorPass.type = 'password';
-        newPassEyeIcon.className = 'fa-solid fa-eye';
+        if (newPassEyeIcon) newPassEyeIcon.className = 'fa-solid fa-eye';
       }
     });
   }
