@@ -888,11 +888,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateHeaderWatchCardButton() {
     const btn = document.getElementById('btnHeaderWatchCard');
     if (!btn) return;
-    if (currentCardFiles.length > 0 || (typeof externalThumbnailUrl !== 'undefined' && externalThumbnailUrl)) {
-      btn.classList.remove('hidden');
-    } else {
-      btn.classList.add('hidden');
-    }
+    btn.classList.remove('hidden');
   }
 
   function showStep(stepNum, pushToHistory = true) {
@@ -1195,15 +1191,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnHeaderWatchCard = document.getElementById('btnHeaderWatchCard');
   if (btnHeaderWatchCard) {
     btnHeaderWatchCard.addEventListener('click', () => {
-      if (currentCardFiles.length > 0 || externalThumbnailUrl) {
-        if (typeof openCardSidebar === 'function') {
-          openCardSidebar();
-        } else {
-          openCardViewer(0);
-        }
-      } else {
-        showToast('Please upload a wedding card photo or PDF first!', 'info');
-        cardFileInput.click();
+      if (typeof openCardSidebar === 'function') {
+        openCardSidebar();
+      } else if (typeof openCardViewer === 'function') {
+        openCardViewer(0);
       }
     });
   }
@@ -1507,15 +1498,34 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateSidebarEdgeTabVisibility() {
     if (!cardSidebarEdgeTab) return;
     const hasCard = (currentCardFiles && currentCardFiles.length > 0) || Boolean(externalThumbnailUrl);
-    const step2Sec = document.getElementById('step2Section');
-    const step3Sec = document.getElementById('step3Section');
-    const isStep2Or3 = (step2Sec && !step2Sec.classList.contains('hidden')) || (step3Sec && !step3Sec.classList.contains('hidden'));
 
-    if (hasCard && isStep2Or3 && !isSidebarOpen) {
-      cardSidebarEdgeTab.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-    } else if (!isSidebarOpen) {
-      cardSidebarEdgeTab.classList.add('hidden');
+    // Toggle active green indicator dot on edge tab
+    const dotPing = document.getElementById('cardSidebarActiveDot');
+    const dotStatic = document.getElementById('cardSidebarActiveDotStatic');
+    if (dotPing && dotStatic) {
+      if (hasCard) {
+        dotPing.classList.remove('hidden');
+        dotStatic.classList.remove('hidden');
+      } else {
+        dotPing.classList.add('hidden');
+        dotStatic.classList.add('hidden');
+      }
     }
+
+    if (!isSidebarOpen) {
+      cardSidebarEdgeTab.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+    } else {
+      cardSidebarEdgeTab.classList.add('opacity-0', 'pointer-events-none');
+    }
+  }
+
+  const btnSidebarUploadCard = document.getElementById('btnSidebarUploadCard');
+  if (btnSidebarUploadCard) {
+    btnSidebarUploadCard.addEventListener('click', () => {
+      closeCardSidebar();
+      const cardFileInput = document.getElementById('cardFileInput');
+      if (cardFileInput) cardFileInput.click();
+    });
   }
 
   // Make Edge Tab vertically draggable so editor can position it anywhere along edge
@@ -2673,4 +2683,10 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.classList.add('hidden');
     }, duration);
   }
+
+  // Ensure Smart Mobile Edge Tab and Header button are initialized on page load
+  try {
+    if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
+    if (typeof updateHeaderWatchCardButton === 'function') updateHeaderWatchCardButton();
+  } catch (_) {}
 });
