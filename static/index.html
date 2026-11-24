@@ -957,25 +957,7 @@
         </button>
       </div>
 
-      <!-- Install Mobile App Card (PWA) -->
-      <div class="bg-gradient-to-r from-amber-500/15 via-rose-500/10 to-purple-500/15 border border-amber-500/35 rounded-2xl p-2.5 px-3 flex items-center justify-between text-left shadow-lg">
-        <div class="flex items-center gap-2.5 min-w-0">
-          <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-rose-500 text-black font-bold flex items-center justify-center text-sm shadow-md shrink-0">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <div class="min-w-0">
-            <div class="text-xs font-bold text-white flex items-center gap-1.5">
-              <span>Install Mobile App</span>
-              <span class="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.2 rounded-full font-mono">PWA</span>
-            </div>
-            <div class="text-[10px] text-white/60 truncate">फोन में ऐप डाउनलोड करें</div>
-          </div>
-        </div>
-        <button type="button" id="btnInstallPwa" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-90 active:scale-95 text-black font-black text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/25 transition cursor-pointer shrink-0">
-          <i class="fa-solid fa-download text-[11px]"></i>
-          <span>Install</span>
-        </button>
-      </div>
+
 
       <!-- XML Templates (Compact) -->
       <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
@@ -998,62 +980,7 @@
     </div>
   </div>
 
-  <!-- ==================== PWA INSTALL GUIDE MODAL ==================== -->
-  <div id="modalPwaInstallGuide" class="fixed inset-0 z-[70] bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
-    <div class="glass-card bg-neutral-900/98 border border-amber-500/30 rounded-3xl p-5 max-w-sm w-full space-y-4 shadow-2xl text-left max-h-[90vh] overflow-y-auto">
-      <div class="flex justify-between items-center border-b border-white/10 pb-3">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <h3 class="text-sm font-bold text-white">फोन में ऐप कैसे लगाएं?</h3>
-        </div>
-        <button type="button" id="btnClosePwaGuide" class="text-white/50 hover:text-white p-1 rounded-lg cursor-pointer">
-          <i class="fa-solid fa-xmark text-sm"></i>
-        </button>
-      </div>
 
-      <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-3 text-xs text-amber-300 leading-relaxed">
-        💡 <b>यह PWA वेब-ऐप है:</b> इसके लिए कोई 50MB की भारी APK डाउनलोड नहीं करनी पड़ती। यह सीधे <b>Google Chrome</b> से 1 सेकंड में आपके फोन पर असली ऐप बन जाती है!
-      </div>
-
-      <div class="space-y-2.5 text-xs text-white/80">
-        <div class="bg-white/5 p-3 rounded-2xl border border-white/10 space-y-1.5">
-          <div class="font-bold text-emerald-400 flex items-center gap-1.5">
-            <i class="fa-brands fa-android text-base"></i> Android फोन (Chrome):
-          </div>
-          <p class="text-white/80">1. अपने मोबाइल में यह लिंक खोलें।</p>
-          <p class="text-white/80">2. Chrome के ऊपर दाएँ <b>⋮ (3-डॉट)</b> दबाएँ।</p>
-          <p class="text-white/80">3. <b>"Install app"</b> या <b>"Add to Home screen"</b> पर क्लिक करें।</p>
-        </div>
-
-        <div class="bg-white/5 p-3 rounded-2xl border border-white/10 space-y-1.5">
-          <div class="font-bold text-rose-400 flex items-center gap-1.5">
-            <i class="fa-brands fa-apple text-base text-white"></i> iPhone (Safari):
-          </div>
-          <p class="text-white/80">1. नीचे <b>शेयर बटन (⎋)</b> दबाएँ।</p>
-          <p class="text-white/80">2. <b>"Add to Home Screen (+)"</b> पर क्लिक करें।</p>
-        </div>
-
-        <!-- QR Code for easy phone scan -->
-        <div class="bg-white/5 p-3 rounded-2xl border border-white/10 text-center space-y-2">
-          <p class="text-[11px] text-white/70">यदि आप कंप्यूटर पर हैं, तो मोबाइल से QR कोड स्कैन करें:</p>
-          <div class="inline-block p-2 bg-white rounded-xl shadow-md">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&margin=1&data=https%3A%2F%2Fvivah-edit.onrender.com%2F" alt="QR Code" class="w-28 h-28 mx-auto" />
-          </div>
-        </div>
-      </div>
-
-      <div class="flex gap-2">
-        <button type="button" id="btnCopyPwaLink" class="flex-1 py-2.5 bg-white/10 hover:bg-white/20 active:scale-95 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 transition cursor-pointer">
-          <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> लिंक कॉपी करें
-        </button>
-        <button type="button" id="btnOkPwaGuide" class="flex-1 py-2.5 bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-90 active:scale-95 text-black font-black rounded-xl text-xs transition cursor-pointer">
-          समझ गया (OK)
-        </button>
-      </div>
-    </div>
-  </div>
 
   <!-- ==================== AFTER MOTION Z JUGAD GUIDE MODAL ==================== -->
   <div id="modalAfterMotionGuide" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
