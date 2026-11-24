@@ -1,21 +1,33 @@
 {
-  "short_name": "VivahEdit AI",
+  "id": "/?source=pwa",
   "name": "VivahEdit AI - Shadi Invitation XML Generator",
+  "short_name": "VivahEdit",
+  "description": "Alight Motion Wedding Invitation XML Generator & Scanner",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#170224",
+  "theme_color": "#170224",
+  "categories": ["utilities", "productivity"],
   "icons": [
     {
-      "src": "icon.png",
+      "src": "/icon.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "any"
     },
     {
-      "src": "icon.png",
+      "src": "/icon.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ],
-  "start_url": "/",
-  "background_color": "#170224",
-  "theme_color": "#6d1b7b",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }
