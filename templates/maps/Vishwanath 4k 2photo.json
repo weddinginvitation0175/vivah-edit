@@ -1,0 +1,62 @@
+{
+  "layers": {
+    "pariwar": "10341650",
+    "groom_slide_name": "102380160",
+    "groom_details": "102380162",
+    "bride_slide_name": "102380154",
+    "bride_details": "102391743",
+    "venue_header": "102380186",
+    "venue_gram": "102380184",
+    "vinit_header": "102380191",
+    "vinit_details": "102391759",
+    "main_date": "102380241",
+    "slide1_photo_shape": "102392052",
+    "slide2_photo_shape": "102392053"
+  },
+  "person_slides": [
+    {
+      "startTime": 8200,
+      "name_id": "102380154",
+      "details_id": "102391743",
+      "honorific_id": "102392054",
+      "honorific_id_alt": "102380165"
+    },
+    {
+      "startTime": 14166,
+      "name_id": "102380160",
+      "details_id": "102380162",
+      "honorific_id": "102392055",
+      "honorific_id_alt": "102380166"
+    }
+  ],
+  "ceremonies": [
+    {
+      "type": "separate",
+      "raw": true,
+      "title_id": "102391736",
+      "date_id": "10341691",
+      "day_id": "10341695"
+    },
+    {
+      "type": "separate",
+      "raw": true,
+      "title_id": "10341894",
+      "date_id": "10341897",
+      "day_id": "10341900"
+    },
+    {
+      "type": "separate",
+      "raw": true,
+      "title_id": "102391738",
+      "date_id": "10341742",
+      "day_id": "10341739"
+    },
+    {
+      "type": "separate",
+      "raw": true,
+      "title_id": "102380178",
+      "date_id": "102380175",
+      "day_id": "102380172"
+    }
+  ]
+}

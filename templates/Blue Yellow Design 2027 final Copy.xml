@@ -1,0 +1,1366 @@
+<?xml version='1.0' encoding='UTF-8' ?><!--
+Created by Alight Motion (http://alightmotion.com)
+Exported: 2026-11-23 07:56 AM
+5.0.273.1028417 (1028417)
+e3844be (06-Mar-2026 3:14:40 pm)
+-->
+<scene title="Blue Yellow Design 2027 final Copy" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="60448" fps="30" modifiedTime="1795400765380" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+  <media uri="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" type="image/jpeg" duration="0" size="0" sig="6E360E7956608A1F6AC6E80B18091278A33C0717" orientation="0" infoUpdated="1793414423632" width="0" height="0" />
+  <media uri="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" type="image/png" duration="0" size="0" sig="C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E" orientation="0" infoUpdated="1793414423632" width="0" height="0" />
+  <media uri="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" type="image/png" duration="0" size="0" sig="0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4" orientation="0" infoUpdated="1793414423632" width="0" height="0" />
+  <media uri="am:7D661D5AC130D4F76C6EC5C80E9796F8EE7774B4.png" filename="Save the date PNG [EDCB59D].png" title="Save the date PNG [EDCB59D].png" type="image/png" duration="0" size="0" sig="7D661D5AC130D4F76C6EC5C80E9796F8EE7774B4" orientation="0" infoUpdated="1793414423632" width="0" height="0" />
+  <media uri="am:C5A5CF1BD45FD69B6874E7C466C448BAA691746F.png" filename="SDW Animal(15).png" title="SDW Animal(15).png" type="image/png" size="657427" sig="C5A5CF1BD45FD69B6874E7C466C448BAA691746F" orientation="0" infoUpdated="1795400721645" width="1280" height="806" />
+  <media uri="am:1BACE7DD90F3734D7BD07C40C0F57881718DFE3E.mp4" type="video/mp4" duration="6133300" sig="1BACE7DD90F3734D7BD07C40C0F57881718DFE3E" orientation="0" infoUpdated="1793414423632" width="1280" height="720" />
+  <bookmark t="6016" />
+  <bookmark t="12050" />
+  <bookmark t="18083" />
+  <bookmark t="24116" />
+  <bookmark t="30216" />
+  <bookmark t="36250" />
+  <bookmark t="42350" />
+  <bookmark t="48383" />
+  <bookmark t="54383" />
+  <bookmark t="60350" />
+  <bookmark t="66350" />
+  <shape id="10223291" label="0f69c98097625e6e393175009188a505.jpg" startTime="0" endTime="6032" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223293" startTime="0" endTime="6032" fillType="color" mediaFillMode="fill" parent="10223299" size="18.000000" font="googlefonts?name=Tillana&amp;weight=800" wrapWidth="410" align="center">
+    <transform>
+      <location value="157.279099,281.665253,0.000000" />
+      <scale value="3.200346,3.200346" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>नेवता 
+</content>
+  </text>
+  <text id="102391624" label="Birthday Copy" startTime="0" endTime="6032" fillType="color" mediaFillMode="fill" parent="10223299" size="18.000000" font="googlefonts?name=Tillana&amp;weight=800" wrapWidth="410" align="center">
+    <transform>
+      <location value="-123.981194,25.453869,0.000000" />
+      <scale value="2.333433,2.333433" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>बिहाव 
+</content>
+  </text>
+  <shape id="10223295" label="SDW Cloud(3).png" startTime="0" endTime="6032" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,-29.500000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223298" label="SDW Cloud(3).png Copy" startTime="0" endTime="6032" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.074602" v="1006.340698,-269.916565,-82.500000" />
+        <kf t="0.002653" v="1006.340698,185.125977,-41.500000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223299" label="Null 1" startTime="0" endTime="6032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223300" label="0f69c98097625e6e393175009188a505.jpg" startTime="6033" endTime="12065" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223302" startTime="6033" endTime="12065" fillType="color" mediaFillMode="fill" parent="10223306" size="8.000000" font="imported?name=AMS Manoja.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="-62.962418,166.904373,0.000000" />
+      <scale value="3.304177,3.304177" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>pairvaar kI Aaer sae
+
+ snaeihla Aama/PaNa</content>
+  </text>
+  <text id="102391625" label="Birthday Copy 2" startTime="6033" endTime="12065" fillType="color" mediaFillMode="fill" parent="10223306" size="18.000000" font="googlefonts?name=Tillana&amp;weight=800" wrapWidth="410" align="center">
+    <transform>
+      <location value="-254.823273,-82.267906,0.000000" />
+      <scale value="1.792942,1.792942" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>सिन्हा </content>
+  </text>
+  <shape id="10223303" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="6033" endTime="12065" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223304" label="SDW Cloud(3).png" startTime="6033" endTime="12065" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223305" label="SDW Cloud(3).png Copy" startTime="6033" endTime="12065" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223306" label="Null 2" startTime="6033" endTime="12065" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223309" label="0f69c98097625e6e393175009188a505.jpg" startTime="12066" endTime="18098" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223311" startTime="12066" endTime="18098" fillType="color" mediaFillMode="fill" parent="10223315" size="18.000000" font="googlefonts?name=Martel&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="153.336121,161.545715,0.000000" />
+      <scale value="2.692036,2.692036" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>राहुल </content>
+  </text>
+  <text id="102400327" label="राहुल Copy 2" startTime="12066" endTime="18098" fillType="color" mediaFillMode="fill" parent="10223315" size="18.000000" font="googlefonts?name=Mukta&amp;weight=600" wrapWidth="410" align="center">
+    <transform>
+      <location value="-100.815369,42.633057,0.000000" />
+      <scale value="2.199665,2.199665" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>संग </content>
+  </text>
+  <text id="102400326" label="राहुल Copy" startTime="12066" endTime="18098" fillType="color" mediaFillMode="fill" parent="10223315" size="18.000000" font="googlefonts?name=Martel&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="-259.056702,-107.839981,0.000000" />
+      <scale value="2.692036,2.692036" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>अंजली </content>
+  </text>
+  <shape id="10223312" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="12066" endTime="18098" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="905.926880,708.577637,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223313" label="SDW Cloud(3).png" startTime="12066" endTime="18098" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223314" label="SDW Cloud(3).png Copy" startTime="12066" endTime="18098" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223315" label="Null 3" startTime="12066" endTime="18098" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223319" label="0f69c98097625e6e393175009188a505.jpg" startTime="18100" endTime="24132" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223321" startTime="18100" endTime="24132" fillType="color" mediaFillMode="fill" parent="10223327" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="334.968475,-163.393555,0.000000" />
+      <scale value="2.087828,2.087828" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>सौ. कां. अंजली </content>
+  </text>
+  <text id="102400328" label="सौ. कां. अंजली Copy" startTime="18100" endTime="24132" fillType="color" mediaFillMode="fill" parent="10223327" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="375.965118,111.862389,0.000000" />
+      <scale value="1.745103,1.745103" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>सुपौत्री : श्री रामाधार सिंह
+सुपुत्री - श्री नंदलाल
+माता - श्रीमती दुसला बाई
+ग्राम - तखतपुर, 
+जिला - बिलासपुर (छ.ग.) </content>
+  </text>
+  <text id="10223335" startTime="18100" endTime="24132" fillType="color" mediaFillMode="fill" parent="10223327" size="11.000000" font="imported?name=AMS Aaditya.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="329.980225,-263.437103,0.000000" />
+      <scale value="1.734016,1.734016" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <content>AayauVmataI</content>
+  </text>
+  <shape id="10223324" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="18100" endTime="24132" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223325" label="SDW Cloud(3).png" startTime="18100" endTime="24132" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223326" label="SDW Cloud(3).png Copy" startTime="18100" endTime="24132" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223327" label="Null 4" startTime="18100" endTime="24132" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223328" label="0f69c98097625e6e393175009188a505.jpg" startTime="24116" endTime="30232" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <embedScene id="10223329" label="Group 1" startTime="24116" endTime="30232" fillType="intrinsic" outTime="6116" mediaFillMode="fill" parent="10223334">
+    <transform>
+      <location value="376.740173,10.877001,0.000000" />
+      <scale value="0.715979,0.715979" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="6116" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="10223317" label="Ink Drop [7F010A3].mp4" startTime="0" endTime="6116" fillType="media" blending="mask" fillVideo="am:1BACE7DD90F3734D7BD07C40C0F57881718DFE3E.mp4" outTime="6116" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="960.000000,540.000000,0.000000" />
+          <rotation value="-73.536591" />
+        </transform>
+        <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+          <property name="keyColor" type="color" value="#ffffffff" />
+          <property name="threshold" type="float" value="0.100000" />
+          <property name="feather" type="float" value="0.050000" />
+          <property name="defringe" type="bool" value="false" />
+          <property name="invert" type="bool" value="false" />
+        </effect>
+        <property name="size" type="vec2" value="960.000000,540.000000" />
+      </shape>
+    </scene>
+  </embedScene>
+  <shape id="10223332" label="SDW Cloud(3).png" startTime="24116" endTime="30232" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.983649" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002617" v="918.097168,827.388184,0.000000" />
+        <kf t="0.019131" v="919.609802,950.789673,-52.500000" />
+        <kf t="0.073577" v="924.597168,1357.658936,-76.500000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223333" label="SDW Cloud(3).png Copy" startTime="24116" endTime="30232" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.983649" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002617" v="1006.340698,185.125977,0.000000" />
+        <kf t="0.019131" v="1006.340698,79.231125,-56.500000" />
+        <kf t="0.073577" v="1006.340698,-269.916565,-81.500000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223334" label="Null 5" startTime="24116" endTime="30232" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.983649" v="1.140000,1.140000" />
+        <kf t="0.073577" v="1.014000,1.014000" />
+        <kf t="0.002617" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223336" label="0f69c98097625e6e393175009188a505.jpg" startTime="30233" endTime="36265" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223337" startTime="30233" endTime="36265" fillType="color" mediaFillMode="fill" parent="10223343" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-14.536255,-10.135026,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>मायन, तेल </content>
+  </text>
+  <text id="102400333" label="मायन, तेल Copy" startTime="30233" endTime="36265" fillType="color" mediaFillMode="fill" parent="10223343" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-31.189135,153.061554,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>दिनांक - 13-11-2026
+दिन - बुधवार </content>
+  </text>
+  <text id="10223339" startTime="30233" endTime="36265" fillType="color" mediaFillMode="fill" parent="10223343" size="11.000000" font="imported?name=AMS Aaditya.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="-34.689167,-163.994186,0.000000" />
+      <scale value="2.108485,2.108485" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <content>maa/gailak kaya_kXma</content>
+  </text>
+  <shape id="10223340" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="30233" endTime="36265" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223341" label="SDW Cloud(3).png" startTime="30233" endTime="36265" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223342" label="SDW Cloud(3).png Copy" startTime="30233" endTime="36265" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223343" label="Null 6" startTime="30233" endTime="36265" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223344" label="0f69c98097625e6e393175009188a505.jpg" startTime="36332" endTime="42364" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <shape id="10223347" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="36332" endTime="42364" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="742.371399,727.994751,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.260000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223348" label="SDW Cloud(3).png" startTime="36332" endTime="42364" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223350" label="Null 7" startTime="36332" endTime="42364" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223370" label="0f69c98097625e6e393175009188a505.jpg" startTime="48383" endTime="54415" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <shape id="10223373" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="48383" endTime="54415" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223374" label="SDW Cloud(3).png" startTime="48383" endTime="54415" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223375" label="SDW Cloud(3).png Copy" startTime="48383" endTime="54415" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223376" label="Null 9" startTime="48383" endTime="54415" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="10223377" label="0f69c98097625e6e393175009188a505.jpg" startTime="54383" endTime="60415" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="10223379" startTime="54383" endTime="60415" fillType="color" mediaFillMode="fill" parent="10223383" size="11.000000" font="googlefonts?name=Crimson Text&amp;weight=700&amp;italic=1" wrapWidth="410" align="center">
+    <transform>
+      <location value="2.887747,194.242767,0.000000" />
+      <scale value="3.654052,3.654052" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <content>15-11-2026</content>
+  </text>
+  <text id="102400358" label="15-11-2026 Copy" startTime="54383" endTime="60415" fillType="color" mediaFillMode="fill" parent="10223383" size="11.000000" font="googlefonts?name=Lobster&amp;weight=400" wrapWidth="410" align="center">
+    <transform>
+      <location value="-31.628601,316.702026,0.000000" />
+      <scale value="1.183908,1.183908" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <content>Amar edits 7067392032 </content>
+  </text>
+  <shape id="10223384" label="Save the date PNG [EDCB59D].png" startTime="54383" endTime="60415" fillType="media" fillImage="am:7D661D5AC130D4F76C6EC5C80E9796F8EE7774B4.png" mediaFillMode="fill" parent="10223383" s=".rect">
+    <transform>
+      <location value="8.230396,-90.935791,0.000000" />
+      <scale value="0.647559,0.647559" />
+    </transform>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="960.000000,540.000000" />
+  </shape>
+  <shape id="10223380" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="54383" endTime="60415" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="10223381" label="SDW Cloud(3).png" startTime="54383" endTime="60448" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.079637" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997361" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.008080" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="10223382" label="SDW Cloud(3).png Copy" startTime="54383" endTime="60448" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.079637" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997361" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.008080" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="10223383" label="Null 10" startTime="54383" endTime="60415" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="102400325" label="SDW Animal(15).png" startTime="0" endTime="6032" fillType="media" fillImage="am:C5A5CF1BD45FD69B6874E7C466C448BAA691746F.png" mediaFillMode="fill" parent="10223299" s=".rect">
+    <transform>
+      <location value="454.159882,-308.661987,0.000000" />
+      <scale value="0.102414,0.102414" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="true">
+      <property name="count" type="float" value="12.000000" />
+      <property name="radius" type="float" value="1293.000000" />
+      <property name="evolution" type="float">
+        <kf t="0.002653" v="0.540000" />
+        <kf t="1.000000" v="0.340000" />
+      </property>
+      <property name="scatterSeed" type="float" value="0.000000" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="0.060000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="857.500000,540.000000" />
+  </shape>
+  <embedScene id="102400329" label="Group 1" startTime="18066" endTime="24132" fillType="intrinsic" outTime="6066" mediaFillMode="fill">
+    <transform>
+      <location value="634.947144,545.818481,0.000000" />
+      <scale value="0.837026,0.837026" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="6066" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="10223317" label="Ink Drop [7F010A3].mp4" startTime="0" endTime="6066" fillType="media" blending="mask" fillVideo="am:1BACE7DD90F3734D7BD07C40C0F57881718DFE3E.mp4" outTime="6066" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="960.000000,540.000000,0.000000" />
+          <rotation value="-72.439026" />
+        </transform>
+        <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+          <property name="keyColor" type="color" value="#ffffffff" />
+          <property name="threshold" type="float" value="0.100000" />
+          <property name="feather" type="float" value="0.050000" />
+          <property name="defringe" type="bool" value="false" />
+          <property name="invert" type="bool" value="false" />
+        </effect>
+        <property name="size" type="vec2" value="960.000000,540.000000" />
+      </shape>
+    </scene>
+  </embedScene>
+  <text id="102400330" startTime="24100" endTime="30232" fillType="color" mediaFillMode="fill" parent="10223334" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="-471.728668,-135.604904,0.000000" />
+      <scale value="2.250917,2.250917" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>चि. राहुल </content>
+  </text>
+  <text id="102400331" label="सौ. कां. अंजली Copy" startTime="24100" endTime="30232" fillType="color" mediaFillMode="fill" parent="10223334" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="-440.159393,153.343826,0.000000" />
+      <scale value="1.730293,1.730293" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <content>सुपौत्र : श्री गोविंद सिंह
+सुपुत्री - श्री संतोष 
+माता - श्रीमती यशोदा बाई
+ग्राम - कोटा , जिला - बिलासपुर (छ.ग.) </content>
+  </text>
+  <text id="102400332" startTime="24100" endTime="30232" fillType="color" mediaFillMode="fill" parent="10223334" size="11.000000" font="imported?name=AMS Aaditya.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="-459.264648,-253.970947,0.000000" />
+      <scale value="1.611408,1.611408" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <content>AayauVmaana</content>
+  </text>
+  <shape id="10223331" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="24116" endTime="30232" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002617" v="1164.000000,-839.000000" />
+        <kf t="0.983649" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="102400334" label="0f69c98097625e6e393175009188a505.jpg" startTime="36233" endTime="42265" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="102400335" startTime="36233" endTime="42265" fillType="color" mediaFillMode="fill" parent="102400341" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-14.536255,-10.135026,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>हल्दी, मंडप </content>
+  </text>
+  <text id="102400336" label="मायन, तेल Copy" startTime="36233" endTime="42265" fillType="color" mediaFillMode="fill" parent="102400341" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-31.189135,153.061554,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>दिनांक - 14-11-2026
+दिन - गुरुवार </content>
+  </text>
+  <text id="102400337" startTime="36233" endTime="42265" fillType="color" mediaFillMode="fill" parent="102400341" size="11.000000" font="imported?name=AMS Aaditya.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="-34.689167,-163.994186,0.000000" />
+      <scale value="2.108485,2.108485" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <content>maa/gailak kaya_kXma</content>
+  </text>
+  <shape id="102400338" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="36233" endTime="42265" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="102400339" label="SDW Cloud(3).png" startTime="36233" endTime="42265" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="102400340" label="SDW Cloud(3).png Copy" startTime="36233" endTime="42265" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="102400341" label="Null 6" startTime="36233" endTime="42265" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="102400342" label="0f69c98097625e6e393175009188a505.jpg" startTime="42333" endTime="48365" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="102400343" startTime="42333" endTime="48365" fillType="color" mediaFillMode="fill" parent="102400349" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-14.536255,-10.135026,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>बारात स्वागत </content>
+  </text>
+  <text id="102400344" label="मायन, तेल Copy" startTime="42333" endTime="48365" fillType="color" mediaFillMode="fill" parent="102400349" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-31.189135,153.061554,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <content>दिनांक - 15-11-2026
+दिन - शुक्रवार </content>
+  </text>
+  <text id="102400345" startTime="42333" endTime="48365" fillType="color" mediaFillMode="fill" parent="102400349" size="11.000000" font="imported?name=AMS Aaditya.ttf" wrapWidth="410" align="center">
+    <transform>
+      <location value="-34.689167,-163.994186,0.000000" />
+      <scale value="2.108485,2.108485" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <content>maa/gailak kaya_kXma</content>
+  </text>
+  <shape id="102400346" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="42333" endTime="48365" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="102400347" label="SDW Cloud(3).png" startTime="42333" endTime="48365" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <shape id="102400348" label="SDW Cloud(3).png Copy" startTime="42333" endTime="48365" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="102400349" label="Null 6" startTime="42333" endTime="48365" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="102400350" label="0f69c98097625e6e393175009188a505.jpg" startTime="48366" endTime="54398" fillType="media" fillImage="am:6E360E7956608A1F6AC6E80B18091278A33C0717.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale value="1.777778,1.777778" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,304.000000" />
+  </shape>
+  <text id="102400352" label="मायन, तेल Copy" startTime="48366" endTime="54398" fillType="color" mediaFillMode="fill" parent="102400357" size="18.000000" font="googlefonts?name=Martel&amp;weight=600" wrapWidth="1064" align="center">
+    <transform>
+      <location value="-29.411423,-122.493988,0.000000" />
+      <scale value="1.597262,1.597262" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="0.738000" />
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000" />
+    <content>विनीत </content>
+  </text>
+  <text id="10223371" startTime="48383" endTime="54415" fillType="color" mediaFillMode="fill" parent="10223376" size="9.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="410" align="center">
+    <transform>
+      <location value="-6.149320,157.924835,0.000000" />
+      <scale value="2.226796,2.226796" />
+    </transform>
+    <fillColor value="#ff004ca9" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.248000" />
+    </effect>
+    <content>श्री नंदलाल (पापा) 
+श्रीमती दुसला बाई (माँ) 
+ग्राम - तखतपुर, 
+जिला - बिलासपुर (छ.ग.) </content>
+  </text>
+  <shape id="102400354" label="8e5c0eded7d9e06a4941b1e67e880a23.png" startTime="48366" endTime="54398" fillType="media" fillImage="am:0920DE8CCFE2373292E11C07EFAC80DFDDDFCAF4.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="744.149170,672.170166,0.000000" />
+      <scale value="0.203646,0.203646" />
+    </transform>
+    <effect id="com.alightcreative.effects.repeat.scatter" locallyApplied="false">
+      <property name="count" type="float" value="20.000000" />
+      <property name="radius" type="float" value="2000.000000" />
+      <property name="evolution" type="float" value="0.320000" />
+      <property name="scatterSeed" type="float" value="0.170000" />
+      <property name="offset" type="vec2">
+        <kf t="0.002653" v="1164.000000,-839.000000" />
+        <kf t="0.997347" v="1164.000000,-4048.000000" />
+      </property>
+      <property name="angle" type="float" value="1.000000" />
+      <property name="scale" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="fillColor" type="color" value="#ff2d1ef6" />
+      <property name="blend" type="float" value="0.000000" />
+      <property name="colorAltCopies" type="bool" value="false" />
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="easeIn" type="float" value="0.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="0.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="invert" type="bool" value="false" />
+      <property name="randomOrder" type="bool" value="false" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.975000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="522.000000,960.000000" />
+  </shape>
+  <shape id="102400355" label="SDW Cloud(3).png" startTime="48366" endTime="54398" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="924.597168,1357.658936,0.000000" />
+        <kf t="0.997347" v="924.597168,1663.408936,0.000000" />
+        <kf t="0.002653" v="918.097168,827.388184,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+      <rotation value="-180.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+  <nullobj id="102400357" label="Null 6" startTime="48366" endTime="54398" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.997347" v="1.140000,1.140000" />
+        <kf t="0.074602" v="1.014000,1.014000" />
+        <kf t="0.002653" v="0.820000,0.820000" />
+      </scale>
+    </transform>
+  </nullobj>
+  <shape id="102400356" label="SDW Cloud(3).png Copy" startTime="48366" endTime="54398" fillType="media" fillImage="am:C5C8A5C7F2C0AC6867247D16D58551D0BD42A90E.png" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location>
+        <kf t="0.074602" v="1006.340698,-269.916565,0.000000" />
+        <kf t="0.997347" v="1006.340698,-590.416565,0.000000" />
+        <kf t="0.002653" v="1006.340698,185.125977,0.000000" />
+      </location>
+      <scale value="2.543519,2.543519" />
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,352.000000" />
+  </shape>
+</scene>

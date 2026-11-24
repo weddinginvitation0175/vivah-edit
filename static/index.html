@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate dark" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>VivahEdit AI - Wedding XML Automation</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#1a0414" />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mukta:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              500: '#ec4899',
+              600: '#db2777',
+              700: '#be185d',
+              800: '#9d174d',
+              900: '#701037',
+              950: '#38051a'
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            hindi: ['Mukta', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    try {
+      if (localStorage.getItem('editor_access_token')) {
+        document.documentElement.classList.add('has-auth-token');
+      }
+    } catch (_) {}
+  </script>
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    .has-auth-token #gatekeeperScreen { display: none !important; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #24051a 0%, #0a0108 100%);
+      min-height: 100vh;
+      color: #f3f4f6;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+      padding-left: env(safe-area-inset-left, 0px);
+      padding-right: env(safe-area-inset-right, 0px);
+      overscroll-behavior-y: contain;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .input-clean {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8125rem;
+      color: #ffffff;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .input-clean::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+    .input-clean:focus {
+      border-color: #f59e0b;
+    }
+    /* Mobile optimization: prevent iOS zoom on inputs */
+    @media screen and (max-width: 640px) {
+      .input-clean, input[type="text"], input[type="password"], textarea, select {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+</head>
+<body class="pb-20">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-black/75 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 py-2.5">
+    <div class="max-w-xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2.5 min-w-0">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-600 flex items-center justify-center text-white shadow-md shrink-0">
+          <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+        </div>
+        <div class="min-w-0 text-left">
+          <h1 id="headerProjectName" class="text-sm sm:text-base font-bold tracking-tight text-white truncate max-w-[150px] sm:max-w-xs">VivahEdit AI</h1>
+          <p id="headerProjectSub" class="text-[9px] sm:text-[10px] text-amber-300/80 truncate max-w-[150px] sm:max-w-xs">Alight Motion XML Automation</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button type="button" id="btnActiveEditorProfile" onclick="openEditorSelectionModal()" class="py-1 px-2.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-rose-500/20 hover:from-amber-500/30 hover:to-rose-500/30 text-amber-300 border border-amber-500/40 text-xs font-bold flex items-center gap-1.5 transition active:scale-95 shadow cursor-pointer" title="Switch Editor">
+          <i id="headerEditorIcon" class="fa-solid fa-crown text-[11px] text-amber-400"></i>
+          <span id="headerEditorName" class="truncate max-w-[70px] sm:max-w-[100px]">Amar</span>
+          <span class="text-[9px] text-white/50 bg-black/40 px-1 py-0.2 rounded ml-0.5">Switch</span>
+        </button>
+        <button id="btnHeaderWatchCard" class="hidden py-1 px-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 transition text-xs flex items-center gap-1.5 border border-amber-500/40 font-semibold shadow active:scale-95" title="Watch Card Fullscreen">
+          <i class="fa-solid fa-eye text-xs"></i>
+          <span>View Card</span>
+        </button>
+        <button id="btnSettings" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white/80 hover:text-white transition text-xs flex items-center justify-center border border-white/10 shadow active:scale-95" title="Settings">
+          <i class="fa-solid fa-gear text-sm"></i>
+        </button>
+        <!-- Lock button hidden from header for zero-clutter (accessible via settings) -->
+        <button id="btnLockApp" class="hidden"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-xl mx-auto px-3 sm:px-4 mt-2.5 sm:mt-3 space-y-3">
+
+    <!-- STEP BAR -->
+    <div class="grid grid-cols-3 gap-1.5 bg-black/50 p-1.5 rounded-2xl border border-white/10 text-xs font-bold shadow-lg">
+      <button id="navStep1" class="step-btn py-2 text-center rounded-xl transition bg-gradient-to-r from-rose-700 to-amber-600 text-white shadow font-bold flex items-center justify-center gap-1.5">
+        <span class="w-4 h-4 rounded-full bg-white/20 text-[10px] flex items-center justify-center">1</span>
+        <span>Upload Card</span>
+      </button>
+      <button id="navStep2" class="step-btn py-2 text-center rounded-xl transition text-white/60 hover:text-white flex items-center justify-center gap-1.5">
+        <span class="w-4 h-4 rounded-full bg-white/10 text-[10px] flex items-center justify-center">2</span>
+        <span>Edit Details</span>
+      </button>
+      <button id="navStep3" class="step-btn py-2 text-center rounded-xl transition text-white/60 hover:text-white flex items-center justify-center gap-1.5">
+        <span class="w-4 h-4 rounded-full bg-white/10 text-[10px] flex items-center justify-center">3</span>
+        <span>Get XML</span>
+      </button>
+    </div>
+
+    <!-- ==================== STEP 1: UPLOAD ==================== -->
+    <section id="step1Section" class="space-y-3">
+      
+      <!-- Permanent Active XML Template Badge -->
+      <div class="glass-card rounded-2xl p-2.5 px-3.5 border border-amber-500/30 flex items-center justify-between text-xs bg-gradient-to-r from-amber-500/10 via-black/40 to-black/40 shadow">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-sm shrink-0 border border-amber-500/30">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="min-w-0 text-left">
+            <span class="text-white/50 text-[10px] block font-medium">Active XML Template:</span>
+            <span id="step1ActiveTemplateBadge" class="font-bold text-amber-300 truncate text-xs block">Loading...</span>
+          </div>
+        </div>
+        <button type="button" id="btnStep1ChangeTemplate" class="px-2.5 py-1 rounded-xl bg-white/10 hover:bg-amber-500/20 text-amber-300 text-[11px] font-semibold border border-white/15 shrink-0 transition active:scale-95 cursor-pointer flex items-center gap-1">
+          <i class="fa-solid fa-sliders text-[10px]"></i>
+          <span>Change</span>
+        </button>
+      </div>
+
+      <!-- Card Upload Box (Supports Multiple Photos & PDF) -->
+      <div class="glass-card rounded-3xl p-5 sm:p-6 border-dashed border-2 border-amber-400/40 text-center relative overflow-hidden group hover:border-amber-400/80 transition cursor-pointer bg-gradient-to-b from-amber-500/5 to-transparent shadow-lg" onclick="document.getElementById('cardFileInput').click()">
+        <input type="file" id="cardFileInput" accept="image/*,.pdf,application/pdf" multiple class="hidden" />
+        
+        <div id="cardUploadPlaceholder" class="space-y-3 py-3 sm:py-5">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-amber-500/25 to-rose-600/25 flex items-center justify-center text-amber-400 text-2xl border border-amber-400/40 shadow-lg group-hover:scale-105 transition">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white">Upload Wedding Card</h3>
+            <p class="text-xs text-white/60 mt-0.5">Take photo or upload 1 to 5 pages from gallery/PDF</p>
+          </div>
+          <div>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold shadow-md">
+              <i class="fa-solid fa-image text-amber-400"></i>
+              <span>Choose Photos or PDF</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Preview when image(s) or PDF selected -->
+        <div id="cardPreviewContainer" class="hidden space-y-3 text-left" onclick="event.stopPropagation()">
+          <div class="flex items-center justify-between px-1 border-b border-white/10 pb-2">
+            <span id="cardFilesSummary" class="text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-check text-sm"></i>
+              <span id="cardPagesBadge">1 Page Ready</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnWatchAllCards" class="text-xs text-amber-300 hover:text-amber-200 font-bold px-2.5 py-1 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center gap-1.5 transition">
+                <i class="fa-solid fa-eye text-xs"></i> <span>View Fullscreen</span>
+              </button>
+              <button type="button" id="btnAddMoreCards" class="text-xs text-white/80 hover:text-white font-medium px-2.5 py-1 rounded-xl bg-white/10 border border-white/15 flex items-center gap-1 transition">
+                <i class="fa-solid fa-plus text-xs"></i> <span>+ Add Page</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Large Card Preview Container -->
+          <div id="cardThumbnailsGrid" class="space-y-2 max-h-[480px] overflow-y-auto p-0.5">
+            <!-- Dynamically populated page cards -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="space-y-2 pt-1">
+        <button id="btnStartAiScan" class="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-600 to-brand-700 text-white font-bold text-sm sm:text-base shadow-xl flex items-center justify-center gap-2 hover:opacity-95 transition active:scale-[0.98]">
+          <i class="fa-solid fa-wand-magic-sparkles text-sm text-yellow-300"></i>
+          <span>Scan Card with AI</span>
+        </button>
+
+        <button id="btnLoadDemo" class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-amber-300/90 hover:text-amber-300 text-xs font-semibold flex items-center justify-center gap-2 transition border border-white/10 active:scale-95">
+          <i class="fa-solid fa-bolt text-xs"></i>
+          <span>Try Demo Data</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ==================== STEP 2: EDIT DETAILS ==================== -->
+    <section id="step2Section" class="hidden space-y-3.5">
+
+      <!-- Header & Card Side Selector -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-3 border-amber-400/25 bg-black/40 shadow-md">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-white/90">पक्ष चुनें:</span>
+            <span id="badgeCardSide" class="text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded-full font-bold">
+              👦 वर पक्ष
+            </span>
+          </div>
+
+          <!-- Quick Watch Card Lightbox Button -->
+          <button type="button" id="btnToggleFloatingInDetails" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-xs font-bold flex items-center gap-1.5 transition shadow active:scale-95 cursor-pointer" title="View Wedding Card">
+            <i class="fa-solid fa-eye text-amber-400 text-xs"></i>
+            <span>View Card</span>
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-2 p-1 bg-black/60 rounded-xl border border-white/10">
+          <button type="button" id="btnSideGroom" class="py-2.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow">
+            <span>👦 वर पक्ष</span>
+          </button>
+          <button type="button" id="btnSideBride" class="py-2.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 text-white/60 hover:text-white">
+            <span>👧 वधू पक्ष</span>
+          </button>
+        </div>
+        <p class="text-[11px] text-white/50 text-left" id="cardSideNote">
+          वर पक्ष: दूल्हे और उसके परिवार का विवरण पहले दिखेगा।
+        </p>
+      </div>
+
+      <!-- Couple & Clan -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-2.5 shadow-sm text-left">
+        <h3 class="text-xs font-bold text-amber-300 uppercase tracking-wider border-b border-white/10 pb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-heart text-rose-400 text-xs"></i>
+          <span>1. Couple & Family Details</span>
+        </h3>
+        
+        <div>
+          <label class="block text-[11px] text-white/70 mb-1">Family Surname</label>
+          <input type="text" id="inpPariwar" class="w-full input-clean" placeholder="e.g. Sahu Pariwar" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] font-semibold text-blue-300 mb-1">Groom Name</label>
+            <input type="text" id="inpGroomName" class="w-full input-clean border-blue-500/40 font-semibold" placeholder="Enter Groom Name" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-semibold text-pink-300 mb-1">Bride Name</label>
+            <input type="text" id="inpBrideName" class="w-full input-clean border-pink-500/40 font-semibold" placeholder="Enter Bride Name" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Groom Details -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-2.5 border-blue-500/25 shadow-sm text-left">
+        <h3 class="text-xs font-bold text-blue-300 uppercase tracking-wider border-b border-white/10 pb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-user-tie text-blue-400 text-xs"></i>
+          <span>2. Groom Family Details</span>
+        </h3>
+
+        <div>
+          <label class="block text-[11px] text-white/70 mb-1">Grandparents</label>
+          <input type="text" id="inpGroomGrandparents" class="w-full input-clean" placeholder="Late Shri ... & Smt ..." />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Father Name</label>
+            <input type="text" id="inpGroomFather" class="w-full input-clean" placeholder="Father's Name" />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Mother Name</label>
+            <input type="text" id="inpGroomMother" class="w-full input-clean" placeholder="Mother's Name" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Village / City</label>
+            <input type="text" id="inpGroomVillage" class="w-full input-clean" placeholder="Village or City" />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">District</label>
+            <input type="text" id="inpGroomDistrict" class="w-full input-clean" placeholder="District" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bride Details -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-2.5 border-pink-500/25 shadow-sm text-left">
+        <h3 class="text-xs font-bold text-pink-300 uppercase tracking-wider border-b border-white/10 pb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-person-dress text-pink-400 text-xs"></i>
+          <span>3. Bride Family Details</span>
+        </h3>
+
+        <div>
+          <label class="block text-[11px] text-white/70 mb-1">Grandparents</label>
+          <input type="text" id="inpBrideGrandparents" class="w-full input-clean" placeholder="Late Shri ... & Smt ..." />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Father Name</label>
+            <input type="text" id="inpBrideFather" class="w-full input-clean" placeholder="Father's Name" />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Mother Name</label>
+            <input type="text" id="inpBrideMother" class="w-full input-clean" placeholder="Mother's Name" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Village / City</label>
+            <input type="text" id="inpBrideVillage" class="w-full input-clean" placeholder="Village or City" />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">District</label>
+            <input type="text" id="inpBrideDistrict" class="w-full input-clean" placeholder="District" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Ceremonies & Functions -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-2.5 shadow-sm text-left">
+        <h3 class="text-xs font-bold text-amber-300 uppercase tracking-wider border-b border-white/10 pb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-days text-amber-400 text-xs"></i>
+          <span>4. Wedding Schedule & Ceremonies</span>
+        </h3>
+
+        <!-- Event 1 -->
+        <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-2">
+          <div>
+            <label class="block text-[10px] text-white/60 mb-1">Ceremony 1</label>
+            <input type="text" id="inpEv1Title" class="w-full input-clean font-semibold text-amber-200" placeholder="Haldi, Mandap" value="हल्दी, मंडप" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Date</label>
+              <input type="text" id="inpEv1Date" class="w-full input-clean text-xs font-mono" placeholder="20.02.2027" />
+            </div>
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Day</label>
+              <input type="text" id="inpEv1Day" class="w-full input-clean text-xs" placeholder="Saturday" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-2">
+          <div>
+            <label class="block text-[10px] text-white/60 mb-1">Ceremony 2</label>
+            <input type="text" id="inpEv2Title" class="w-full input-clean font-semibold text-amber-200" placeholder="Matrika Pujan" value="मातृका पूजन" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Date</label>
+              <input type="text" id="inpEv2Date" class="w-full input-clean text-xs font-mono" placeholder="21.02.2027" />
+            </div>
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Day</label>
+              <input type="text" id="inpEv2Day" class="w-full input-clean text-xs" placeholder="Sunday" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-2">
+          <div>
+            <label class="block text-[10px] text-white/60 mb-1">Ceremony 3</label>
+            <input type="text" id="inpEv3Title" class="w-full input-clean font-semibold text-amber-200" placeholder="Sangeet Sandhya" value="संगीत संध्या" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Date</label>
+              <input type="text" id="inpEv3Date" class="w-full input-clean text-xs font-mono" placeholder="20.02.2027" />
+            </div>
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Day</label>
+              <input type="text" id="inpEv3Day" class="w-full input-clean text-xs" placeholder="Saturday" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-2">
+          <div>
+            <label class="block text-[10px] text-white/60 mb-1">Ceremony 4</label>
+            <input type="text" id="inpEv4Title" class="w-full input-clean font-semibold text-amber-200" placeholder="Barat Departure" value="बारात प्रस्थान" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Date</label>
+              <input type="text" id="inpEv4Date" class="w-full input-clean text-xs font-mono" placeholder="21.02.2027" />
+            </div>
+            <div>
+              <label class="block text-[9px] text-white/40 mb-0.5">Day</label>
+              <input type="text" id="inpEv4Day" class="w-full input-clean text-xs" placeholder="Sunday" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venue & Inviter -->
+      <div class="glass-card rounded-2xl p-3.5 space-y-2.5 shadow-sm text-left">
+        <h3 class="text-xs font-bold text-amber-300 uppercase tracking-wider border-b border-white/10 pb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-rose-400 text-xs"></i>
+          <span>5. Venue & RSVP</span>
+        </h3>
+        
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">Wedding Venue</label>
+            <input type="text" id="inpVenueGram" class="w-full input-clean" placeholder="e.g. Mangal Bhawan / Residence" />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/70 mb-1">District</label>
+            <input type="text" id="inpVenueDistrict" class="w-full input-clean" placeholder="e.g. Durg" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[11px] text-white/70 mb-1">Invited By</label>
+          <textarea id="inpVinit" rows="2" class="w-full input-clean" placeholder="e.g. All Family & Relatives"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5 pt-1">
+          <div>
+            <label class="block text-[11px] text-white/60 mb-1 flex items-center justify-between">
+              <span>Studio Name</span>
+              <span class="text-[9px] text-amber-300/80 font-mono flex items-center gap-0.5"><i class="fa-solid fa-lock text-[8px]"></i>Fixed</span>
+            </label>
+            <input type="text" id="inpStudioName" class="w-full input-clean font-semibold text-amber-300" value="Amar Edit" readonly />
+          </div>
+          <div>
+            <label class="block text-[11px] text-white/60 mb-1 flex items-center justify-between">
+              <span>Phone</span>
+              <span class="text-[9px] text-amber-300/80 font-mono flex items-center gap-0.5"><i class="fa-solid fa-lock text-[8px]"></i>Fixed</span>
+            </label>
+            <input type="text" id="inpStudioPhone" class="w-full input-clean font-semibold text-amber-300 font-mono" value="7067392032" readonly />
+          </div>
+        </div>
+      </div>
+
+      <!-- Font Engine: Simplified -->
+      <div class="glass-card rounded-2xl p-3 space-y-2 border border-amber-400/25 text-left">
+        <div class="flex items-center justify-between">
+          <label class="block text-xs font-semibold text-white/90">🎨 Hindi Font Style:</label>
+          <span class="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
+            Recommended
+          </span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <label class="p-2.5 rounded-xl bg-black/50 border border-amber-500/40 cursor-pointer flex items-center gap-2 hover:border-amber-400 transition">
+            <input type="radio" name="fontMode" value="hybrid" checked class="text-amber-500 focus:ring-amber-400" />
+            <div>
+              <span class="font-bold text-amber-300 block text-xs">AMS + Normal Hybrid</span>
+              <span class="text-[9px] text-white/50 block">Optimized for video design</span>
+            </div>
+          </label>
+          <label class="p-2.5 rounded-xl bg-black/40 border border-white/10 cursor-pointer flex items-center gap-2 hover:border-white/20 transition">
+            <input type="radio" name="fontMode" value="unicode" class="text-amber-500 focus:ring-amber-400" />
+            <div>
+              <span class="font-bold text-white/80 block text-xs">Pure Unicode Standard</span>
+              <span class="text-[9px] text-white/50 block">All layers in Mukta font</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 2 Navigation Buttons (Back to Upload & Proceed to Export) -->
+      <div class="grid grid-cols-3 gap-2 pt-1">
+        <button type="button" id="btnBackToStep1" class="col-span-1 py-3.5 px-3 rounded-2xl bg-white/10 hover:bg-white/15 text-white/90 hover:text-white font-semibold text-xs transition border border-white/15 flex items-center justify-center gap-1.5 shadow active:scale-95 cursor-pointer">
+          <i class="fa-solid fa-arrow-left text-xs"></i>
+          <span>Back</span>
+        </button>
+        <button type="button" id="btnProceedToXml" class="col-span-2 py-3.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center justify-center gap-2 hover:opacity-95 transition active:scale-95 cursor-pointer">
+          <span>Proceed to Export</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ==================== STEP 3: EXPORT ==================== -->
+    <section id="step3Section" class="hidden space-y-3.5">
+
+      <!-- Live Summary Card -->
+      <div class="glass-card rounded-2xl p-4 border border-white/10 space-y-2.5 bg-gradient-to-b from-rose-950/60 to-black/80">
+        
+        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+          <span class="text-xs font-semibold text-amber-300 tracking-wide" id="previewCardPariwar">
+            Sahu Pariwar
+          </span>
+          <span id="previewCardSideBadge" class="text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded-full font-bold">
+            Groom Side
+          </span>
+        </div>
+
+        <div class="text-center py-1">
+          <h3 id="previewCoupleHeadline" class="text-lg font-bold text-white">
+            Sandeep & Pooja
+          </h3>
+        </div>
+
+        <!-- 2 Columns Parents -->
+        <div class="grid grid-cols-2 gap-2 text-[11px] bg-black/40 p-2.5 rounded-xl border border-white/5">
+          <div class="space-y-0.5 border-r border-white/10 pr-2">
+            <span class="text-[10px] text-blue-300 font-bold block" id="previewGroomSideLabel">वर पक्ष</span>
+            <p id="previewGroomGrandparents" class="text-white/50 text-[10px]"></p>
+            <p id="previewGroomParents" class="text-white font-medium"></p>
+            <p id="previewGroomPlace" class="text-white/60 text-[10px]"></p>
+          </div>
+          <div class="space-y-0.5 pl-1">
+            <span class="text-[10px] text-pink-300 font-bold block" id="previewBrideSideLabel">वधू पक्ष</span>
+            <p id="previewBrideGrandparents" class="text-white/50 text-[10px]"></p>
+            <p id="previewBrideParents" class="text-white font-medium"></p>
+            <p id="previewBridePlace" class="text-white/60 text-[10px]"></p>
+          </div>
+        </div>
+
+        <!-- Ceremonies list -->
+        <div class="space-y-1.5 bg-black/40 p-2.5 rounded-xl border border-white/5">
+          <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider block">
+            Ceremonies & Schedule
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px]" id="previewEventsList">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Venue & Inviter -->
+        <div class="grid grid-cols-2 gap-2 text-[11px] pt-1.5 border-t border-white/10 text-white/70">
+          <div>
+            <span class="text-amber-300 font-medium block text-[10px]">Venue:</span>
+            <span id="previewVenue" class="text-white font-medium"></span>
+          </div>
+          <div class="text-right">
+            <span class="text-amber-300 font-medium block text-[10px]">Invited By:</span>
+            <span id="previewVinit" class="text-white font-medium"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Card -->
+      <div class="glass-card rounded-3xl p-4 sm:p-5 text-center space-y-3.5 border-amber-400/25 shadow-xl bg-gradient-to-b from-black/60 to-black/90">
+        
+        <!-- Template Selection -->
+        <div class="text-left bg-black/50 p-3 rounded-2xl border border-white/10 space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label class="text-xs text-white/80 font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-layer-group text-amber-400"></i>
+              <span>Select XML Template:</span>
+            </label>
+            <label for="templateFileInput" class="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 border border-amber-500/40 rounded-xl text-xs text-amber-300 font-semibold cursor-pointer flex items-center gap-1.5 transition shadow">
+              <i class="fa-solid fa-cloud-arrow-up text-amber-400"></i>
+              <span>+ Upload XML</span>
+            </label>
+            <input type="file" id="templateFileInput" accept=".xml,text/xml,application/xml,text/plain,.amzip,application/zip,*/*" class="hidden" />
+          </div>
+          <select id="selectTemplate" class="w-full bg-black/70 border border-white/15 rounded-xl px-3 py-2 text-xs font-medium text-white focus:outline-none focus:border-amber-400 shadow-inner">
+            <option value="Green_Pink_2027_Final.xml">Green Pink Final (Recommended)</option>
+          </select>
+          <div id="noTemplatesNoticeStep3" class="hidden p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs space-y-2">
+            <div class="font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-amber-400"></i>
+              <span id="noTemplatesEditorName">Sunil</span>, no XML templates found
+            </div>
+            <p class="text-[11px] text-white/70">
+              Upload your Alight Motion XML template file to export wedding card projects in 1-click.
+            </p>
+            <label for="step3EmptyUploadInput" class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-rose-600 hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 cursor-pointer shadow active:scale-95 transition">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>+ Upload Your XML File (.xml / .amzip)</span>
+            </label>
+            <input type="file" id="step3EmptyUploadInput" accept=".xml,text/xml,application/xml,text/plain,.amzip,application/zip,*/*" class="hidden" />
+          </div>
+        </div>
+
+        <!-- Action Buttons: Simplified to 1 Clear Hero Button + 1 Download Button -->
+        <div class="space-y-2 pt-1">
+          <!-- 1. Primary Action: Open / Import in After Motion Z / Alight Motion -->
+          <button type="button" id="btnShareAfterMotion" class="w-full py-4 px-4 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-600 to-brand-700 hover:opacity-95 text-white font-bold text-sm sm:text-base shadow-2xl flex items-center justify-center gap-2.5 transition active:scale-[0.98] cursor-pointer">
+            <i class="fa-solid fa-bolt-lightning text-yellow-300 text-base"></i>
+            <span id="btnShareLabel">Open in Alight Motion</span>
+          </button>
+
+          <!-- 2. Secondary Action: Direct Download XML File -->
+          <button type="button" id="btnDownloadXml" class="w-full py-3 px-3 rounded-xl bg-white/10 hover:bg-white/15 text-white/90 hover:text-white font-semibold text-xs border border-white/15 flex items-center justify-center gap-2 transition active:scale-[0.98] cursor-pointer" title="Download XML project file">
+            <i class="fa-solid fa-file-arrow-down text-amber-400 text-xs"></i>
+            <span>Download XML File</span>
+          </button>
+
+          <!-- Hidden alias button for backward compatibility with listeners -->
+          <button type="button" id="btnRedirectAfterMotion" class="hidden"></button>
+        </div>
+      </div>
+
+      <!-- Step 3 Bottom Action & Back Buttons -->
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button type="button" id="btnBackToStep2" class="py-3 px-3 rounded-2xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs transition border border-white/15 flex items-center justify-center gap-1.5 shadow active:scale-95 cursor-pointer">
+          <i class="fa-solid fa-arrow-left text-xs"></i>
+          <span>Edit Details</span>
+        </button>
+        <button type="button" id="btnStartNew" class="py-3 px-3 rounded-2xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition border border-white/10 flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer">
+          <i class="fa-solid fa-rotate-left text-xs"></i>
+          <span>New Project</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FLOATING SHADI CARD WIDGET (PiP Matcher) ==================== -->
+  <div id="floatingCardWidget" class="fixed z-40 hidden select-none flex-col rounded-2xl overflow-hidden shadow-2xl border border-amber-400/50 bg-neutral-950/95 backdrop-blur-xl transition-shadow" style="width: 220px; height: 290px; right: 12px; top: 76px; touch-action: none; box-shadow: 0 15px 45px rgba(0,0,0,0.9), 0 0 18px rgba(245,158,11,0.25);">
+    
+    <!-- Single Sleek Draggable Header (Clean & Simple) -->
+    <div id="floatingCardHeader" class="flex items-center justify-between px-2.5 py-1.5 bg-gradient-to-r from-amber-600/35 via-neutral-900 to-neutral-900/95 border-b border-white/10 cursor-move text-white shrink-0 select-none active:bg-amber-600/50 transition">
+      <div class="flex items-center gap-1.5 min-w-0 pointer-events-none">
+        <i class="fa-solid fa-grip-vertical text-amber-400 text-xs"></i>
+        <span class="text-[11px] font-bold text-amber-200 truncate">Card Preview</span>
+        <span id="floatingPageBadge" class="text-[8px] bg-black/70 border border-white/10 px-1 py-0.5 rounded font-mono text-white/80">1/1</span>
+      </div>
+
+      <!-- Action Controls -->
+      <div class="flex items-center gap-1.5 shrink-0">
+        <!-- Preset Size Toggle (XS / S / M / L) -->
+        <button type="button" id="btnFloatingToggleSize" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-[10px] sm:text-[9px] font-bold text-amber-300 flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Switch Size: XS / S / M / L">
+          <span id="floatingSizeLabel">M</span>
+        </button>
+
+        <!-- Transparency Toggle -->
+        <button type="button" id="btnFloatingToggleOpacity" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Toggle Transparency">
+          <i class="fa-solid fa-circle-half-stroke text-[10px] sm:text-[9px]"></i>
+        </button>
+
+        <!-- Fullscreen Lightbox View -->
+        <button type="button" id="btnFloatingExpandFull" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Fullscreen Lightbox">
+          <i class="fa-solid fa-expand text-[10px] sm:text-[9px]"></i>
+        </button>
+
+        <!-- Close / Minimize -->
+        <button type="button" id="btnCloseFloatingWidget" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-rose-600/80 hover:bg-rose-600 text-white flex items-center justify-center transition ml-0.5 cursor-pointer active:scale-95" title="Close Float">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Card Image Viewport (Clean, Edge-to-Edge) -->
+    <div id="floatingCardBody" class="flex-1 relative overflow-hidden bg-neutral-950 flex items-center justify-center cursor-grab active:cursor-grabbing p-0">
+      <img id="floatingCardImg" src="" alt="Floating Wedding Card" class="max-w-none transition-transform duration-75 select-none origin-center" style="transform: translate(0px, 0px) scale(1);" draggable="false" />
+
+      <!-- Empty state if no card is uploaded yet -->
+      <div id="floatingCardEmptyState" class="hidden flex-col items-center justify-center text-center p-3 text-white/50 space-y-1">
+        <i class="fa-solid fa-image text-2xl text-amber-400/40"></i>
+        <span class="text-[11px] font-medium text-white/80">No card uploaded</span>
+        <span class="text-[9px] text-white/40">Upload card in Step 1</span>
+      </div>
+
+      <!-- Multi-page On-Image Nav Arrows -->
+      <button type="button" id="btnFloatingPrevPage" class="absolute left-1 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black/70 hover:bg-black text-white/90 hover:text-white flex items-center justify-center border border-white/20 transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer shadow-md">
+        <i class="fa-solid fa-chevron-left text-[9px]"></i>
+      </button>
+      <button type="button" id="btnFloatingNextPage" class="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black/70 hover:bg-black text-white/90 hover:text-white flex items-center justify-center border border-white/20 transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer shadow-md">
+        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+      </button>
+
+      <!-- Zoom Indicator Pill -->
+      <div id="floatingZoomPill" class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/65 backdrop-blur-sm border border-white/10 text-[8px] font-mono text-amber-300 pointer-events-none select-none opacity-70">
+        <span id="floatingZoomVal">100%</span>
+      </div>
+    </div>
+
+    <!-- 4-Sided & 4-Corner Resize Handles (All 4 Sides) -->
+    <!-- Top Edge -->
+    <div class="floating-resizer absolute top-0 left-4 right-4 h-3 cursor-ns-resize z-30 flex items-center justify-center group" data-resize-dir="top" title="Resize Top">
+      <div class="h-1 w-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:w-10 transition-all shadow-sm"></div>
+    </div>
+    <!-- Bottom Edge -->
+    <div class="floating-resizer absolute bottom-0 left-4 right-4 h-3.5 cursor-ns-resize z-30 flex items-center justify-center group" data-resize-dir="bottom" title="Resize Bottom">
+      <div class="h-1 w-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:w-10 transition-all shadow-sm"></div>
+    </div>
+    <!-- Left Edge -->
+    <div class="floating-resizer absolute top-4 left-0 bottom-4 w-3 cursor-ew-resize z-30 flex items-center justify-center group" data-resize-dir="left" title="Resize Left">
+      <div class="w-1 h-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:h-10 transition-all shadow-sm"></div>
+    </div>
+    <!-- Right Edge -->
+    <div class="floating-resizer absolute top-4 right-0 bottom-4 w-3 cursor-ew-resize z-30 flex items-center justify-center group" data-resize-dir="right" title="Resize Right">
+      <div class="w-1 h-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:h-10 transition-all shadow-sm"></div>
+    </div>
+
+    <!-- 4 Corners -->
+    <div class="floating-resizer absolute top-0 left-0 w-4 h-4 cursor-nwse-resize z-30" data-resize-dir="top-left" title="Resize Corner"></div>
+    <div class="floating-resizer absolute top-0 right-0 w-4 h-4 cursor-nesw-resize z-30" data-resize-dir="top-right" title="Resize Corner"></div>
+    <div class="floating-resizer absolute bottom-0 left-0 w-5 h-5 cursor-nesw-resize z-30" data-resize-dir="bottom-left" title="Resize Corner"></div>
+    <div class="floating-resizer absolute bottom-0 right-0 w-7 h-7 flex items-end justify-end p-1 cursor-nwse-resize text-amber-400/80 hover:text-amber-300 hover:scale-110 transition z-30 select-none" data-resize-dir="bottom-right" title="Resize Corner">
+      <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor">
+        <path d="M9 1L1 9M9 5L5 9M9 9L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- FLOATING LAUNCHER PILL (Compact sticky button when widget is minimized) -->
+  <button type="button" id="floatingLauncherPill" class="fixed right-3.5 z-40 hidden px-2.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 via-rose-600 to-brand-700 text-white font-bold text-[11px] shadow-xl border border-amber-300/40 flex items-center gap-1.5 hover:scale-105 active:scale-95 transition cursor-pointer" style="box-shadow: 0 6px 18px rgba(245,158,11,0.35); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));">
+    <i class="fa-solid fa-clone text-[10px] text-amber-300"></i>
+    <span>Float</span>
+  </button>
+
+  <!-- FULLSCREEN CARD VIEWER (Lightbox Modal for Image & PDF) -->
+  <div id="modalCardViewer" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col hidden select-none">
+    <!-- Top Bar -->
+    <div class="flex items-center justify-between px-4 py-3 bg-black/70 border-b border-white/10 z-20">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+        <span id="viewerCardTitle" class="font-bold text-white text-xs truncate max-w-[180px] sm:max-w-md">Wedding Card Preview</span>
+        <span id="viewerCardBadge" class="text-[10px] bg-white/10 px-2 py-0.5 rounded text-amber-300 font-mono shrink-0">1 / 1</span>
+      </div>
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button type="button" id="btnViewerZoomIn" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" title="Zoom In">
+          <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+        </button>
+        <button type="button" id="btnViewerZoomOut" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" title="Zoom Out">
+          <i class="fa-solid fa-magnifying-glass-minus text-xs"></i>
+        </button>
+        <button type="button" id="btnViewerReset" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" title="Reset Zoom">
+          <i class="fa-solid fa-arrows-rotate text-xs"></i>
+        </button>
+        <button type="button" id="btnCloseViewer" class="w-8 h-8 rounded-lg bg-rose-600/80 hover:bg-rose-600 text-white flex items-center justify-center transition ml-1" title="Close Viewer">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas / Container -->
+    <div class="flex-1 relative overflow-hidden flex items-center justify-center p-2 sm:p-4" id="viewerContainer">
+      <!-- Image Display -->
+      <img id="viewerImage" src="" alt="Wedding Card" class="max-h-full max-w-full object-contain transition-transform duration-100 rounded-lg shadow-2xl cursor-grab active:cursor-grabbing" />
+      
+      <!-- PDF Frame Display -->
+      <iframe id="viewerPdfFrame" src="" class="w-full h-full rounded-lg border-0 bg-neutral-900 hidden"></iframe>
+
+      <!-- Nav Prev / Next buttons -->
+      <button type="button" id="btnViewerPrev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 shadow-2xl transition z-10 disabled:opacity-20 disabled:pointer-events-none">
+        <i class="fa-solid fa-chevron-left text-sm"></i>
+      </button>
+      <button type="button" id="btnViewerNext" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 shadow-2xl transition z-10 disabled:opacity-20 disabled:pointer-events-none">
+        <i class="fa-solid fa-chevron-right text-sm"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="py-2.5 px-4 bg-black/70 border-t border-white/10 text-center text-[11px] text-white/60 flex items-center justify-between z-20">
+      <span><i class="fa-solid fa-mouse-pointer text-amber-400 mr-1"></i> Double-click or scroll to zoom. Drag to move.</span>
+      <button type="button" id="btnViewerOpenTab" class="text-amber-300 hover:text-amber-200 underline text-xs flex items-center gap-1">
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Open in New Tab
+      </button>
+    </div>
+  </div>
+
+  <!-- QR MODAL -->
+  <div id="modalQr" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="glass-card bg-neutral-900/95 border border-white/15 rounded-2xl p-5 max-w-xs w-full text-center space-y-3">
+      <div class="flex justify-between items-center border-b border-white/10 pb-2">
+        <h3 class="text-xs font-bold text-amber-300">Connect Mobile</h3>
+        <button id="btnCloseQr" class="text-white/50 hover:text-white p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="bg-white p-2 rounded-xl w-44 h-44 mx-auto flex items-center justify-center shadow">
+        <img id="qrImg" src="/api/qr" alt="QR Code" class="w-full h-full" />
+      </div>
+      <p class="text-[11px] text-white/60">Scan with phone camera to open app on mobile</p>
+      <div class="p-2 rounded-lg bg-black/60 border border-white/10 text-[10px] font-mono text-amber-200 break-all" id="mobileUrlDisplay">
+        Loading...
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN AUTH MODAL (Password 7067) -->
+  <div id="modalAdminAuth" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="glass-card bg-neutral-900/95 border border-white/15 rounded-2xl p-5 max-w-xs w-full space-y-3.5 text-center shadow-2xl">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg border border-amber-500/30">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <div>
+        <h3 class="text-xs font-bold text-white">Admin Security</h3>
+        <p class="text-[11px] text-white/50 mt-0.5">Enter Admin Password to manage API Key</p>
+      </div>
+      <div class="space-y-1.5">
+        <input type="password" id="inpAdminPassword" class="w-full input-clean text-center tracking-widest text-sm font-mono" placeholder="••••" maxlength="10" />
+        <div id="authErrorMsg" class="text-[11px] text-rose-400 font-medium hidden">Incorrect password! Access denied.</div>
+      </div>
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button type="button" id="btnCancelAuth" class="py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 text-xs font-medium transition border border-white/10">
+          Cancel
+        </button>
+        <button type="button" id="btnConfirmAuth" class="py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-black font-semibold text-xs transition">
+          Unlock
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCANNED CARDS FOLDER MODAL -->
+  <div id="modalScannedCards" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="glass-card bg-neutral-900/95 border border-white/15 rounded-3xl p-4 sm:p-5 max-w-lg w-full max-h-[90vh] flex flex-col space-y-3 shadow-2xl">
+      <!-- Header -->
+      <div class="flex items-center justify-between border-b border-white/10 pb-2.5 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-base border border-amber-500/30">
+            <i class="fa-solid fa-folder-open"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white flex items-center gap-1.5">
+              <span>Scanned Cards Folder</span>
+              <span id="scannedCardsCountBadge" class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded-full font-mono">0</span>
+            </h3>
+            <p class="text-[10px] text-white/50">Saved wedding cards — 1-click load into editor</p>
+          </div>
+        </div>
+        <button type="button" id="btnCloseScannedFolder" onclick="closeScannedFolderModal()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-rose-600/80 hover:text-white text-white/70 flex items-center justify-center text-base transition-all cursor-pointer shadow-sm active:scale-95" aria-label="Close Folder">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Search Filter -->
+      <div class="relative shrink-0">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-white/30 text-xs"></i>
+        <input type="text" id="inpSearchScannedCards" class="w-full input-clean pl-8 py-1.5 text-xs" placeholder="Search by groom, bride, or clan..." />
+      </div>
+
+      <!-- Scanned Cards List (Scrollable) -->
+      <div id="scannedCardsListDetailed" class="flex-1 overflow-y-auto space-y-2 pr-1 min-h-[160px]">
+        <div class="text-center py-8 text-xs text-white/40">
+          <i class="fa-solid fa-spinner animate-spin text-amber-400 text-sm mb-1"></i>
+          <div>Loading scanned cards...</div>
+        </div>
+      </div>
+
+      <!-- Footer Info & Bottom Close Button -->
+      <div class="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-white/40 shrink-0">
+        <span>Saved cards stored for 7 days</span>
+        <button type="button" id="btnRefreshScannedCards" class="text-amber-300/80 hover:text-amber-300 flex items-center gap-1 font-semibold cursor-pointer">
+          <i class="fa-solid fa-rotate text-[10px]"></i> Refresh
+        </button>
+      </div>
+      <button type="button" onclick="closeScannedFolderModal()" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition border border-white/10 flex items-center justify-center gap-2 cursor-pointer shrink-0">
+        <i class="fa-solid fa-xmark"></i>
+        <span>Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- SETTINGS MODAL (CLEAN & SIMPLE) -->
+  <div id="modalSettings" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="glass-card bg-neutral-900/98 border border-white/15 rounded-3xl p-5 sm:p-6 max-w-sm sm:max-w-md w-full max-h-[92vh] overflow-y-auto space-y-3.5 shadow-2xl">
+      <!-- Clean Header -->
+      <div class="flex justify-between items-center border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-sm border border-amber-500/30">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">Settings</h3>
+        </div>
+        <button type="button" id="btnCloseSettings" onclick="closeSettingsModal()" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-rose-600 text-white/70 hover:text-white flex items-center justify-center text-sm transition cursor-pointer" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Active Editor Profile (Compact) -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-2.5 px-3 flex items-center justify-between text-left">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div id="settingsEditorAvatarBox" class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-600 text-white flex items-center justify-center text-sm shrink-0">
+            <i id="settingsEditorIcon" class="fa-solid fa-crown text-xs"></i>
+          </div>
+          <div class="min-w-0">
+            <div id="settingsEditorName" class="text-xs font-bold text-white truncate">Amar</div>
+          </div>
+        </div>
+        <button type="button" onclick="closeSettingsModal(); openEditorSelectionModal();" class="px-3 py-1 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-semibold border border-amber-500/30 transition active:scale-95 cursor-pointer flex items-center gap-1.5 shrink-0">
+          <i class="fa-solid fa-users text-[10px]"></i>
+          <span>Switch</span>
+        </button>
+      </div>
+
+      <!-- Scanned Cards Folder (Compact) -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-2.5 px-3 flex items-center justify-between text-left">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-sm border border-amber-500/30 shrink-0">
+            <i class="fa-solid fa-folder-open text-xs"></i>
+          </div>
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="text-xs font-bold text-white truncate">Scanned Cards</span>
+            <span id="settingsScannedCount" class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.2 rounded-full font-mono">0</span>
+          </div>
+        </div>
+        <button type="button" id="btnSettingsOpenFolder" class="px-3 py-1 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs flex items-center gap-1.5 transition active:scale-95 cursor-pointer shrink-0">
+          <span>Open</span>
+          <i class="fa-solid fa-chevron-right text-[9px]"></i>
+        </button>
+      </div>
+
+      <!-- XML Templates (Compact) -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xs border border-amber-500/30">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <span class="text-xs font-bold text-white">XML Templates</span>
+          </div>
+          <label for="settingsTemplateFileInput" class="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 border border-amber-500/40 rounded-xl text-xs text-amber-300 font-semibold cursor-pointer flex items-center gap-1.5 transition shadow">
+            <i class="fa-solid fa-cloud-arrow-up text-amber-400 text-xs"></i>
+            <span>+ Upload XML</span>
+          </label>
+          <input type="file" id="settingsTemplateFileInput" accept=".xml,text/xml,application/xml,text/plain,.amzip,application/zip,*/*" class="hidden" />
+        </div>
+        <div id="settingsTemplatesList" class="space-y-1.5 text-xs text-white/80 max-h-44 overflow-y-auto pr-0.5"></div>
+      </div>
+
+      <!-- Gemini API Key (Compact Row) -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
+        <div class="flex items-center justify-between">
+          <label class="text-xs font-semibold text-white/90 flex items-center gap-1.5">
+            <i class="fa-solid fa-key text-amber-400 text-xs"></i>
+            <span>Gemini API Key</span>
+          </label>
+          <span id="apiKeyStatusBadge" class="text-[9px] text-emerald-400 font-mono">Active ✓</span>
+        </div>
+        <div class="flex gap-2">
+          <div class="relative flex-1 min-w-0">
+            <input type="password" id="inpApiKey" class="w-full input-clean pr-8 py-1.5 text-xs" placeholder="AIzaSy..." />
+            <button type="button" id="btnToggleKeyVis" class="absolute right-2 top-2 text-white/50 hover:text-white text-xs cursor-pointer">
+              <i class="fa-solid fa-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+          <button type="button" id="btnSaveApiKey" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition border border-white/15 cursor-pointer shrink-0">
+            Save
+          </button>
+        </div>
+      </div>
+
+      <!-- Editor Passcode (Compact Row) -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-3 space-y-2 text-left">
+        <div class="flex items-center justify-between">
+          <label class="text-xs font-semibold text-white/90 flex items-center gap-1.5">
+            <i class="fa-solid fa-lock text-rose-400 text-xs"></i>
+            <span>Editor Passcode</span>
+          </label>
+        </div>
+        <div class="flex gap-2">
+          <div class="relative flex-1 min-w-0">
+            <input type="password" id="inpNewEditorPass" class="w-full input-clean pr-8 py-1.5 font-mono text-white text-xs" placeholder="New Passcode" />
+            <button type="button" id="btnToggleNewPassEye" class="absolute right-2 top-2 text-white/50 hover:text-white text-xs cursor-pointer">
+              <i class="fa-solid fa-eye" id="newPassEyeIcon"></i>
+            </button>
+          </div>
+          <button type="button" id="btnSaveNewEditorPass" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition border border-white/15 cursor-pointer shrink-0">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== AFTER MOTION Z JUGAD GUIDE MODAL ==================== -->
+  <div id="modalAfterMotionGuide" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="glass-card bg-neutral-900/98 border border-amber-500/30 rounded-3xl p-5 max-w-sm w-full space-y-4 shadow-2xl">
+      <!-- Header -->
+      <div class="flex justify-between items-center border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-lg border border-amber-500/30">
+            <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">How to Open in After Motion Z / Alight Motion</h3>
+            <p id="guideFilenameText" class="text-[10px] text-amber-300 font-mono truncate max-w-[180px]">project.xml downloaded</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAfterMotionGuideModal()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-rose-600 text-white/70 hover:text-white flex items-center justify-center text-base transition cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- 3 Quick Methods -->
+      <div class="space-y-2.5 text-left text-xs">
+        <!-- Method 1 -->
+        <div class="p-3 rounded-2xl bg-gradient-to-r from-amber-500/15 to-transparent border border-amber-500/25 space-y-1">
+          <div class="flex items-center gap-2 font-bold text-amber-300">
+            <span class="w-5 h-5 rounded-full bg-amber-500 text-black flex items-center justify-center text-[10px] font-black shrink-0">1</span>
+            <span>Chrome [Open] Button (Fastest)</span>
+          </div>
+          <p class="text-[11px] text-white/70 pl-7 leading-relaxed">
+            Immediately after download, tap <b>[Open]</b> notification on your screen and select <b>After Motion Z</b>.
+          </p>
+        </div>
+
+        <!-- Method 2 -->
+        <div class="p-3 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-transparent border border-emerald-500/25 space-y-1">
+          <div class="flex items-center gap-2 font-bold text-emerald-300">
+            <span class="w-5 h-5 rounded-full bg-emerald-500 text-black flex items-center justify-center text-[10px] font-black shrink-0">2</span>
+            <span>File Manager / Downloads Folder</span>
+          </div>
+          <p class="text-[11px] text-white/70 pl-7 leading-relaxed">
+            Open phone's <b>Downloads</b> folder in File Manager, tap the downloaded XML file (or tap Share), and pick <b>After Motion Z</b>.
+          </p>
+        </div>
+
+        <!-- Method 3 -->
+        <div class="p-3 rounded-2xl bg-gradient-to-r from-sky-500/15 to-transparent border border-sky-500/25 space-y-1">
+          <div class="flex items-center gap-2 font-bold text-sky-300">
+            <span class="w-5 h-5 rounded-full bg-sky-500 text-black flex items-center justify-center text-[10px] font-black shrink-0">3</span>
+            <span>WhatsApp / Telegram Method</span>
+          </div>
+          <p class="text-[11px] text-white/70 pl-7 leading-relaxed">
+            Send the file to yourself on WhatsApp/Telegram. Tapping the file in chat directly imports it into <b>After Motion Z</b>!
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button type="button" onclick="closeAfterMotionGuideModal()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-600 hover:opacity-90 text-white font-bold text-xs transition shadow-lg cursor-pointer">
+        Got it!
+      </button>
+    </div>
+  </div>
+
+
+  <!-- LOADING OVERLAY -->
+  <div id="loadingOverlay" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex flex-col items-center justify-center p-4 hidden">
+    <div class="w-12 h-12 rounded-full border-4 border-amber-400 border-t-transparent animate-spin mb-3"></div>
+    <h3 id="loadingTitle" class="text-sm font-bold text-white mb-1">Processing...</h3>
+    <p id="loadingSub" class="text-xs text-white/50 text-center max-w-xs">Please wait a moment...</p>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden px-4 py-2.5 rounded-xl text-xs font-medium shadow-2xl transition duration-300"></div>
+
+  <!-- ==================== MULTI-EDITOR WORKSPACE SELECTION SCREEN ==================== -->
+  <div id="editorSelectionScreen" class="fixed inset-0 z-50 bg-[#0c010a]/95 backdrop-blur-2xl flex items-center justify-center p-4 overflow-y-auto hidden">
+    <div class="glass-card bg-neutral-950/95 border border-white/15 rounded-3xl p-5 sm:p-6 max-w-sm w-full space-y-4 text-center shadow-2xl my-auto relative">
+      <!-- Close button (shown when switching editors) -->
+      <button type="button" id="btnCloseEditorModal" onclick="closeEditorSelectionModal()" class="hidden absolute top-4 right-4 w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center text-sm transition cursor-pointer" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Clean Header -->
+      <div class="space-y-1.5 pt-1">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-600 text-white flex items-center justify-center text-xl shadow-lg border border-white/20">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h2 class="text-base sm:text-lg font-bold text-white tracking-tight">Select Editor Profile</h2>
+      </div>
+
+      <!-- Editor Cards List -->
+      <div id="editorProfilesGrid" class="space-y-2 text-left max-h-[380px] overflow-y-auto pr-0.5">
+        <!-- Dynamically loaded clean cards: Amar, Sunil, Ajay -->
+      </div>
+    </div>
+  </div>
+
+  <!-- GATEKEEPER PASSCODE SCREEN -->
+  <div id="gatekeeperScreen" class="fixed inset-0 z-50 bg-[#0c010a]/95 backdrop-blur-xl flex items-center justify-center p-4 hidden">
+    <div class="glass-card bg-neutral-950/90 border border-white/15 rounded-3xl p-6 sm:p-7 max-w-sm w-full space-y-4 text-center shadow-2xl">
+      <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-amber-500/20 to-rose-600/20 text-rose-400 flex items-center justify-center text-2xl border border-rose-500/30 shadow-lg">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold text-white tracking-tight">VivahEdit Workspace</h2>
+        <p class="text-xs text-white/50 mt-0.5">Enter Passcode to Access Editor Workspace</p>
+      </div>
+
+      <div class="space-y-2">
+        <div class="relative">
+          <input type="password" id="inpGatekeeperPass" class="w-full input-clean text-center tracking-widest text-lg font-mono font-bold py-3 pr-10 border-white/20 focus:border-rose-500 rounded-xl" placeholder="••••" maxlength="20" autofocus autocomplete="current-password" />
+          <button type="button" id="btnToggleGatekeeperEye" class="absolute right-3 top-3.5 text-white/40 hover:text-white text-sm">
+            <i class="fa-solid fa-eye" id="gatekeeperEyeIcon"></i>
+          </button>
+        </div>
+
+        <div id="gatekeeperErrorMsg" class="hidden text-xs text-rose-400 font-semibold bg-rose-500/10 border border-rose-500/30 py-2 px-3 rounded-xl"></div>
+
+        <label class="flex items-center justify-center gap-2 text-xs text-white/60 cursor-pointer select-none pt-1">
+          <input type="checkbox" id="chkRememberDevice" checked class="rounded text-rose-600 focus:ring-0 bg-black/40 border-white/20" />
+          <span>Remember on this device</span>
+        </label>
+      </div>
+
+      <button type="button" id="btnUnlockGatekeeper" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 via-rose-600 to-brand-700 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2 hover:opacity-95 transition">
+        <i class="fa-solid fa-lock-open text-xs"></i>
+        <span>Unlock Workspace</span>
+      </button>
+
+      <button type="button" id="btnBackToEditorSelect" class="text-amber-300/70 hover:text-amber-300 text-xs transition underline pt-1 block mx-auto cursor-pointer">
+        ← Switch Editor Profile
+      </button>
+
+      <p class="text-[10px] text-white/30 pt-1">Protected by VivahEdit Shield • Amar Edits</p>
+    </div>
+  </div>
+
+  <!-- APP SCRIPT -->
+  <script src="/app.js?v=9.8"></script>
+</body>
+</html>

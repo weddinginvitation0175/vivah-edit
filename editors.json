@@ -1,0 +1,44 @@
+{
+  "active_default_editor": "amar",
+  "editors": [
+    {
+      "id": "amar",
+      "name": "Amar",
+      "role": "Lead Editor",
+      "avatar": "fa-crown",
+      "color": "from-amber-500 to-rose-600",
+      "templates": [
+        "Blue Yellow Design 2027 final Copy.xml",
+        "Green_Pink_2027_Final.xml",
+        "White Yellow Design Final.xml"
+      ],
+      "default_template": "White Yellow Design Final.xml"
+    },
+    {
+      "id": "sunil",
+      "name": "Sunil",
+      "role": "Editor",
+      "avatar": "fa-video",
+      "color": "from-blue-500 to-cyan-500",
+      "templates": [
+        "Vishwanath 4k 2photo.xml",
+        "Sunil 4k 3 photo.xml",
+        "Puroshotm 5k 3photo.xml",
+        "Chnadra 4k 3phto Green.xml",
+        "New template 02.xml"
+      ],
+      "default_template": "Vishwanath 4k 2photo.xml"
+    },
+    {
+      "id": "ajay",
+      "name": "Ajay",
+      "role": "Editor",
+      "avatar": "fa-wand-magic-sparkles",
+      "color": "from-emerald-500 to-teal-500",
+      "templates": [
+        "Surendra 4 Kry Wedding Design.xml"
+      ],
+      "default_template": "Surendra 4 Kry Wedding Design.xml"
+    }
+  ]
+}

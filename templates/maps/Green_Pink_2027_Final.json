@@ -1,0 +1,62 @@
+{
+  "layers": {
+    "sang": "102400150",
+    "big_name_top": "102400149",
+    "big_name_bottom": "102400154",
+    "big_name_1": "102400149",
+    "big_name_2": "102400154",
+    "pariwar": "102400122",
+    "groom_honorific": "102400158",
+    "groom_slide_name": "102400159",
+    "groom_details": "102400160",
+    "bride_honorific": "102400172",
+    "bride_slide_name": "102400173",
+    "bride_details": "102400174",
+    "venue_district": "102400215",
+    "venue_gram": "102400216",
+    "venue_header": "102400217",
+    "vinit_details": "102400225",
+    "vinit_header": "102400226",
+    "branding": "102400235"
+  },
+  "ceremonies": [
+    {
+      "type": "separate",
+      "title_id": "102400182",
+      "date_id": "102400187",
+      "day_id": "102400188"
+    },
+    {
+      "type": "separate",
+      "title_id": "102400193",
+      "date_id": "102400192",
+      "day_id": "102400191"
+    },
+    {
+      "type": "separate",
+      "title_id": "102400201",
+      "date_id": "102400200",
+      "day_id": "102400199"
+    },
+    {
+      "type": "separate",
+      "title_id": "102400209",
+      "date_id": "102400208",
+      "day_id": "102400207"
+    }
+  ],
+  "person_slides": [
+    {
+      "startTime": 17308,
+      "honorific_id": "102400158",
+      "name_id": "102400159",
+      "details_id": "102400160"
+    },
+    {
+      "startTime": 24300,
+      "honorific_id": "102400172",
+      "name_id": "102400173",
+      "details_id": "102400174"
+    }
+  ]
+}

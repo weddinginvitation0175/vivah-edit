@@ -1,0 +1,57 @@
+{
+  "layers": {
+    "sang": "202386402",
+    "big_name_top": "202386401",
+    "big_name_bottom": "202386403",
+    "big_name_1": "202386401",
+    "big_name_2": "202386403",
+    "pariwar": "202386303",
+    "groom_slide_name": "202386501",
+    "groom_details": "202386502",
+    "groom_address": "202386503",
+    "bride_slide_name": "202386601",
+    "bride_details": "202386602",
+    "bride_address": "202386603",
+    "venue_header": "202387102",
+    "venue_gram": "202387103",
+    "vinit_header": "202387201",
+    "vinit_details": "202387202",
+    "main_date": "202387304"
+  },
+  "ceremonies": [
+    {
+      "type": "combined_date_day",
+      "title_id": "202386702",
+      "date_day_id": "202386703"
+    },
+    {
+      "type": "combined_date_day",
+      "title_id": "202386802",
+      "date_day_id": "202386803"
+    },
+    {
+      "type": "combined_date_day",
+      "title_id": "202386902",
+      "date_day_id": "202386903"
+    },
+    {
+      "type": "combined_date_day",
+      "title_id": "202387002",
+      "date_day_id": "202387003"
+    }
+  ],
+  "person_slides": [
+    {
+      "startTime": 11866,
+      "name_id": "202386501",
+      "details_id": "202386502",
+      "address_id": "202386503"
+    },
+    {
+      "startTime": 15766,
+      "name_id": "202386601",
+      "details_id": "202386602",
+      "address_id": "202386603"
+    }
+  ]
+}

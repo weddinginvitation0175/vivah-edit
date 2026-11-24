@@ -1,0 +1,1145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene title="...Surendra  4 kry  Copy Copy Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="49116" fps="60" modifiedTime="1795488177701" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+  <bookmark t="1908" />
+  <embedScene id="102392457" label="Red white Copy" startTime="0" endTime="2815" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="3799" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="3799" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.059227" v="540.000000,960.000000,-2500.000000" />
+            <kf t="0.976047" v="540.000000,960.000000,100.000000" />
+            <kf t="0.217163" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.980522" v="0.000000" />
+            <kf t="-0.059227" v="-8.780487" />
+            <kf t="0.217163" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" hidden="true" startTime="0" endTime="3799" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="-12.954502,20.052858,105.305054" />
+          <scale value="0.917741,0.917741" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="-550.365234,822.641968" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="3799" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <text id="102386275" label="आमंत्रण " startTime="0" endTime="3799" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="imported?name=AMS Aakash.ttf" wrapWidth="512" align="left">
+        <transform>
+          <location value="-26.012060,342.932587,-7.580627" />
+          <scale value="1.529750,1.529750" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff390075" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff5a04cf" />
+          <size value="2.000000" />
+        </path-stroke>
+        <content>► MaI gaNaeSaaya nama:</content>
+      </text>
+      <text id="102386277" hidden="true" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="-35.452324,293.150757,-7.580627" />
+          <scale value="1.295070,1.295070" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>► MaI gaNaeSaaya nama:</content>
+      </text>
+      <text id="102386274" hidden="true" startTime="0" endTime="3799" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="433.188293,-107.955002,-7.580627" />
+          <scale value="2.188218,2.188218" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <size value="2.500000" />
+        </path-stroke>
+        <content>उयके</content>
+      </text>
+      <embedScene id="102392460" label="Group 2" startTime="0" endTime="3782" fillType="intrinsic" outTime="3782" mediaFillMode="fill" parent="102370502">
+        <transform>
+          <location value="4.200233,-36.967728,100.312317" />
+          <pivot value="0.000000,0.054688" />
+          <scale value="0.824434,0.824434" />
+          <rotation value="1.892733" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+          <property name="inTime" type="float" value="0.500000" />
+          <property name="outTime" type="float" value="0.800000" />
+        </effect>
+        <border direction="outside" id="1">
+          <size value="11.000000" />
+        </border>
+        <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="3782" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+          <shape id="10225980" label="Circle 1" startTime="0" endTime="3782" fillType="color" blending="mask" mediaFillMode="fill" s=".circle">
+            <transform>
+              <location value="942.574219,500.363403,0.000000" />
+              <scale value="2.291221,2.291221" />
+            </transform>
+            <fillColor value="#ff954293" />
+            <property name="size" type="vec2" value="148.620941,148.620941" />
+          </shape>
+        </scene>
+      </embedScene>
+    </scene>
+  </embedScene>
+  <nullobj id="102392461" label="Null 1" startTime="0" endTime="2815" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location>
+        <kf t="-0.079929" v="540.000000,960.000000,-2500.000000" />
+        <kf t="1.317230" v="540.000000,960.000000,100.000000" />
+        <kf t="0.293073" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+      </location>
+      <rotation>
+        <kf t="1.323269" v="0.000000" />
+        <kf t="-0.079929" v="-8.780487" />
+        <kf t="0.293073" v="-3.292694" />
+      </rotation>
+    </transform>
+  </nullobj>
+  <embedScene id="102392459" label="Group 2" hidden="true" startTime="0" endTime="2832" fillType="intrinsic" outTime="2832" mediaFillMode="fill" parent="102392461">
+    <transform>
+      <location value="7.975358,7.050557,203.624786" />
+      <pivot value="0.000000,0.054688" />
+      <scale value="0.780620,0.780620" />
+      <rotation value="2.858968" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.500000" />
+      <property name="outTime" type="float" value="0.800000" />
+    </effect>
+    <border direction="outside" id="1">
+      <size value="11.000000" />
+    </border>
+    <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="2832" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="102392462" label="Picsart_26-04-12_06-30-41-132.jpg" startTime="0" endTime="2832" fillType="media" fillImage="content://media/external/images/media/1000479681" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="912.046875,480.468872,0.000000" />
+        </transform>
+        <property name="size" type="vec2" value="369.436768,369.436768" />
+      </shape>
+      <shape id="10225980" label="Circle 1" startTime="0" endTime="2815" fillType="color" blending="mask" mediaFillMode="fill" s=".circle">
+        <transform>
+          <location value="942.574219,500.363403,0.000000" />
+          <scale value="2.291221,2.291221" />
+        </transform>
+        <fillColor value="#ff954293" />
+        <property name="size" type="vec2" value="148.620941,148.620941" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102386204" label="Red white Copy 2" startTime="2750" endTime="6366" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="3783" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="3783" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.059477" v="540.000000,960.000000,-2500.000000" />
+            <kf t="0.980175" v="540.000000,960.000000,100.000000" />
+            <kf t="0.218081" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.984669" v="0.000000" />
+            <kf t="-0.059477" v="-8.780487" />
+            <kf t="0.218081" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" hidden="true" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="20.123901,64.100838,105.305054" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="462.462585,693.693848" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.860188,-1.640892,136.732544" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="744.165771,1312.626465" />
+      </shape>
+      <text id="202386201" label="आमंत्रण Copy" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="imported?name=AMS Kartik.ttf" wrapWidth="512" align="left">
+        <transform>
+          <location value="486.120636,239.869614,-7.580627" />
+          <scale value="2.874614,2.874614" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff46008c" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff7024bb" />
+          <size value="4.500000" />
+        </path-stroke>
+        <content>Aaama/PaNa</content>
+      </text>
+      <text id="202386202" label="आमंत्रण Copy 2" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="imported?name=AMS Kartik.ttf" wrapWidth="512" align="left">
+        <transform>
+          <location value="666.161255,79.102501,-7.580627" />
+          <scale value="2.544909,2.544909" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff46008c" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff7024bb" />
+          <size value="5.000000" />
+        </path-stroke>
+        <content>ivavaah</content>
+      </text>
+    </scene>
+  </embedScene>
+  <embedScene id="102386276" label="Red white Copy" startTime="6333" endTime="9148" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="3783" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <bookmark t="2458" />
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="3783" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.059477" v="540.000000,960.000000,-2500.000000" />
+            <kf t="0.980175" v="540.000000,960.000000,100.000000" />
+            <kf t="0.218081" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.984669" v="0.000000" />
+            <kf t="-0.059477" v="-8.780487" />
+            <kf t="0.218081" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="20.123901,64.100838,105.305054" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="-550.365234,822.641968" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <text id="202386301" label="आमंत्रण " startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="imported?name=AMS Kartik.ttf" wrapWidth="512" align="left">
+        <transform>
+          <location value="182.884949,191.418518,-7.580627" />
+          <scale value="1.529750,1.529750" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff390075" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff5a04cf" />
+          <size value="2.000000" />
+        </path-stroke>
+        <content>sneaihla Aaama/PaNa</content>
+      </text>
+      <text id="202386302" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Martel&amp;weight=800" wrapWidth="512" align="left">
+        <transform>
+          <location value="279.569763,44.337543,-7.580627" />
+          <scale value="1.295070,1.295070" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>परिवार का</content>
+      </text>
+      <text id="202386303" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Martel&amp;weight=800" wrapWidth="512" align="left">
+        <transform>
+          <location value="306.223969,-117.870071,-7.580627" />
+          <scale value="1.686020,1.686020" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <size value="2.500000" />
+        </path-stroke>
+        <content>कन्नौजी</content>
+      </text>
+    </scene>
+  </embedScene>
+  <embedScene id="102386278" label="Red white Copy 3" startTime="9066" endTime="11881" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="3783" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <bookmark t="2008" />
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="3783" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.059477" v="540.000000,960.000000,-2500.000000" />
+            <kf t="0.980175" v="540.000000,960.000000,100.000000" />
+            <kf t="0.218081" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.984669" v="0.000000" />
+            <kf t="-0.059477" v="-8.780487" />
+            <kf t="0.218081" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="20.123901,64.100838,105.305054" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="494.828491,742.242798" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="3782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <text id="202386401" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Martel&amp;weight=800" wrapWidth="512" align="left">
+        <transform>
+          <location value="375.887970,-100.798286,-7.580627" />
+          <scale value="1.762269,1.762269" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff470188" />
+        <content>सुरेंद्र </content>
+      </text>
+      <text id="202386403" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Martel&amp;weight=800" wrapWidth="512" align="left">
+        <transform>
+          <location value="318.133453,205.675018,-7.580627" />
+          <scale value="1.618388,1.618388" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff552e97" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff6422d2" />
+          <size value="3.000000" />
+        </path-stroke>
+        <content>सुमति</content>
+      </text>
+      <text id="202386402" startTime="0" endTime="3782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Roboto&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="292.019501,51.190620,-7.580627" />
+          <scale value="1.300584,1.300584" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <size value="2.000000" />
+        </path-stroke>
+        <content>संग</content>
+      </text>
+    </scene>
+  </embedScene>
+  <embedScene id="102386219" label="Red white Copy 4" startTime="11866" endTime="15782" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="5032" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <bookmark t="708" />
+      <nullobj id="102386220" label="Null 1" startTime="0" endTime="5015" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="0.001595" v="211.352600,960.500000,0.000000" />
+            <kf t="0.141176" v="696.869873,954.500000,0.000000" e="cubicBezier 0.3024876 0.21176471 0.096417904 1.0" />
+            <kf t="0.992024" v="746.927612,960.000000,0.000000" />
+          </location>
+        </transform>
+      </nullobj>
+      <shape id="102386279" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102386220" s=".rect">
+        <transform>
+          <location value="82.334763,-256.114380,0.000000" />
+          <scale value="1.291874,1.291874" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="640.124207,952.500000" />
+      </shape>
+      <text id="202386503" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386220" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="-185.192017,467.460144,0.000000" />
+          <scale value="1.594999,1.594999" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>ग्राम - गारेंगा, डाकपारा (बकावण्ड)
+जिला - बस्तर (छ.ग.)</content>
+      </text>
+      <text id="202386502" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386220" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="-193.695313,292.895874,-20.266968" />
+          <scale value="1.652521,1.652521" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>सुपौत्र - स्व.श्री शिबोराम कन्नौजी
+सुपुत्र - श्री फारीसराम कन्नौजी</content>
+      </text>
+      <text id="202386501" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386220" size="18.000000" font="googlefonts?name=Baloo&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="74.227356,144.218140,0.000000" />
+          <scale value="1.588353,1.588353" />
+        </transform>
+        <fillColor value="#ff6c18ab" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff62219e" />
+          <size value="0.500000" />
+        </path-stroke>
+        <content>चि. सुरेंद्र </content>
+      </text>
+      <embedScene id="102392168" label="Photo" startTime="0" endTime="5032" fillType="intrinsic" outTime="5032" mediaFillMode="fill" parent="102386220">
+        <transform>
+          <location value="-109.696106,-399.171875,-19.738037" />
+          <scale value="0.545719,0.545719" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="5032" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+          <shape id="102392873" label="IMG-20260501-WA0018.jpg" startTime="0" endTime="5032" fillType="media" fillImage="content://media/external/images/media/1000500831" mediaFillMode="fill" s=".rect">
+            <transform>
+              <location value="938.685547,703.488037,0.000000" />
+            </transform>
+            <property name="size" type="vec2" value="588.961914,450.368103" />
+          </shape>
+          <shape id="10179493" label="Ink Drop [7F010A3].mp4" startTime="0" endTime="5015" fillType="media" blending="mask" fillVideo="am:924BA4A543A39F67E299C1694D6E7100152900EA.mp4" inTime="33" outTime="5048" mediaFillMode="fill" s=".rect">
+            <transform>
+              <location value="960.000000,540.000000,0.000000" />
+            </transform>
+            <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+              <property name="keyColor" type="color" value="#ffffffff" />
+              <property name="threshold" type="float" value="0.100000" />
+              <property name="feather" type="float" value="0.050000" />
+              <property name="defringe" type="bool" value="false" />
+              <property name="invert" type="bool" value="false" />
+            </effect>
+            <property name="size" type="vec2" value="960.000000,449.369873" />
+          </shape>
+        </scene>
+      </embedScene>
+      <shape id="102386281" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102386220" s=".rect">
+        <transform>
+          <location value="-167.054932,-312.289551,0.000000" />
+        </transform>
+        <property name="size" type="vec2" value="501.525909,752.288940" />
+      </shape>
+    </scene>
+  </embedScene>
+  <nullobj id="102386285" label="Ladka " startTime="11866" endTime="15782" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location>
+        <kf t="0.002043" v="211.352600,960.500000,0.000000" />
+        <kf t="0.180796" v="696.869873,954.500000,0.000000" e="cubicBezier 0.3024876 0.21176471 0.096417904 1.0" />
+        <kf t="1.270429" v="746.927612,960.000000,0.000000" />
+      </location>
+    </transform>
+  </nullobj>
+  <embedScene id="102386225" label="Red white Copy 5" startTime="15766" endTime="19465" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="5032" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <nullobj id="102386226" label="Null 1" startTime="0" endTime="5015" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="0.001595" v="540.000000,960.000000,0.000000" />
+            <kf t="0.161117" v="91.843689,960.000000,0.000000" e="cubicBezier 0.3 0.21 0.1 1.0" />
+            <kf t="1.000000" v="46.343689,960.000000,0.000000" />
+          </location>
+        </transform>
+      </nullobj>
+      <shape id="102386282" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102386226" s=".rect">
+        <transform>
+          <location value="213.054138,-597.250732,0.000000" />
+          <scale value="1.649133,1.649133" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="540.000000,952.500000" />
+      </shape>
+      <text id="202386603" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386226" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="439.069366,427.567688,0.000000" />
+          <scale value="1.382832,1.382832" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>ग्राम - जैबेल, पोलेबेड़ा (बकावण्ड) 
+ जिला - बस्तर (छ.ग.)</content>
+      </text>
+      <text id="202386602" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386226" size="11.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="418.326721,265.490662,-20.266968" />
+          <scale value="1.538067,1.538067" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>सुपौत्री- स्व.श्री सामनाथ नेताम
+सुपुत्री - स्व.श्री शोभानाथ नेताम</content>
+      </text>
+      <text id="202386601" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386226" size="18.000000" font="googlefonts?name=Laila&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="470.789429,136.211243,0.000000" />
+          <scale value="1.257413,1.257413" />
+        </transform>
+        <fillColor value="#ff7123b1" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff7d1bd3" />
+          <size value="1.000000" />
+        </path-stroke>
+        <content>सौ. का. सुमति (रानी)</content>
+      </text>
+      <shape id="102386284" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102386226" s=".rect">
+        <transform>
+          <location value="473.440582,-333.455811,0.000000" />
+          <scale value="1.082404,1.082404" />
+        </transform>
+        <property name="size" type="vec2" value="464.937622,697.406555" />
+      </shape>
+      <embedScene id="102392220" label="Photo" startTime="0" endTime="5032" fillType="intrinsic" outTime="5032" mediaFillMode="fill" parent="102386226">
+        <transform>
+          <location value="504.503784,-399.768677,-19.738037" />
+          <scale value="0.564834,0.564834" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <scene title="" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#00000000" totalTime="5032" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+          <shape id="102392874" label="Picsart_26-05-01_12-46-34-050.jpg" startTime="0" endTime="5032" fillType="media" fillImage="content://media/external/images/media/1000500848" mediaFillMode="fill" s=".rect">
+            <transform>
+              <location value="913.821045,694.805542,0.000000" />
+            </transform>
+            <property name="size" type="vec2" value="321.899780,470.435364" />
+          </shape>
+          <shape id="10179493" label="Ink Drop [7F010A3].mp4" startTime="0" endTime="5015" fillType="media" blending="mask" fillVideo="am:924BA4A543A39F67E299C1694D6E7100152900EA.mp4" inTime="33" outTime="5048" mediaFillMode="fill" s=".rect">
+            <transform>
+              <location value="960.000000,540.000000,0.000000" />
+            </transform>
+            <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+              <property name="keyColor" type="color" value="#ffffffff" />
+              <property name="threshold" type="float" value="0.100000" />
+              <property name="feather" type="float" value="0.050000" />
+              <property name="defringe" type="bool" value="false" />
+              <property name="invert" type="bool" value="false" />
+            </effect>
+            <property name="size" type="vec2" value="960.000000,540.000000" />
+          </shape>
+        </scene>
+      </embedScene>
+    </scene>
+  </embedScene>
+  <nullobj id="102386287" label="Ladki " startTime="15766" endTime="19466" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location>
+        <kf t="-0.087837" v="540.000000,960.000000,0.000000" />
+        <kf t="0.128378" v="91.843689,960.000000,0.000000" e="cubicBezier 0.3 0.21 0.1 1.0" />
+        <kf t="1.265405" v="46.343689,960.000000,0.000000" />
+      </location>
+    </transform>
+  </nullobj>
+  <embedScene id="102386391" label="चुल माटी " startTime="19266" endTime="23766" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="4782" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <bookmark t="8" />
+      <shape id="102391715" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.802925,-1.983264,40.471359" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="0.422327" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="698.046021,1231.275635" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="4782" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.047051" v="540.000000,960.000000,-2500.000000" />
+            <kf t="1.000000" v="540.000000,960.000000,100.000000" />
+            <kf t="0.172522" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.778963" v="0.000000" />
+            <kf t="-0.047051" v="-8.780487" />
+            <kf t="0.172522" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <text id="202386703" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="19.310730,173.803726,-7.580627" />
+          <scale value="0.920809,0.920809" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>दिनांक - 06-05-2026
+बुधवार</content>
+      </text>
+      <text id="202386702" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="14.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="274.061279,64.266136,-7.580627" />
+          <scale value="1.565262,1.565262" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>मंडपाच्छादन</content>
+      </text>
+      <text id="202386701" label="मंगलिक कार्यक्रम Copy" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="98.918396,-110.310669,-7.580627" />
+          <scale value="1.129656,1.129656" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <content>मांगलिक कार्यक्रम</content>
+      </text>
+      <shape id="102386301" label="Picsart_26-02-12_00-00-34-949.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="14.738873,-46.813091,-100.000000" />
+          <rotation value="3.292683" />
+        </transform>
+        <property name="size" type="vec2" value="233.144653,233.144653" />
+      </shape>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="19.163258,42.968147,6.269608" />
+          <scale value="1.183716,1.183716" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="464.350708,696.525879" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102386386" label="मड़प" startTime="23650" endTime="28150" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="5065" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <shape id="102391716" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5065" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.799647,-2.001030,33.129837" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="0.328086" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="744.165771,1312.626465" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="33" endTime="5065" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.054650" v="540.000000,960.000000,-2500.000000" />
+            <kf t="0.940382" v="540.000000,960.000000,100.000000" />
+            <kf t="0.154014" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.730326" v="0.000000" />
+            <kf t="-0.054650" v="-8.780487" />
+            <kf t="0.154014" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5065" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <text id="202386803" startTime="0" endTime="5065" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="7.484741,215.283936,-7.580627" />
+          <scale value="1.011911,1.011911" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>दिनांक - 07.05.2026
+गुरूवार</content>
+      </text>
+      <text id="202386802" startTime="50" endTime="5065" fillType="color" mediaFillMode="fill" parent="102370502" size="16.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="131.625229,80.809227,-7.580627" />
+          <scale value="1.240353,1.240353" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>हरिद्रालेपन, तेल</content>
+      </text>
+      <text id="202386801" label="मंगलिक कार्यक्रम Copy" startTime="-16" endTime="5065" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="104.692116,-120.235184,-7.580627" />
+          <scale value="1.074063,1.074063" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <content>मांगलिक कार्यक्रम</content>
+      </text>
+      <shape id="102386301" label="Picsart_26-02-12_00-00-34-949.png" startTime="16" endTime="5065" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="25.865479,-35.330494,-100.000000" />
+          <rotation value="3.292683" />
+        </transform>
+        <property name="size" type="vec2" value="244.974945,244.974976" />
+      </shape>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="5065" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="20.123901,64.100838,-25.176392" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="537.119873,805.679932" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102386314" label="बारात" startTime="28016" endTime="32516" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="4782" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <shape id="102391717" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.928833,-1.094177,1500.263916" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="5.107922" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="1322.866943,2333.392578" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="4782" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.047051" v="540.000000,960.000000,-2500.000000" />
+            <kf t="1.000000" v="540.000000,960.000000,100.000000" />
+            <kf t="0.172522" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.778963" v="0.000000" />
+            <kf t="-0.047051" v="-8.780487" />
+            <kf t="0.172522" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <text id="202386903" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="1.564519,171.776306,-7.580627" />
+          <scale value="0.920809,0.920809" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>दिनांक - 08.05.2026
+शुक्रवार</content>
+      </text>
+      <text id="202386902" label="मंडप Copy" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="16.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="129.554504,49.009872,-7.580627" />
+          <scale value="1.328923,1.328923" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>पाणिग्रहण, लगन</content>
+      </text>
+      <text id="202386901" label="मंगलिक कार्यक्रम Copy" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="98.918396,-110.310669,-7.580627" />
+          <scale value="1.129656,1.129656" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <content>मांगलिक कार्यक्रम</content>
+      </text>
+      <shape id="102386301" label="Picsart_26-02-12_00-00-34-949.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="14.738873,-46.813091,-100.000000" />
+          <rotation value="3.292683" />
+        </transform>
+        <property name="size" type="vec2" value="233.144653,233.144653" />
+      </shape>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="12.793054,29.975750,105.305054" />
+          <scale value="1.183716,1.183716" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="464.350708,696.525879" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102392843" label="बारात" startTime="32500" endTime="37000" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="4782" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <shape id="102391717" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.928833,-1.094177,1500.263916" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="5.107922" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="1322.866943,2333.392578" />
+      </shape>
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="4782" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.047051" v="540.000000,960.000000,-2500.000000" />
+            <kf t="1.000000" v="540.000000,960.000000,100.000000" />
+            <kf t="0.172522" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.778963" v="0.000000" />
+            <kf t="-0.047051" v="-8.780487" />
+            <kf t="0.172522" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <text id="202387003" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="4.959282,193.045502,-7.580627" />
+          <scale value="0.884108,0.884108" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>दिनांक - 08.05.2026
+शुक्रवार</content>
+      </text>
+      <text id="202387002" label="मंडप Copy" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="16.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="10.224943,35.639835,-7.580627" />
+          <scale value="1.144282,1.144282" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>आशीर्वाद समारोह, प्रीतिभोज</content>
+      </text>
+      <text id="202387001" label="मंगलिक कार्यक्रम Copy" startTime="0" endTime="4782" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="95.131493,-152.421936,-7.580627" />
+          <scale value="1.129656,1.129656" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <content>मांगलिक कार्यक्रम</content>
+      </text>
+      <shape id="102386301" label="Picsart_26-02-12_00-00-34-949.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="12.484909,-85.653946,-100.000000" />
+          <rotation value="3.292683" />
+        </transform>
+        <property name="size" type="vec2" value="233.144653,233.144653" />
+      </shape>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="4782" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="12.793054,29.975750,105.305054" />
+          <scale value="1.183716,1.183716" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="464.350708,696.525879" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102386316" label="विवाह स्थल" startTime="36916" endTime="41416" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="5015" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <shape id="102391719" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="10.757129,-2.218260,264.042603" />
+          <scale value="0.888836,0.888836" />
+          <rotation value="-0.826625" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="778.420166,1373.047363" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="5015" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.044865" v="526.275269,986.655640,-2500.000000" />
+            <kf t="0.953539" v="526.275269,986.655640,100.000000" />
+            <kf t="0.164507" v="526.275269,986.655640,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.742772" v="0.000000" />
+            <kf t="-0.044865" v="-8.780487" />
+            <kf t="0.164507" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <text id="202387103" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102370502" size="12.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="12.330685,206.969788,-7.580627" />
+          <scale value="0.998769,0.998769" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>ग्राम - गारेंगा, डाकपारा (बकावण्ड)
+जिला - बस्तर (छ.ग.)</content>
+      </text>
+      <text id="202387102" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="171.370453,62.286083,-7.580627" />
+          <scale value="1.287746,1.287746" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>विवाह स्थल</content>
+      </text>
+      <text id="202387101" label="मंगलिक कार्यक्रम Copy" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="89.644188,-112.169815,-7.580627" />
+          <scale value="1.111702,1.111702" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <content>मांगलिक कार्यक्रम</content>
+      </text>
+      <shape id="102386273" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="17.275085,88.793457,3.110718" />
+          <scale value="1.138478,1.138478" />
+          <rotation value="2.971372" />
+        </transform>
+        <property name="size" type="vec2" value="468.513855,702.770508" />
+      </shape>
+      <shape id="102386301" label="Picsart_26-02-12_00-00-34-949.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="19.708431,-53.832561,-100.000000" />
+          <rotation value="3.292683" />
+        </transform>
+        <property name="size" type="vec2" value="233.494400,236.393661" />
+      </shape>
+    </scene>
+  </embedScene>
+  <embedScene id="102386294" label="विनीत" startTime="41383" endTime="45399" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="5015" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <bookmark t="708" />
+      <nullobj id="102386220" label="Null 1" startTime="0" endTime="5015" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="0.001595" v="206.388855,1048.623779,0.000000" />
+            <kf t="0.141176" v="641.118469,1043.251709,0.000000" e="cubicBezier 0.3024876 0.21176471 0.096417904 1.0" />
+            <kf t="0.992024" v="685.939941,1048.176392,0.000000" />
+          </location>
+          <scale value="0.895395,0.895395" />
+        </transform>
+      </nullobj>
+      <shape id="102392096" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102386220" s=".rect">
+        <transform>
+          <location value="166.064819,-383.853577,0.000000" />
+          <scale value="1.442798,1.442798" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.045000" />
+        </effect>
+        <property name="size" type="vec2" value="640.124207,952.500000" />
+      </shape>
+      <text id="202387202" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386220" size="12.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="center">
+        <transform>
+          <location value="-149.077759,155.434280,0.000000" />
+          <scale value="1.521063,1.521063" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>श्री फरीसराम कन्नौजी (पापा)
+श्रीमती कौशल्या (माँ) 
+</content>
+      </text>
+      <shape id="102386281" label="Picsart_26-02-11_23-28-09-495.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458149" mediaFillMode="fill" parent="102386220" s=".rect">
+        <transform>
+          <location value="-138.654114,54.943481,0.000000" />
+          <scale value="1.215603,1.215603" />
+        </transform>
+        <property name="size" type="vec2" value="494.533600,741.800537" />
+      </shape>
+      <shape id="102386311" label="Picsart_26-02-12_00-00-34-949.png" startTime="0" endTime="5015" fillType="media" fillImage="content://media/external/images/media/1000458148" mediaFillMode="fill" parent="102386220" s=".rect">
+        <transform>
+          <location value="-153.972443,-21.026892,0.000000" />
+          <scale value="0.992347,0.992347" />
+        </transform>
+        <property name="size" type="vec2" value="268.573242,268.573242" />
+      </shape>
+      <text id="202387201" startTime="0" endTime="5015" fillType="color" mediaFillMode="fill" parent="102386220" size="18.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="512" align="left">
+        <transform>
+          <location value="290.691833,-96.948204,0.000000" />
+          <scale value="2.367600,2.367600" />
+        </transform>
+        <fillColor value="#ff4e28a2" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff6b25d2" />
+          <size value="2.000000" />
+        </path-stroke>
+        <content>विनीत</content>
+      </text>
+    </scene>
+  </embedScene>
+  <embedScene id="102386297" label="save the date " startTime="45350" endTime="49116" fillType="intrinsic" mediaFillMode="fill" templatePPId="xB8h7cQc25-0f003422fa0f40a4">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <opacity>
+        <kf t="0.577536" v="1.000000" />
+        <kf t="1.002390" v="0.000000" />
+      </opacity>
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="Red white Copy" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="6082" fps="60" modifiedTime="1770919928109" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+      <shape id="102386272" label="Picsart_26-02-12_23-21-20-204.png" startTime="0" endTime="6082" fillType="media" fillImage="content://media/external/images/media/1000458150" mediaFillMode="fill" parent="102370502" s=".rect">
+        <transform>
+          <location value="0.000000,0.000000,136.732544" />
+          <rotation value="2.233355" />
+        </transform>
+        <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="true">
+          <property name="strength" type="float" value="0.030000" />
+        </effect>
+        <property name="size" type="vec2" value="665.748474,1174.306641" />
+      </shape>
+      <nullobj id="102370502" label="Null 1" startTime="0" endTime="6082" mediaFillMode="fill" type="perspective">
+        <transform>
+          <location>
+            <kf t="-0.036994" v="540.000000,960.000000,-2500.000000" />
+            <kf t="1.000000" v="540.000000,960.000000,100.000000" />
+            <kf t="0.135646" v="540.000000,960.000000,-250.000000" e="cubicBezier 0.319403 0.29518715 0.18507463 1.0" />
+          </location>
+          <rotation>
+            <kf t="0.612463" v="0.000000" />
+            <kf t="-0.036994" v="-8.780487" />
+            <kf t="0.135646" v="-3.292694" />
+          </rotation>
+        </transform>
+      </nullobj>
+      <text id="202387304" startTime="0" endTime="6082" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Lobster&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="322.022827,389.882446,-7.580627" />
+          <scale value="1.993189,1.993189" />
+        </transform>
+        <fillColor value="#ff000000" />
+        <content>08.05.2026</content>
+      </text>
+      <text id="202387303" label="मंगलिक कार्यक्रम Copy" startTime="0" endTime="6082" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Great Vibes&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="806.186890,193.971985,-7.580627" />
+          <scale value="3.636945,3.636945" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff762dc5" />
+          <size value="6.500000" />
+        </path-stroke>
+        <content>Date</content>
+      </text>
+      <text id="202387302" label="मंगलिक कार्यक्रम Copy 4" startTime="0" endTime="6082" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Great Vibes&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="895.934937,60.470215,-7.580627" />
+          <scale value="3.129461,3.129461" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff762dc5" />
+          <size value="6.500000" />
+        </path-stroke>
+        <content>the</content>
+      </text>
+      <text id="202387301" label="मंगलिक कार्यक्रम Copy 2" startTime="0" endTime="6082" fillType="color" mediaFillMode="fill" parent="102370502" size="18.000000" font="googlefonts?name=Great Vibes&amp;weight=400" wrapWidth="512" align="left">
+        <transform>
+          <location value="804.158203,-95.539551,-7.580627" />
+          <scale value="4.072999,4.072999" />
+          <rotation value="2.404802" />
+        </transform>
+        <fillColor value="#ff6a33a5" />
+        <path-stroke direction="centered" end-size="1.500000">
+          <color value="#ff762dc5" />
+          <size value="6.500000" />
+        </path-stroke>
+        <content>Save </content>
+      </text>
+    </scene>
+  </embedScene>
+  <shape id="102386317" label="white_red_particles_overlay(720p).mp4" startTime="-16" endTime="49115" fillType="media" fillVideo="content://media/external/video/media/1000447874" inTime="-248" outTime="31687" speed="0.650000" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="541.281311,887.509521,0.000000" />
+      <scale value="1.421087,1.421087" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="true">
+      <property name="keyColor" type="color" value="#ff020101" />
+      <property name="threshold" type="float" value="0.278600" />
+      <property name="feather" type="float" value="0.175000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <property name="size" type="vec2" value="849.271851,1021.485352" />
+  </shape>
+  <audio id="102392584" label="AUD-20260214-WA0008.mp3" startTime="0" endTime="49115" src="content://media/external/audio/media/1000446563" inTime="6683" outTime="55798" mediaFillMode="fill">
+    <gain>
+      <kf t="1.084170" v="0.000000" />
+      <kf t="0.925542" v="1.000000" />
+      <kf t="0.999857" v="0.000000" />
+    </gain>
+  </audio>
+</scene>

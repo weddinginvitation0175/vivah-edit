@@ -1,0 +1,21 @@
+{
+  "short_name": "VivahEdit AI",
+  "name": "VivahEdit AI - Shadi Invitation XML Generator",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#170224",
+  "theme_color": "#6d1b7b",
+  "display": "standalone",
+  "orientation": "portrait"
+}

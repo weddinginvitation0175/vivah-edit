@@ -1,0 +1,2164 @@
+<?xml version='1.0' encoding='UTF-8' ?><!--
+Created by Alight Motion (http://alightmotion.com)
+Exported: 2026-11-24 08:31 AM
+5.0.273.1028417 (1028417)
+e3844be (Mar 6, 2026 3:14:40 PM)
+-->
+<scene title="New template 02" width="1080" height="1920" exportWidth="1080" exportHeight="1920" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="54366" fps="30" modifiedTime="1795489296813" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+  <media uri="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" filename="IMG_20260130_150148.jpg" title="IMG_20260130_150148.jpg" type="image/jpeg" size="279038" sig="FD880924ABA754F31B60C15A6DA5F21413373003" orientation="0" infoUpdated="1795489266531" width="1164" height="2072" />
+  <media uri="am:D87E87F7ECF4E667A24709D094623046D655E741.jpg" filename="09577a7f5d6a81321167c81228de8e1a.jpg" title="09577a7f5d6a81321167c81228de8e1a.jpg" type="image/jpeg" size="49116" sig="D87E87F7ECF4E667A24709D094623046D655E741" orientation="0" infoUpdated="1795489266531" width="564" height="564" />
+  <media uri="am:25DA8061A7B374DE29B77FD260DFD1610B9B5764.jpg" filename="28c3cca50e0ddc7e72e37f15de2150aa.jpg" title="28c3cca50e0ddc7e72e37f15de2150aa.jpg" type="image/jpeg" duration="0" size="72872" sig="25DA8061A7B374DE29B77FD260DFD1610B9B5764" orientation="0" infoUpdated="1795489266531" width="736" height="736" />
+  <media uri="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" filename="f2f99fc61dcbe390cd68349a2c681048 (1).jpg" title="f2f99fc61dcbe390cd68349a2c681048 (1).jpg" type="image/jpeg" duration="0" size="4018" sig="13FD79EB4DAADE7D10786C6F3D92D971D0D25115" orientation="0" infoUpdated="1795489266531" width="650" height="400" />
+  <media uri="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" filename="e7328efd5a5b6fe5630eb406282cf5ad_720w.mp4" title="e7328efd5a5b6fe5630eb406282cf5ad_720w.mp4" type="video/mp4" duration="8022000" size="356693" fps="0.30" sig="93F1546A207B4AD43477582F967B841AD68AE5C4" orientation="0" infoUpdated="1795489266531" width="720" height="1280" />
+  <media uri="content://media/external/audio/media/1000263903" filename="Ful_Hasan_Lage___फूल_हासन_लागे___मार_डारे_मया_मा___Anuj_Sharma___Mar_Dare_Maya_Ma___Video_Song(256k).mp3" title="Ful_Hasan_Lage___फूल_हासन_लागे___मार_डारे_मया_मा___Anuj_Sharma___Mar_Dare_Maya_Ma___Video_Song(256k).mp3" type="audio/mpeg" duration="313848000" size="5021996" infoUpdated="1795489199121" />
+  <media uri="am:7C2FE7F29BB5039B6DF8D72468A3D702374323BA.jpg" filename="Save The Date.jpg" title="Save The Date.jpg" type="image/jpeg" size="40733" sig="7C2FE7F29BB5039B6DF8D72468A3D702374323BA" orientation="0" infoUpdated="1795489266531" width="736" height="736" />
+  <media uri="content://media/external/images/media/1000264612" filename="images.jpeg" title="images.jpeg" type="image/jpeg" size="49153" orientation="0" infoUpdated="1795489199121" width="495" height="619" />
+  <media uri="am:227D13ACE0748CD0622996EB93EFD6FBF574ABBD.mp4" type="video/mp4" duration="38360000" sig="227D13ACE0748CD0622996EB93EFD6FBF574ABBD" orientation="0" infoUpdated="1795489266531" width="1920" height="1080" />
+  <media uri="am:5B956C7D42C29D297499040F1A89C250C8691653.jpg" filename="SDW Photo Galary(42).jpg" title="SDW Photo Galary(42).jpg" type="image/jpeg" duration="0" size="85291" sig="5B956C7D42C29D297499040F1A89C250C8691653" orientation="0" infoUpdated="1795489266531" width="0" height="0" />
+  <media uri="content://media/external/images/media/1000264729" filename="d85a27176448453.Y3JvcCw0OTA5LDM4NDAsNDI1LDA.jpg" title="d85a27176448453.Y3JvcCw0OTA5LDM4NDAsNDI1LDA.jpg" type="image/jpeg" size="86707" orientation="0" infoUpdated="1775801726460" width="404" height="316" />
+  <bookmark t="6016" />
+  <bookmark t="12016" />
+  <bookmark t="18016" />
+  <bookmark t="24016" />
+  <bookmark t="30016" />
+  <bookmark t="36016" />
+  <bookmark t="42016" />
+  <shape id="102379894" label="Background" startTime="0" endTime="6032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <shape id="102379896" label="Lighting" startTime="0" endTime="6032" fillType="media" blending="screen" fillImage="am:D87E87F7ECF4E667A24709D094623046D655E741.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="533.443848,761.560181,0.000000" />
+      <scale value="0.738889,0.738889" />
+      <rotation>
+        <kf t="0.002653" v="0.000000" />
+        <kf t="0.997347" v="52.682926" />
+      </rotation>
+    </transform>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="1.000000" />
+      <property name="vib" type="float" value="2.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,540.000000" />
+  </shape>
+  <shape id="102379895" label="lord Ganesha" startTime="0" endTime="6032" fillType="media" fillImage="am:25DA8061A7B374DE29B77FD260DFD1610B9B5764.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="533.443848,761.560181,0.000000" />
+      <scale value="0.428704,0.428704" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#ffffffff" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+      <property name="saturation" type="float" value="0.300000" />
+      <property name="vib" type="float" value="1.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <property name="size" type="vec2" value="540.000000,540.000000" />
+  </shape>
+  <shape id="102379961" label="Devider Copy 2" startTime="0" endTime="6033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="560.500122,1440.668823,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102379900" startTime="0" endTime="6032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="googlefonts?name=Laila&amp;weight=700" wrapWidth="1542" align="center">
+    <transform>
+      <location value="519.015869,1348.848633,0.000000" />
+      <scale value="1.393645,1.393645" />
+    </transform>
+    <fillColor value="#ffffa100" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>गणेशाय नमः</content>
+  </text>
+  <text id="102379908" startTime="0" endTime="6032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="537.787598,1180.737793,0.000000" />
+      <scale value="1.295071,1.295071" />
+    </transform>
+    <fillColor value="#ffffa100" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>ॐ श्री</content>
+  </text>
+  <shape id="102379906" label="Rounded Rectangle 1" startTime="0" endTime="6033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379907" label="Rounded Rectangle 1 Copy" startTime="0" endTime="6033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379910" label="Particles" startTime="0" endTime="6032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102379901" label="Camera 1" startTime="0" endTime="6032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102379911" label="Background" startTime="6000" endTime="12032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <shape id="102379934" label="Devider Copy" startTime="6000" endTime="12033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="610.727661,1161.036499,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="638.000000,332.000000" />
+  </shape>
+  <text id="102379915" startTime="6000" endTime="12032" fillType="color" mediaFillMode="fill" size="24.000000" font="imported?name=AMS Kartik.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="581.634705,1051.059204,0.000000" />
+      <scale value="1.592792,1.592792" />
+    </transform>
+    <fillColor value="#ffd2b06f" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>ivavaah Aaama/PaNa</content>
+  </text>
+  <shape id="102379917" label="Rounded Rectangle 1" startTime="6000" endTime="12033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="463.152618,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379918" label="Rounded Rectangle 1 Copy" startTime="6000" endTime="12033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379919" label="Particles" startTime="6000" endTime="12032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102379916" label="Camera 1" startTime="6000" endTime="12032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <audio id="102379987" label="Ful_Hasan_Lage___फूल_हासन_लागे___मार_डारे_मया_मा___Anuj_Sharma___Mar_Dare_Maya_Ma___Video_Song(256k).mp3" startTime="-266" endTime="54366" src="content://media/external/audio/media/1000263903" inTime="23500" outTime="78132" mediaFillMode="fill">
+    <gain>
+      <kf t="0.762959" v="1.000000" />
+      <kf t="0.878276" v="1.000000" />
+      <kf t="0.878899" v="1.000000" />
+      <kf t="0.999707" v="0.000000" />
+    </gain>
+  </audio>
+  <shape id="102379990" label="Background" startTime="11933" endTime="17965" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <shape id="102379991" label="Devider Copy" startTime="12000" endTime="18033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="610.727661,1161.036499,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="632.000000,332.000000" />
+  </shape>
+  <text id="102391702" startTime="12000" endTime="18032" fillType="color" mediaFillMode="fill" size="24.000000" font="imported?name=AMS Kartik.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="585.568054,1061.680908,0.000000" />
+      <scale value="1.188483,1.188483" />
+    </transform>
+    <fillColor value="#ff93b8d1" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>sneaihla Aaama/PaNa</content>
+  </text>
+  <text id="102379992" startTime="12000" endTime="18032" fillType="color" mediaFillMode="fill" size="24.000000" font="googlefonts?name=Laila&amp;weight=700" wrapWidth="1542" align="center">
+    <transform>
+      <location value="558.360596,897.375427,0.000000" />
+      <scale value="1.335927,1.335927" />
+    </transform>
+    <fillColor value="#ff93b8d1" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>साहू परिवार का</content>
+  </text>
+  <shape id="102379993" label="Rounded Rectangle 1" startTime="12000" endTime="18033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="463.152618,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379994" label="Rounded Rectangle 1 Copy" startTime="12000" endTime="18033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102379995" label="Particles" startTime="12000" endTime="18032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102379996" label="Camera 1" startTime="12000" endTime="18032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102379997" label="Background" startTime="18000" endTime="24032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380126" startTime="18000" endTime="24032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="525.898804,1582.452881,0.000000" />
+      <scale value="0.837224,0.837224" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>सुपौत्र- राजू साहू
+सुपुत्र - श्याम साहू
+ग्राम- राजाबर
+जि.- राजनादगाव (CG)
+</content>
+  </text>
+  <shape id="102379998" label="Devider" startTime="18000" endTime="24033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="575.001587,1356.796143,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,336.970337" />
+  </shape>
+  <text id="102379999" startTime="18000" endTime="24032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="524.331726,1232.471680,0.000000" />
+      <scale value="1.477951,1.477951" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>चि. रोहित कुमार</content>
+  </text>
+  <text id="102380000" startTime="18000" endTime="24032" fillType="color" mediaFillMode="fill" size="32.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1542" align="center">
+    <transform>
+      <location value="567.342651,1069.085205,0.000000" />
+      <scale value="1.088846,1.088846" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>आयुष्मान</content>
+  </text>
+  <shape id="102380001" label="Rounded Rectangle 1" startTime="18000" endTime="24033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380002" label="Rounded Rectangle 1 Copy" startTime="18000" endTime="24033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <embedScene id="102380003" label="Photo Group" startTime="18000" endTime="24032" fillType="intrinsic" outTime="6032" mediaFillMode="fill">
+    <transform>
+      <location value="530.542480,871.391113,0.000000" />
+      <pivot value="0.000000,-300.870239" />
+      <scale value="1.034209,1.034209" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="" width="1257" height="1920" exportWidth="1257" exportHeight="1920" precompose="dynamicResolution" bgcolor="#00000000" totalTime="6032" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="102380151" label="d85a27176448453.Y3JvcCw0OTA5LDM4NDAsNDI1LDA.jpg" startTime="0" endTime="5933" fillType="media" fillImage="content://media/external/images/media/1000264729" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="629.569519,687.423340,0.000000" />
+          <scale value="0.935923,0.935923" />
+        </transform>
+        <property name="size" type="vec2" value="628.500000,491.500000" />
+      </shape>
+      <shape id="102379928" label="Ink Drop.mp4" startTime="0" endTime="6032" fillType="media" blending="mask" fillVideo="am:227D13ACE0748CD0622996EB93EFD6FBF574ABBD.mp4" inTime="800" outTime="8832" speed="1.331565" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="628.499939,659.129761,0.000000" />
+          <scale value="1.163889,1.163889" />
+        </transform>
+        <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+          <property name="keyColor" type="color" value="#ff000000" />
+          <property name="threshold" type="float" value="0.100000" />
+          <property name="feather" type="float" value="0.050000" />
+          <property name="defringe" type="bool" value="false" />
+          <property name="invert" type="bool" value="false" />
+        </effect>
+        <property name="size" type="vec2" value="540.000000,303.500000" />
+      </shape>
+    </scene>
+  </embedScene>
+  <shape id="102380004" label="Particles" startTime="18000" endTime="24032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380005" label="Camera 1" startTime="18000" endTime="24032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102380006" label="Background" startTime="24000" endTime="30032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380127" startTime="24000" endTime="30032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="528.559082,1543.431641,0.000000" />
+      <scale value="0.837224,0.837224" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>
+सुपौत्री- राजू साहू
+सुपुत्री - श्याम साहू
+ग्राम- राजाबर
+जि.- राजनादगाव (CG)
+</content>
+  </text>
+  <shape id="102380007" label="Devider" startTime="24000" endTime="30033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="564.109558,1329.443359,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380008" startTime="24000" endTime="30032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="528.026855,1207.936646,0.000000" />
+      <scale value="1.477951,1.477951" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>सौ.का. मीनाक्षी </content>
+  </text>
+  <text id="102380009" startTime="24000" endTime="30032" fillType="color" mediaFillMode="fill" size="28.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="540.295898,1071.611938,0.000000" />
+      <scale value="1.054475,1.054475" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>आयुष्मति</content>
+  </text>
+  <shape id="102380010" label="Rounded Rectangle 1" startTime="24000" endTime="30033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380011" label="Rounded Rectangle 1 Copy" startTime="24000" endTime="30033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <embedScene id="102380012" label="Photo Group" startTime="24000" endTime="30032" fillType="intrinsic" outTime="6032" mediaFillMode="fill">
+    <transform>
+      <location value="536.749451,905.311646,0.000000" />
+      <pivot value="0.000000,-300.870239" />
+      <scale value="1.034209,1.034209" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="" width="1257" height="1920" exportWidth="1257" exportHeight="1920" precompose="dynamicResolution" bgcolor="#00000000" totalTime="6032" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="102379931" label="Photo" startTime="0" endTime="6032" fillType="media" fillImage="am:5B956C7D42C29D297499040F1A89C250C8691653.jpg" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="644.235046,702.185120,0.000000" />
+          <scale value="0.513333,0.513333" />
+        </transform>
+        <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+          <property name="scale" type="float" value="1.000000" />
+          <property name="phase" type="float" value="0.000000" />
+          <property name="mirror" type="bool" value="true" />
+          <property name="vertoffs" type="bool" value="false" />
+          <property name="angle" type="float" value="0.000000" />
+        </effect>
+        <effect id="com.alightcreative.effects.sharpen" locallyApplied="false">
+          <property name="strength" type="float" value="0.330000" />
+          <property name="radius" type="float" value="1.000000" />
+        </effect>
+        <effect id="com.alightcreative.effects.satvib" locallyApplied="false">
+          <property name="saturation" type="float" value="0.130000" />
+          <property name="vib" type="float" value="1.000000" />
+        </effect>
+        <property name="size" type="vec2" value="497.698517,740.981628" />
+      </shape>
+      <shape id="102379928" label="Ink Drop.mp4" startTime="0" endTime="6032" fillType="media" blending="mask" fillVideo="am:227D13ACE0748CD0622996EB93EFD6FBF574ABBD.mp4" inTime="800" outTime="8832" speed="1.331565" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="628.499939,659.129761,0.000000" />
+          <scale value="1.163889,1.163889" />
+        </transform>
+        <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+          <property name="keyColor" type="color" value="#ff000000" />
+          <property name="threshold" type="float" value="0.100000" />
+          <property name="feather" type="float" value="0.050000" />
+          <property name="defringe" type="bool" value="false" />
+          <property name="invert" type="bool" value="false" />
+        </effect>
+        <property name="size" type="vec2" value="540.000000,303.500000" />
+      </shape>
+    </scene>
+  </embedScene>
+  <shape id="102380013" label="Particles" startTime="24000" endTime="30032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380014" label="Camera 1" startTime="24000" endTime="30032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102380015" label="Background" startTime="30000" endTime="36032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380016" startTime="30000" endTime="36032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1373.229126,0.000000" />
+      <scale value="0.837224,0.837224" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिन - मंगलवार</content>
+  </text>
+  <text id="102380017" startTime="30000" endTime="36032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1279.597412,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिनांक-21.03.2026</content>
+  </text>
+  <shape id="102380018" label="Devider" startTime="30000" endTime="36033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="545.147461,1205.656372,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380019" startTime="30000" endTime="36032" fillType="color" mediaFillMode="fill" size="24.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1104.425537,0.000000" />
+      <scale value="0.918936,0.918936" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>मायन</content>
+  </text>
+  <text id="102380020" startTime="30000" endTime="36032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,786.032104,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिन- सोमवार</content>
+  </text>
+  <text id="102380021" startTime="30000" endTime="36032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,692.400391,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिनांक-20.03.2026</content>
+  </text>
+  <shape id="102380022" label="Devider" startTime="30000" endTime="36033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="556.573853,618.459351,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380023" startTime="30000" endTime="36032" fillType="color" mediaFillMode="fill" size="32.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,517.228516,0.000000" />
+      <scale value="0.918936,0.918936" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>चुलमाटी</content>
+  </text>
+  <shape id="102380024" label="Rounded Rectangle 1" startTime="30000" endTime="36032" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350796" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380025" label="Rounded Rectangle 1 Copy" startTime="30000" endTime="36032" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350796" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380026" label="Particles" startTime="30000" endTime="36032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380027" label="Camera 1" startTime="30000" endTime="36032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102380028" label="Background" startTime="36033" endTime="42065" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380033" startTime="36000" endTime="42032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="520.994263,1487.224365,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>at 7:00pm</content>
+  </text>
+  <text id="102380034" startTime="36000" endTime="42032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.722046,1346.145996,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिन- बुधवार 22.03.2026</content>
+  </text>
+  <shape id="102380035" label="Devider" startTime="36000" endTime="42033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="555.243042,1261.201904,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380036" startTime="36000" endTime="42032" fillType="color" mediaFillMode="fill" size="24.000000" font="googlefonts?name=Baloo&amp;weight=400" wrapWidth="1542" align="center">
+    <transform>
+      <location value="539.913208,1162.401733,0.000000" />
+      <scale value="0.918936,0.918936" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>बारात प्रस्थान</content>
+  </text>
+  <embedScene id="102380149" label="Photo Group" startTime="36033" endTime="42065" fillType="intrinsic" outTime="6032" mediaFillMode="fill">
+    <transform>
+      <location value="530.542480,871.391113,0.000000" />
+      <pivot value="0.000000,-300.870239" />
+      <scale value="1.034209,1.034209" />
+    </transform>
+    <fillColor value="#ff000000" />
+    <scene title="" width="1257" height="1920" exportWidth="1257" exportHeight="1920" precompose="dynamicResolution" bgcolor="#00000000" totalTime="6032" fps="30" modifiedTime="0" amver="1028417" ffver="106" am="com.alightcreative.motion/5.0.273.1028417" amplatform="android" retime="off" retimeAdaptFPS="false">
+      <shape id="102380150" label="images.jpeg" startTime="0" endTime="5966" fillType="media" fillImage="content://media/external/images/media/1000264612" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="616.605469,805.715088,0.000000" />
+          <scale value="0.608559,0.608559" />
+        </transform>
+        <property name="size" type="vec2" value="628.500000,785.500000" />
+      </shape>
+      <shape id="102379928" label="Ink Drop.mp4" startTime="0" endTime="6032" fillType="media" blending="mask" fillVideo="am:227D13ACE0748CD0622996EB93EFD6FBF574ABBD.mp4" inTime="800" outTime="8832" speed="1.331565" mediaFillMode="fill" s=".rect">
+        <transform>
+          <location value="628.499939,659.129761,0.000000" />
+          <scale value="1.163889,1.163889" />
+        </transform>
+        <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+          <property name="keyColor" type="color" value="#ff000000" />
+          <property name="threshold" type="float" value="0.100000" />
+          <property name="feather" type="float" value="0.050000" />
+          <property name="defringe" type="bool" value="false" />
+          <property name="invert" type="bool" value="false" />
+        </effect>
+        <property name="size" type="vec2" value="540.000000,303.500000" />
+      </shape>
+    </scene>
+  </embedScene>
+  <shape id="102380037" label="Rounded Rectangle 1" startTime="36000" endTime="42033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380038" label="Rounded Rectangle 1 Copy" startTime="36000" endTime="42033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380039" label="Particles" startTime="36000" endTime="42032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380040" label="Camera 1" startTime="36000" endTime="42032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102380128" label="Background" startTime="42033" endTime="48065" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380129" startTime="42133" endTime="48165" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1285.020020,0.000000" />
+      <scale value="1.228275,1.228275" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>श्री लालाराम -रस्मिका</content>
+  </text>
+  <text id="102380130" startTime="42000" endTime="48032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="525.898804,1582.452881,0.000000" />
+      <scale value="0.837224,0.837224" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>श्री मखान लाला
+श्री राजा साहू 
+ महाराज साहू 
+साहू
+</content>
+  </text>
+  <text id="102380131" startTime="42000" endTime="48032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1285.020020,0.000000" />
+      <scale value="1.228275,1.228275" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>श्री लालाराम -रस्मिका</content>
+  </text>
+  <shape id="102380132" label="Devider" startTime="42000" endTime="48033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="545.147461,1205.656372,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380133" startTime="42000" endTime="48032" fillType="color" mediaFillMode="fill" size="24.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="530.999756,1104.425537,0.000000" />
+      <scale value="0.918936,0.918936" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>विनीत</content>
+  </text>
+  <text id="102380134" startTime="42000" endTime="48032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,786.032104,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>at 7:00pm</content>
+  </text>
+  <text id="102380135" startTime="42000" endTime="48032" fillType="gradient" mediaFillMode="fill" size="24.000000" font="imported?name=Handycheera Regular.otf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,692.400391,0.000000" />
+      <scale value="1.114786,1.114786" />
+    </transform>
+    <fillColor value="#fffae965" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <content>दिन- बुधवार 22.03.2026</content>
+  </text>
+  <shape id="102380136" label="Devider" startTime="42000" endTime="48033" fillType="media" fillImage="am:13FD79EB4DAADE7D10786C6F3D92D971D0D25115.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="556.573853,618.459351,0.000000" />
+      <scale value="0.806481,0.806481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#fff6f6f6" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#fffae965" />
+      <property name="color2" type="color" value="#fffae965" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.wipe2" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.290071" v="-0.046000" />
+        <kf t="0.000000" v="0.545000" />
+      </property>
+      <property name="end" type="float">
+        <kf t="0.290071" v="0.962000" />
+        <kf t="0.000000" v="0.372000" />
+      </property>
+      <property name="angle" type="float" value="0.000000" />
+      <property name="feather" type="float" value="13.800000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,332.000000" />
+  </shape>
+  <text id="102380137" startTime="42000" endTime="48032" fillType="color" mediaFillMode="fill" size="24.000000" font="imported?name=Pink Santa.ttf" wrapWidth="1542" align="center">
+    <transform>
+      <location value="542.426147,517.228516,0.000000" />
+      <scale value="0.918936,0.918936" />
+    </transform>
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <content>आशीर्वाद समारोह</content>
+  </text>
+  <shape id="102380138" label="Rounded Rectangle 1" startTime="42000" endTime="48033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380139" label="Rounded Rectangle 1 Copy" startTime="42000" endTime="48033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380140" label="Particles" startTime="42000" endTime="48032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380141" label="Camera 1" startTime="42000" endTime="48032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+  <shape id="102380142" label="Background" startTime="48000" endTime="54032" fillType="media" fillImage="am:FD880924ABA754F31B60C15A6DA5F21413373003.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+    </transform>
+    <effect id="com.alightcreative.effects.tile" locallyApplied="false">
+      <property name="scale" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="mirror" type="bool" value="true" />
+      <property name="vertoffs" type="bool" value="false" />
+      <property name="angle" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.exposure" locallyApplied="false">
+      <property name="exposure" type="float" value="0.000000" />
+      <property name="gamma" type="float" value="1.000000" />
+      <property name="offset" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="539.000000,960.000000" />
+  </shape>
+  <text id="102380143" startTime="48000" endTime="54032" fillType="color" mediaFillMode="fill" size="28.000000" font="googlefonts?name=Kalam&amp;weight=700" wrapWidth="1542" align="center">
+    <transform>
+      <location value="537.098633,1232.096802,0.000000" />
+      <scale value="1.054475,1.054475" />
+    </transform>
+    <fillColor value="#ff98c99c" />
+    <gradient type="linear" startColor="#ffffa100" endColor="#ffffffff" start="0.430209,0.290781" end="0.467737,0.843076" />
+    <effect id="com.alightcreative.effects.textspacing" locallyApplied="false">
+      <property name="letterspacing" type="float" value="0.000000" />
+      <property name="linespacing" type="float" value="1.363000" />
+    </effect>
+    <effect id="com.alightcreative.effects.gaussianblur" locallyApplied="false">
+      <property name="strength" type="float">
+        <kf t="0.035809" v="0.000000" />
+        <kf t="0.002653" v="0.750000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.texttransform" locallyApplied="false">
+      <property name="start" type="float">
+        <kf t="0.000000" v="0.000000" />
+        <kf t="0.114556" v="1.000000" />
+      </property>
+      <property name="end" type="float" value="1.000000" />
+      <property name="phase" type="float" value="0.000000" />
+      <property name="component" type="int" value="1" />
+      <property name="anchor" type="int" value="1" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="10.000000" />
+      <property name="stretch" type="float" value="0.000000" />
+      <property name="alpha" type="float" value="-1.000000" />
+      <property name="useFillColor" type="bool" value="false" />
+      <property name="fillColor" type="color" value="#ff00ff00" />
+      <property name="easeIn" type="float" value="1.000000" />
+      <property name="easeOut" type="float" value="0.000000" />
+      <property name="overlap" type="float" value="5.000000" />
+      <property name="shape" type="int" value="0" />
+      <property name="randomOrder" type="bool" value="true" />
+      <property name="seed" type="float" value="0.000000" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <content>8-02-2026</content>
+  </text>
+  <shape id="102380144" label="Save The Date.jpg" startTime="48000" endTime="54033" fillType="media" fillImage="am:7C2FE7F29BB5039B6DF8D72468A3D702374323BA.jpg" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="537.098633,852.828857,0.000000" />
+      <scale value="0.681481,0.681481" />
+    </transform>
+    <effect id="com.alightcreative.effects.chromakey" locallyApplied="false">
+      <property name="keyColor" type="color" value="#ffffffff" />
+      <property name="threshold" type="float" value="0.100000" />
+      <property name="feather" type="float" value="0.050000" />
+      <property name="defringe" type="bool" value="false" />
+      <property name="invert" type="bool" value="false" />
+    </effect>
+    <effect id="com.alightcreative.gradientoverlay2" locallyApplied="false">
+      <property name="color1" type="color" value="#ffffffff" />
+      <property name="color2" type="color" value="#fff4b446" />
+      <property name="angle" type="float" value="0.000000" />
+      <property name="scale" type="float" value="1.000000" />
+      <property name="alpha" type="float" value="1.000000" />
+      <property name="gradType" type="int" value="0" />
+      <property name="blendMode" type="int" value="0" />
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <property name="size" type="vec2" value="540.000000,540.000000" />
+  </shape>
+  <shape id="102380145" label="Rounded Rectangle 1" startTime="48000" endTime="54033" fillType="none" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.949238,0.949238" />
+    </transform>
+    <fillColor value="#fff4b446" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.000000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="474.000000,883.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380146" label="Rounded Rectangle 1 Copy" startTime="48000" endTime="54033" fillType="color" mediaFillMode="fill" s=".roundrect">
+    <transform>
+      <location value="540.000000,955.818542,0.000000" />
+      <scale value="0.911576,0.911576" />
+    </transform>
+    <fillColor value="#009575c5" />
+    <effect id="com.alightcreative.effects.drawing.progress" locallyApplied="false">
+      <property name="start" type="float" value="0.000000" />
+      <property name="end" type="float">
+        <kf t="0.002652" v="0.000000" />
+        <kf t="0.350738" v="100.000000" />
+      </property>
+    </effect>
+    <effect id="com.alightcreative.effects.fade" locallyApplied="false">
+      <property name="inTime" type="float" value="0.000000" />
+      <property name="outTime" type="float" value="1.000000" />
+    </effect>
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#fffae965" />
+      <size value="3.500000" />
+    </path-stroke>
+    <shadow direction="outside" enabled="false">
+      <size value="5.000000" />
+    </shadow>
+    <property name="size" type="vec2" value="480.000000,907.000000" />
+    <property name="cornerRadius" type="float" value="204.000000" />
+  </shape>
+  <shape id="102380147" label="Particles" startTime="48000" endTime="54032" fillType="media" blending="color-dodge" fillVideo="am:93F1546A207B4AD43477582F967B841AD68AE5C4.mp4" outTime="2999" speed="0.497182" mediaFillMode="fill" s=".rect">
+    <transform>
+      <location value="540.000000,960.000000,0.000000" />
+      <scale value="1.061458,1.061458" />
+    </transform>
+    <property name="size" type="vec2" value="540.000000,960.000000" />
+  </shape>
+  <camera id="102380148" label="Camera 1" startTime="48000" endTime="54032" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="540.000000,960.000000,-1662.768799" />
+    </transform>
+    <fov>
+      <kf t="0.002653" v="7.535418" />
+      <kf t="0.035809" v="54.724030" />
+      <kf t="0.997347" v="60.386909" />
+    </fov>
+    <focus-blur enabled="false">
+      <strength value="0.500000" />
+      <depth-of-field value="166.276886" />
+      <distance value="1662.768799" />
+    </focus-blur>
+    <fog enabled="false">
+      <near-z value="1662.768799" />
+      <far-z value="3325.537598" />
+    </fog>
+  </camera>
+</scene>
