@@ -912,22 +912,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stepNum === 1) {
       step1Section.classList.remove('hidden');
       navStep1.className = activeClass;
-      if (typeof closeFloatingWidget === 'function') closeFloatingWidget();
-      const pill = document.getElementById('floatingLauncherPill');
-      if (pill) pill.classList.add('hidden');
+      if (typeof closeCardSidebar === 'function') closeCardSidebar();
+      else if (typeof closeFloatingWidget === 'function') closeFloatingWidget();
+      if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
     } else if (stepNum === 2) {
       step2Section.classList.remove('hidden');
       navStep2.className = activeClass;
-      if (currentCardFiles.length > 0 || (typeof externalThumbnailUrl !== 'undefined' && externalThumbnailUrl)) {
-        const pill = document.getElementById('floatingLauncherPill');
-        if (pill) pill.classList.remove('hidden');
-      }
+      if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
     } else if (stepNum === 3) {
       step3Section.classList.remove('hidden');
       navStep3.className = activeClass;
       if (typeof renderSummaryCard === 'function' && typeof getFormData === 'function') {
         renderSummaryCard(getFormData());
       }
+      if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
     }
 
     updateHeaderWatchCardButton();
@@ -960,6 +958,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cardFileInput.value = '';
       if (typeof updateFloatingCardView === 'function') updateFloatingCardView();
       if (typeof updateHeaderWatchCardButton === 'function') updateHeaderWatchCardButton();
+      if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
       return;
     }
 
@@ -967,6 +966,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardPreviewContainer.classList.remove('hidden');
 
     if (typeof updateHeaderWatchCardButton === 'function') updateHeaderWatchCardButton();
+    if (typeof updateSidebarEdgeTabVisibility === 'function') updateSidebarEdgeTabVisibility();
 
     const num = currentCardFiles.length;
     cardPagesBadge.textContent = `${num} ${num === 1 ? 'file' : 'files/pages'} ready`;
@@ -1196,7 +1196,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnHeaderWatchCard) {
     btnHeaderWatchCard.addEventListener('click', () => {
       if (currentCardFiles.length > 0 || externalThumbnailUrl) {
-        openCardViewer(0);
+        if (typeof openCardSidebar === 'function') {
+          openCardSidebar();
+        } else {
+          openCardViewer(0);
+        }
       } else {
         showToast('Please upload a wedding card photo or PDF first!', 'info');
         cardFileInput.click();
@@ -1337,31 +1341,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ==================== FLOATING SHADI CARD CONTROLLER (PiP Matcher) ====================
-  const floatingCardWidget = document.getElementById('floatingCardWidget');
-  const floatingLauncherPill = document.getElementById('floatingLauncherPill');
-  const floatingCardHeader = document.getElementById('floatingCardHeader');
+  // ==================== SMART MOBILE CARD SIDEBAR CONTROLLER ====================
+  const cardSidebarPanel = document.getElementById('cardSidebarPanel');
+  const cardSidebarBackdrop = document.getElementById('cardSidebarBackdrop');
+  const cardSidebarEdgeTab = document.getElementById('cardSidebarEdgeTab');
+  const btnCollapseCardSidebar = document.getElementById('btnCollapseCardSidebar');
+  const btnCloseSidebarBottom = document.getElementById('btnCloseSidebarBottom');
+
+  // Backwards-compatible aliases
+  const floatingCardWidget = cardSidebarPanel;
+  const floatingLauncherPill = cardSidebarEdgeTab;
+
   const floatingCardBody = document.getElementById('floatingCardBody');
   const floatingCardImg = document.getElementById('floatingCardImg');
   const floatingCardEmptyState = document.getElementById('floatingCardEmptyState');
   const floatingPageBadge = document.getElementById('floatingPageBadge');
-  const floatingSizeLabel = document.getElementById('floatingSizeLabel');
   const floatingZoomVal = document.getElementById('floatingZoomVal');
+  const floatingZoomPill = document.getElementById('floatingZoomPill');
 
-  const btnFloatingToggleSize = document.getElementById('btnFloatingToggleSize');
-  const btnFloatingToggleOpacity = document.getElementById('btnFloatingToggleOpacity');
-  const btnFloatingExpandFull = document.getElementById('btnFloatingExpandFull');
-  const btnCloseFloatingWidget = document.getElementById('btnCloseFloatingWidget');
-  const btnFloatingPrevPage = document.getElementById('btnFloatingPrevPage');
-  const btnFloatingNextPage = document.getElementById('btnFloatingNextPage');
   const btnFloatingZoomIn = document.getElementById('btnFloatingZoomIn');
   const btnFloatingZoomOut = document.getElementById('btnFloatingZoomOut');
   const btnFloatingResetZoom = document.getElementById('btnFloatingResetZoom');
-  const floatingResizeHandle = document.getElementById('floatingResizeHandle');
+  const btnFloatingExpandFull = document.getElementById('btnFloatingExpandFull');
+  const btnFloatingPrevPage = document.getElementById('btnFloatingPrevPage');
+  const btnFloatingNextPage = document.getElementById('btnFloatingNextPage');
   const btnToggleFloatingInDetails = document.getElementById('btnToggleFloatingInDetails');
-
-  const floatingRightResizeHandle = document.getElementById('floatingRightResizeHandle');
-  const floatingZoomPill = document.getElementById('floatingZoomPill');
 
   let floatingCurrentPageIndex = 0;
   let floatingZoom = 1.0;
@@ -1370,17 +1374,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let floatingIsPanning = false;
   let floatingPanStartX = 0;
   let floatingPanStartY = 0;
+  let isSidebarOpen = false;
   let externalThumbnailUrl = ''; // Fallback image when loaded from history
-
-  // Size Presets (Width x Height) - Featuring XS (Mini) for minimal footprint
-  const FLOATING_SIZES = [
-    { name: 'XS', width: 110, height: 145 },
-    { name: 'S', width: 160, height: 215 },
-    { name: 'M', width: 220, height: 295 },
-    { name: 'L', width: 300, height: 400 }
-  ];
-  let currentFloatingSizeIdx = 2; // Default 'M'
-  let isFloatingTransparent = false;
 
   function updateFloatingCardView() {
     if (!floatingCardImg) return;
@@ -1394,7 +1389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         floatingCardImg.classList.add('hidden');
         if (floatingCardEmptyState) {
           floatingCardEmptyState.classList.remove('hidden');
-          floatingCardEmptyState.innerHTML = '<i class="fa-solid fa-file-pdf text-2xl text-amber-400 mb-1"></i><span class="text-[10px] font-bold text-white">PDF Card</span>';
+          floatingCardEmptyState.innerHTML = '<i class="fa-solid fa-file-pdf text-3xl text-amber-400 mb-1.5"></i><span class="text-xs font-bold text-white">PDF Card Page</span>';
         }
       } else {
         const objUrl = URL.createObjectURL(file);
@@ -1404,7 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (floatingPageBadge) {
-        floatingPageBadge.textContent = `${floatingCurrentPageIndex + 1}/${currentCardFiles.length}`;
+        floatingPageBadge.textContent = `Page ${floatingCurrentPageIndex + 1}/${currentCardFiles.length}`;
       }
       if (btnFloatingPrevPage && btnFloatingNextPage) {
         if (currentCardFiles.length > 1) {
@@ -1421,14 +1416,14 @@ document.addEventListener('DOMContentLoaded', () => {
       floatingCardImg.src = externalThumbnailUrl;
       floatingCardImg.classList.remove('hidden');
       if (floatingCardEmptyState) floatingCardEmptyState.classList.add('hidden');
-      if (floatingPageBadge) floatingPageBadge.textContent = '1/1';
+      if (floatingPageBadge) floatingPageBadge.textContent = 'Page 1/1';
       if (btnFloatingPrevPage) btnFloatingPrevPage.classList.add('hidden');
       if (btnFloatingNextPage) btnFloatingNextPage.classList.add('hidden');
     } else {
       floatingCardImg.classList.add('hidden');
       if (floatingCardEmptyState) {
         floatingCardEmptyState.classList.remove('hidden');
-        floatingCardEmptyState.innerHTML = '<i class="fa-solid fa-image text-xl text-amber-400/40 mb-1"></i><span class="text-[10px]">No Card</span>';
+        floatingCardEmptyState.innerHTML = '<i class="fa-solid fa-image text-3xl text-amber-400/40 mb-1.5"></i><span class="text-xs">No Card</span>';
       }
       if (floatingPageBadge) floatingPageBadge.textContent = '0/0';
       if (btnFloatingPrevPage) btnFloatingPrevPage.classList.add('hidden');
@@ -1454,399 +1449,256 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFloatingTransform();
   }
 
-  function openFloatingWidget() {
-    if (!floatingCardWidget) return;
+  function openCardSidebar() {
+    if (!cardSidebarPanel) return;
+    isSidebarOpen = true;
     updateFloatingCardView();
-    floatingCardWidget.classList.remove('hidden');
-    floatingCardWidget.style.display = 'flex';
-    if (floatingLauncherPill) floatingLauncherPill.classList.add('hidden');
 
-    // Ensure within viewport
-    const rect = floatingCardWidget.getBoundingClientRect();
-    if (rect.right > window.innerWidth || rect.bottom > window.innerHeight || rect.left < 0 || rect.top < 0) {
-      floatingCardWidget.style.right = '12px';
-      floatingCardWidget.style.top = '76px';
-      floatingCardWidget.style.left = 'auto';
+    // Show backdrop with fade
+    if (cardSidebarBackdrop) {
+      cardSidebarBackdrop.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        cardSidebarBackdrop.style.opacity = '1';
+        cardSidebarBackdrop.style.pointerEvents = 'auto';
+      });
+    }
+
+    // Slide in drawer panel
+    cardSidebarPanel.classList.remove('translate-x-full');
+    cardSidebarPanel.classList.add('translate-x-0');
+
+    // Hide edge tab while drawer is visible
+    if (cardSidebarEdgeTab) cardSidebarEdgeTab.classList.add('opacity-0', 'pointer-events-none');
+  }
+
+  function closeCardSidebar() {
+    if (!cardSidebarPanel) return;
+    isSidebarOpen = false;
+
+    // Slide out drawer panel
+    cardSidebarPanel.classList.remove('translate-x-0');
+    cardSidebarPanel.classList.add('translate-x-full');
+
+    // Fade out backdrop
+    if (cardSidebarBackdrop) {
+      cardSidebarBackdrop.style.opacity = '0';
+      cardSidebarBackdrop.style.pointerEvents = 'none';
+      setTimeout(() => {
+        if (!isSidebarOpen) cardSidebarBackdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    updateSidebarEdgeTabVisibility();
+  }
+
+  function toggleCardSidebar() {
+    if (isSidebarOpen) {
+      closeCardSidebar();
+    } else {
+      openCardSidebar();
     }
   }
 
-  function closeFloatingWidget() {
-    if (!floatingCardWidget) return;
-    floatingCardWidget.classList.add('hidden');
-    floatingCardWidget.style.display = 'none';
+  // Aliases for backwards compatibility
+  function openFloatingWidget() { openCardSidebar(); }
+  function closeFloatingWidget() { closeCardSidebar(); }
+  function toggleFloatingWidget() { toggleCardSidebar(); }
+
+  function updateSidebarEdgeTabVisibility() {
+    if (!cardSidebarEdgeTab) return;
+    const hasCard = (currentCardFiles && currentCardFiles.length > 0) || Boolean(externalThumbnailUrl);
     const step2Sec = document.getElementById('step2Section');
-    const step2Active = step2Sec && !step2Sec.classList.contains('hidden');
-    if (step2Active && floatingLauncherPill) {
-      floatingLauncherPill.classList.remove('hidden');
+    const step3Sec = document.getElementById('step3Section');
+    const isStep2Or3 = (step2Sec && !step2Sec.classList.contains('hidden')) || (step3Sec && !step3Sec.classList.contains('hidden'));
+
+    if (hasCard && isStep2Or3 && !isSidebarOpen) {
+      cardSidebarEdgeTab.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+    } else if (!isSidebarOpen) {
+      cardSidebarEdgeTab.classList.add('hidden');
     }
   }
 
-  function toggleFloatingWidget() {
-    if (!floatingCardWidget) return;
-    const isHidden = floatingCardWidget.classList.contains('hidden') || floatingCardWidget.style.display === 'none';
-    if (isHidden) {
-      openFloatingWidget();
-    } else {
-      closeFloatingWidget();
-    }
-  }
+  // Make Edge Tab vertically draggable so editor can position it anywhere along edge
+  if (cardSidebarEdgeTab) {
+    let isDraggingTab = false;
+    let tabStartY = 0;
+    let initialTabTop = 0;
+    let movedTab = false;
 
-  function updateSizeLabelFromDimensions(w) {
-    if (!floatingSizeLabel) return;
-    if (w <= 135) {
-      floatingSizeLabel.textContent = 'XS';
-      currentFloatingSizeIdx = 0;
-    } else if (w <= 190) {
-      floatingSizeLabel.textContent = 'S';
-      currentFloatingSizeIdx = 1;
-    } else if (w <= 260) {
-      floatingSizeLabel.textContent = 'M';
-      currentFloatingSizeIdx = 2;
-    } else {
-      floatingSizeLabel.textContent = 'L';
-      currentFloatingSizeIdx = 3;
-    }
-  }
-
-  function setFloatingDimensions(targetW, targetH, label) {
-    if (!floatingCardWidget) return;
-    const maxW = Math.max(95, window.innerWidth - 12);
-    const maxH = Math.max(115, window.innerHeight - 40);
-    const w = Math.min(targetW, maxW);
-    const h = Math.min(targetH, maxH);
-
-    floatingCardWidget.style.width = `${w}px`;
-    floatingCardWidget.style.height = `${h}px`;
-    if (floatingSizeLabel) floatingSizeLabel.textContent = label;
-
-    // Re-clamp position inside viewport
-    const rect = floatingCardWidget.getBoundingClientRect();
-    if (rect.left + w > window.innerWidth) {
-      floatingCardWidget.style.left = `${Math.max(4, window.innerWidth - w - 8)}px`;
-      floatingCardWidget.style.right = 'auto';
-    }
-    if (rect.top + h > window.innerHeight) {
-      floatingCardWidget.style.top = `${Math.max(4, window.innerHeight - h - 8)}px`;
-    }
-  }
-
-  // Double Click / Tap Toggle: Small (XS: 110x145) <-> Big (M: 240x320)
-  function toggleFloatingSize() {
-    const curW = floatingCardWidget ? floatingCardWidget.offsetWidth : 200;
-    if (curW <= 160) {
-      setFloatingDimensions(240, 320, 'M');
-      currentFloatingSizeIdx = 2;
-    } else {
-      setFloatingDimensions(110, 145, 'XS');
-      currentFloatingSizeIdx = 0;
-    }
-  }
-
-  // Size Preset Cycle (XS -> S -> M -> L -> XS)
-  function cycleFloatingSize() {
-    currentFloatingSizeIdx = (currentFloatingSizeIdx + 1) % FLOATING_SIZES.length;
-    const target = FLOATING_SIZES[currentFloatingSizeIdx];
-    setFloatingDimensions(target.width, target.height, target.name);
-  }
-
-  // Opacity Toggle
-  function toggleFloatingOpacity() {
-    isFloatingTransparent = !isFloatingTransparent;
-    if (floatingCardWidget) {
-      floatingCardWidget.style.opacity = isFloatingTransparent ? '0.70' : '1.0';
-    }
-  }
-
-  // Free Draggable Header logic - Draggable anywhere across entire screen
-  if (floatingCardHeader) {
-    let isHeaderDragging = false;
-    let dragStartX = 0;
-    let dragStartY = 0;
-    let initWidgetLeft = 0;
-    let initWidgetTop = 0;
-
-    floatingCardHeader.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('button')) return; // Ignore clicks on header buttons
-      isHeaderDragging = true;
-      try { floatingCardHeader.setPointerCapture(e.pointerId); } catch (_) {}
-
-      const rect = floatingCardWidget.getBoundingClientRect();
-      initWidgetLeft = rect.left;
-      initWidgetTop = rect.top;
-      dragStartX = e.clientX;
-      dragStartY = e.clientY;
-      floatingCardWidget.style.right = 'auto';
-      floatingCardWidget.style.left = `${initWidgetLeft}px`;
-      floatingCardWidget.style.top = `${initWidgetTop}px`;
+    cardSidebarEdgeTab.addEventListener('pointerdown', (e) => {
+      isDraggingTab = true;
+      movedTab = false;
+      tabStartY = e.clientY;
+      const rect = cardSidebarEdgeTab.getBoundingClientRect();
+      initialTabTop = rect.top;
+      try { cardSidebarEdgeTab.setPointerCapture(e.pointerId); } catch (_) {}
     });
 
-    floatingCardHeader.addEventListener('pointermove', (e) => {
-      if (!isHeaderDragging) return;
-      const deltaX = e.clientX - dragStartX;
-      const deltaY = e.clientY - dragStartY;
-      const w = floatingCardWidget.offsetWidth;
-      const h = floatingCardWidget.offsetHeight;
-
-      // Allow dragging anywhere on entire screen (leaves at least 35px visible)
-      const maxLeft = Math.max(0, window.innerWidth - 35);
-      const maxTop = Math.max(0, window.innerHeight - 35);
-
-      const newLeft = Math.max(0, Math.min(initWidgetLeft + deltaX, maxLeft));
-      const newTop = Math.max(0, Math.min(initWidgetTop + deltaY, maxTop));
-
-      floatingCardWidget.style.left = `${newLeft}px`;
-      floatingCardWidget.style.top = `${newTop}px`;
+    cardSidebarEdgeTab.addEventListener('pointermove', (e) => {
+      if (!isDraggingTab) return;
+      const dy = e.clientY - tabStartY;
+      if (Math.abs(dy) > 5) movedTab = true;
+      if (movedTab) {
+        const newY = Math.max(70, Math.min(window.innerHeight - 80, initialTabTop + dy));
+        cardSidebarEdgeTab.style.top = `${newY}px`;
+        cardSidebarEdgeTab.style.transform = 'none';
+      }
     });
 
-    const endHeaderDrag = (e) => {
-      if (isHeaderDragging) {
-        isHeaderDragging = false;
-        try { floatingCardHeader.releasePointerCapture(e.pointerId); } catch (_) {}
+    const endTabDrag = (e) => {
+      if (!isDraggingTab) return;
+      isDraggingTab = false;
+      try { cardSidebarEdgeTab.releasePointerCapture(e.pointerId); } catch (_) {}
+      if (!movedTab) {
+        openCardSidebar();
       }
     };
-    floatingCardHeader.addEventListener('pointerup', endHeaderDrag);
-    floatingCardHeader.addEventListener('pointercancel', endHeaderDrag);
-
-    // Double-click on header to toggle size (Small <-> Big)
-    floatingCardHeader.addEventListener('dblclick', (e) => {
-      if (e.target.closest('button')) return;
-      toggleFloatingSize();
-    });
-
-    // Touch double-tap on header to toggle size
-    let lastHeaderTap = 0;
-    floatingCardHeader.addEventListener('touchend', (e) => {
-      if (e.target.closest('button')) return;
-      const now = Date.now();
-      if (now - lastHeaderTap < 350) {
-        toggleFloatingSize();
-        lastHeaderTap = 0;
-      } else {
-        lastHeaderTap = now;
-      }
-    });
+    cardSidebarEdgeTab.addEventListener('pointerup', endTabDrag);
+    cardSidebarEdgeTab.addEventListener('pointercancel', endTabDrag);
   }
 
-  // 4-Sided & 4-Corner Resize Controller (Top, Bottom, Left, Right & Corners)
-  const floatingResizers = document.querySelectorAll('.floating-resizer');
-  floatingResizers.forEach(resizer => {
-    let isResizing = false;
-    let resizeDir = '';
-    let startX = 0;
-    let startY = 0;
-    let initLeft = 0;
-    let initTop = 0;
-    let initW = 0;
-    let initH = 0;
-    let movedTotal = 0;
+  // Swipe right on sidebar drawer to close
+  if (cardSidebarPanel) {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    cardSidebarPanel.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
 
-    resizer.addEventListener('pointerdown', (e) => {
-      e.stopPropagation();
-      isResizing = true;
-      resizeDir = resizer.getAttribute('data-resize-dir') || 'bottom-right';
-      startX = e.clientX;
-      startY = e.clientY;
-      movedTotal = 0;
-
-      const rect = floatingCardWidget.getBoundingClientRect();
-      initLeft = rect.left;
-      initTop = rect.top;
-      initW = rect.width;
-      initH = rect.height;
-
-      floatingCardWidget.style.right = 'auto';
-      floatingCardWidget.style.bottom = 'auto';
-      floatingCardWidget.style.left = `${initLeft}px`;
-      floatingCardWidget.style.top = `${initTop}px`;
-
-      try { resizer.setPointerCapture(e.pointerId); } catch (_) {}
-    });
-
-    resizer.addEventListener('pointermove', (e) => {
-      if (!isResizing) return;
-      const deltaX = e.clientX - startX;
-      const deltaY = e.clientY - startY;
-      movedTotal += Math.abs(deltaX) + Math.abs(deltaY);
-
-      const minW = 95;
-      const minH = 115;
-      let newW = initW;
-      let newH = initH;
-      let newLeft = initLeft;
-      let newTop = initTop;
-
-      // Horizontal Resize (Left or Right)
-      if (resizeDir.includes('right')) {
-        newW = Math.max(minW, Math.min(initW + deltaX, window.innerWidth - initLeft - 4));
-      } else if (resizeDir.includes('left')) {
-        const potentialW = initW - deltaX;
-        if (potentialW >= minW) {
-          newW = Math.min(potentialW, initLeft + initW - 4);
-          newLeft = initLeft + initW - newW;
-        } else {
-          newW = minW;
-          newLeft = initLeft + initW - minW;
-        }
+    cardSidebarPanel.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].clientX - touchStartX;
+      const diffY = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (diffX > 60 && diffX > diffY) {
+        closeCardSidebar();
       }
+    }, { passive: true });
+  }
 
-      // Vertical Resize (Top or Bottom)
-      if (resizeDir.includes('bottom')) {
-        newH = Math.max(minH, Math.min(initH + deltaY, window.innerHeight - initTop - 4));
-      } else if (resizeDir.includes('top')) {
-        const potentialH = initH - deltaY;
-        if (potentialH >= minH) {
-          newH = Math.min(potentialH, initTop + initH - 4);
-          newTop = initTop + initH - newH;
-        } else {
-          newH = minH;
-          newTop = initTop + initH - minH;
-        }
-      }
-
-      floatingCardWidget.style.width = `${newW}px`;
-      floatingCardWidget.style.height = `${newH}px`;
-      floatingCardWidget.style.left = `${newLeft}px`;
-      floatingCardWidget.style.top = `${newTop}px`;
-      updateSizeLabelFromDimensions(newW);
-    });
-
-    const endResize = (e) => {
-      if (isResizing) {
-        isResizing = false;
-        try { resizer.releasePointerCapture(e.pointerId); } catch (_) {}
-        if (movedTotal < 6) {
-          cycleFloatingSize();
-        }
-      }
-    };
-    resizer.addEventListener('pointerup', endResize);
-    resizer.addEventListener('pointercancel', endResize);
-  });
-
-  // Card Body Pan, Drag & Zoom
+  // Touch Pan, Double-Tap & Pinch-to-Zoom on image
   if (floatingCardBody) {
-    let isBodyDraggingWidget = false;
-    let bodyDragStartX = 0;
-    let bodyDragStartY = 0;
-    let bodyInitLeft = 0;
-    let bodyInitTop = 0;
+    let initialPinchDist = 0;
+    let initialZoom = 1.0;
+    let lastTapTime = 0;
 
-    floatingCardBody.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('#floatingResizeHandle') || e.target.closest('#floatingRightResizeHandle') || e.target.closest('button')) return;
+    floatingCardBody.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        initialPinchDist = Math.hypot(dx, dy);
+        initialZoom = floatingZoom;
+      } else if (e.touches.length === 1) {
+        const now = Date.now();
+        if (now - lastTapTime < 320) {
+          if (floatingZoom > 1.2) {
+            resetFloatingZoom();
+          } else {
+            floatingZoom = 2.2;
+            updateFloatingTransform();
+          }
+          lastTapTime = 0;
+        } else {
+          lastTapTime = now;
+        }
 
-      // In XS (Mini) mode or when not zoomed, allow moving widget by dragging body too
-      if (currentFloatingSizeIdx === 0 && floatingZoom <= 1.05) {
-        isBodyDraggingWidget = true;
-        try { floatingCardBody.setPointerCapture(e.pointerId); } catch (_) {}
-        const rect = floatingCardWidget.getBoundingClientRect();
-        bodyInitLeft = rect.left;
-        bodyInitTop = rect.top;
-        bodyDragStartX = e.clientX;
-        bodyDragStartY = e.clientY;
-        floatingCardWidget.style.right = 'auto';
-        floatingCardWidget.style.left = `${bodyInitLeft}px`;
-        floatingCardWidget.style.top = `${bodyInitTop}px`;
-      } else {
         floatingIsPanning = true;
-        floatingPanStartX = e.clientX - floatingPanX;
-        floatingPanStartY = e.clientY - floatingPanY;
-        try { floatingCardBody.setPointerCapture(e.pointerId); } catch (_) {}
+        floatingPanStartX = e.touches[0].clientX - floatingPanX;
+        floatingPanStartY = e.touches[0].clientY - floatingPanY;
       }
+    }, { passive: true });
+
+    floatingCardBody.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && initialPinchDist > 0) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const dist = Math.hypot(dx, dy);
+        const scale = dist / initialPinchDist;
+        floatingZoom = Math.max(0.7, Math.min(4.5, initialZoom * scale));
+        updateFloatingTransform();
+      } else if (e.touches.length === 1 && floatingIsPanning) {
+        floatingPanX = e.touches[0].clientX - floatingPanStartX;
+        floatingPanY = e.touches[0].clientY - floatingPanStartY;
+        updateFloatingTransform();
+      }
+    }, { passive: true });
+
+    floatingCardBody.addEventListener('touchend', (e) => {
+      if (e.touches.length < 2) initialPinchDist = 0;
+      if (e.touches.length === 0) floatingIsPanning = false;
+    }, { passive: true });
+
+    // Pointer drag for mouse
+    floatingCardBody.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('button')) return;
+      floatingIsPanning = true;
+      floatingPanStartX = e.clientX - floatingPanX;
+      floatingPanStartY = e.clientY - floatingPanY;
+      try { floatingCardBody.setPointerCapture(e.pointerId); } catch (_) {}
     });
 
     floatingCardBody.addEventListener('pointermove', (e) => {
-      if (isBodyDraggingWidget) {
-        const deltaX = e.clientX - bodyDragStartX;
-        const deltaY = e.clientY - bodyDragStartY;
-        const maxLeft = Math.max(0, window.innerWidth - 35);
-        const maxTop = Math.max(0, window.innerHeight - 35);
-        floatingCardWidget.style.left = `${Math.max(0, Math.min(bodyInitLeft + deltaX, maxLeft))}px`;
-        floatingCardWidget.style.top = `${Math.max(0, Math.min(bodyInitTop + deltaY, maxTop))}px`;
-        return;
-      }
       if (!floatingIsPanning) return;
       floatingPanX = e.clientX - floatingPanStartX;
       floatingPanY = e.clientY - floatingPanStartY;
       updateFloatingTransform();
     });
 
-    const endPan = (e) => {
-      if (isBodyDraggingWidget) {
-        isBodyDraggingWidget = false;
-        try { floatingCardBody.releasePointerCapture(e.pointerId); } catch (_) {}
-      }
+    const endPointerPan = (e) => {
       if (floatingIsPanning) {
         floatingIsPanning = false;
         try { floatingCardBody.releasePointerCapture(e.pointerId); } catch (_) {}
       }
     };
-    floatingCardBody.addEventListener('pointerup', endPan);
-    floatingCardBody.addEventListener('pointercancel', endPan);
-
-    // Double click to toggle widget size (Small <-> Big)
-    floatingCardBody.addEventListener('dblclick', (e) => {
-      if (e.target.closest('button') || e.target.closest('.floating-resizer')) return;
-      toggleFloatingSize();
-    });
-
-    // Touch double-tap detection to toggle widget size
-    let lastBodyTap = 0;
-    floatingCardBody.addEventListener('touchend', (e) => {
-      if (e.target.closest('button') || e.target.closest('.floating-resizer')) return;
-      const now = Date.now();
-      if (now - lastBodyTap < 350) {
-        toggleFloatingSize();
-        lastBodyTap = 0;
-      } else {
-        lastBodyTap = now;
-      }
-    });
+    floatingCardBody.addEventListener('pointerup', endPointerPan);
+    floatingCardBody.addEventListener('pointercancel', endPointerPan);
 
     floatingCardBody.addEventListener('wheel', (e) => {
       e.preventDefault();
-      const delta = e.deltaY < 0 ? 0.2 : -0.2;
-      floatingZoom = Math.max(0.6, Math.min(4.0, floatingZoom + delta));
+      const delta = e.deltaY < 0 ? 0.25 : -0.25;
+      floatingZoom = Math.max(0.6, Math.min(4.5, floatingZoom + delta));
       updateFloatingTransform();
     }, { passive: false });
   }
 
-  // Button Listeners for Floating Widget
-  if (btnFloatingToggleSize) btnFloatingToggleSize.addEventListener('click', cycleFloatingSize);
-  if (btnFloatingToggleOpacity) btnFloatingToggleOpacity.addEventListener('click', toggleFloatingOpacity);
-  if (btnCloseFloatingWidget) btnCloseFloatingWidget.addEventListener('click', closeFloatingWidget);
-  if (floatingLauncherPill) floatingLauncherPill.addEventListener('click', openFloatingWidget);
+  // Sidebar Button Listeners
+  if (btnCollapseCardSidebar) btnCollapseCardSidebar.addEventListener('click', closeCardSidebar);
+  if (btnCloseSidebarBottom) btnCloseSidebarBottom.addEventListener('click', closeCardSidebar);
+  if (cardSidebarBackdrop) cardSidebarBackdrop.addEventListener('click', closeCardSidebar);
+
   if (btnToggleFloatingInDetails) {
     btnToggleFloatingInDetails.addEventListener('click', () => {
-      if (currentCardFiles.length > 0 || (typeof externalThumbnailUrl !== 'undefined' && externalThumbnailUrl)) {
-        openCardViewer(0);
+      if (currentCardFiles.length > 0 || Boolean(externalThumbnailUrl)) {
+        openCardSidebar();
       } else {
-        showToast('No card photo available (Upload card first)', 'info');
+        showToast('No card photo uploaded yet (Upload in Step 1)', 'info');
       }
     });
   }
 
-  if (btnFloatingExpandFull) {
-    btnFloatingExpandFull.addEventListener('click', () => {
-      openCardViewer(floatingCurrentPageIndex);
-    });
-  }
 
   if (btnFloatingZoomIn) {
     btnFloatingZoomIn.addEventListener('click', () => {
-      floatingZoom = Math.min(4.0, floatingZoom + 0.25);
+      floatingZoom = Math.min(4.5, floatingZoom + 0.35);
       updateFloatingTransform();
     });
   }
 
   if (btnFloatingZoomOut) {
     btnFloatingZoomOut.addEventListener('click', () => {
-      floatingZoom = Math.max(0.6, floatingZoom - 0.25);
+      floatingZoom = Math.max(0.6, floatingZoom - 0.35);
       updateFloatingTransform();
     });
   }
 
   if (btnFloatingResetZoom) {
     btnFloatingResetZoom.addEventListener('click', resetFloatingZoom);
+  }
+
+  if (btnFloatingExpandFull) {
+    btnFloatingExpandFull.addEventListener('click', () => {
+      closeCardSidebar();
+      openCardViewer(floatingCurrentPageIndex);
+    });
   }
 
   if (btnFloatingPrevPage) {
@@ -2712,9 +2564,9 @@ document.addEventListener('DOMContentLoaded', () => {
       modalAdminAuth.classList.add('hidden');
       return;
     }
-    // 6. Close floating widget if open on mobile screens (< 640px)
-    if (floatingCardWidget && !floatingCardWidget.classList.contains('hidden') && floatingCardWidget.style.display !== 'none' && window.innerWidth < 640) {
-      closeFloatingWidget();
+    // 6. Close card sidebar drawer if open
+    if (isSidebarOpen) {
+      closeCardSidebar();
       return;
     }
     // 7. Step back navigation
