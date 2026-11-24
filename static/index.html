@@ -672,100 +672,96 @@
 
   </main>
 
-  <!-- ==================== FLOATING SHADI CARD WIDGET (PiP Matcher) ==================== -->
-  <div id="floatingCardWidget" class="fixed z-40 hidden select-none flex-col rounded-2xl overflow-hidden shadow-2xl border border-amber-400/50 bg-neutral-950/95 backdrop-blur-xl transition-shadow" style="width: 220px; height: 290px; right: 12px; top: 76px; touch-action: none; box-shadow: 0 15px 45px rgba(0,0,0,0.9), 0 0 18px rgba(245,158,11,0.25);">
+  <!-- ==================== SMART MOBILE CARD SIDEBAR (Edge Drawer) ==================== -->
+  <!-- 1. Backdrop Overlay -->
+  <div id="cardSidebarBackdrop" class="fixed inset-0 bg-black/65 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0 cursor-pointer"></div>
+
+  <!-- 2. Slide-out Sidebar Drawer -->
+  <aside id="cardSidebarPanel" class="fixed top-0 right-0 bottom-0 z-50 w-[86vw] sm:w-[390px] max-w-[420px] h-[100dvh] bg-neutral-950/95 backdrop-blur-2xl border-l border-amber-400/40 shadow-2xl flex flex-col transition-transform duration-300 ease-out translate-x-full select-none" style="box-shadow: -12px 0 45px rgba(0,0,0,0.9), -2px 0 15px rgba(245,158,11,0.25);">
     
-    <!-- Single Sleek Draggable Header (Clean & Simple) -->
-    <div id="floatingCardHeader" class="flex items-center justify-between px-2.5 py-1.5 bg-gradient-to-r from-amber-600/35 via-neutral-900 to-neutral-900/95 border-b border-white/10 cursor-move text-white shrink-0 select-none active:bg-amber-600/50 transition">
-      <div class="flex items-center gap-1.5 min-w-0 pointer-events-none">
-        <i class="fa-solid fa-grip-vertical text-amber-400 text-xs"></i>
-        <span class="text-[11px] font-bold text-amber-200 truncate">Card Preview</span>
-        <span id="floatingPageBadge" class="text-[8px] bg-black/70 border border-white/10 px-1 py-0.5 rounded font-mono text-white/80">1/1</span>
+    <!-- Sidebar Header -->
+    <div class="flex items-center justify-between px-3 py-2.5 bg-gradient-to-r from-amber-600/35 via-neutral-900 to-neutral-900 border-b border-white/10 text-white shrink-0">
+      <div class="flex items-center gap-2 min-w-0">
+        <!-- Close / Slide-in Arrow -->
+        <button type="button" id="btnCollapseCardSidebar" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 active:bg-amber-500/30 text-amber-300 flex items-center justify-center transition border border-white/15 cursor-pointer active:scale-95" title="Hide Sidebar">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-image text-amber-400 text-xs"></i>
+            <span class="text-xs font-bold text-white truncate">Card Reference</span>
+          </div>
+          <span id="floatingPageBadge" class="text-[9px] text-amber-300/80 font-mono">Page 1/1</span>
+        </div>
       </div>
 
-      <!-- Action Controls -->
-      <div class="flex items-center gap-1.5 shrink-0">
-        <!-- Preset Size Toggle (XS / S / M / L) -->
-        <button type="button" id="btnFloatingToggleSize" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-[10px] sm:text-[9px] font-bold text-amber-300 flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Switch Size: XS / S / M / L">
-          <span id="floatingSizeLabel">M</span>
+      <!-- Quick Action Controls -->
+      <div class="flex items-center gap-1 shrink-0">
+        <button type="button" id="btnFloatingZoomOut" class="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition text-xs border border-white/10 active:scale-95 cursor-pointer" title="Zoom Out">
+          <i class="fa-solid fa-minus text-[10px]"></i>
         </button>
-
-        <!-- Transparency Toggle -->
-        <button type="button" id="btnFloatingToggleOpacity" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Toggle Transparency">
-          <i class="fa-solid fa-circle-half-stroke text-[10px] sm:text-[9px]"></i>
+        <button type="button" id="btnFloatingResetZoom" class="px-2 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-amber-300 text-[10px] font-bold flex items-center justify-center transition border border-white/10 active:scale-95 cursor-pointer" title="Reset Zoom">
+          Fit
         </button>
-
-        <!-- Fullscreen Lightbox View -->
-        <button type="button" id="btnFloatingExpandFull" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition border border-white/10 cursor-pointer active:scale-95" title="Fullscreen Lightbox">
-          <i class="fa-solid fa-expand text-[10px] sm:text-[9px]"></i>
+        <button type="button" id="btnFloatingZoomIn" class="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition text-xs border border-white/10 active:scale-95 cursor-pointer" title="Zoom In">
+          <i class="fa-solid fa-plus text-[10px]"></i>
         </button>
-
-        <!-- Close / Minimize -->
-        <button type="button" id="btnCloseFloatingWidget" class="w-7 h-7 sm:w-6 sm:h-6 rounded-lg bg-rose-600/80 hover:bg-rose-600 text-white flex items-center justify-center transition ml-0.5 cursor-pointer active:scale-95" title="Close Float">
-          <i class="fa-solid fa-xmark text-xs"></i>
+        <button type="button" id="btnFloatingExpandFull" class="w-7 h-7 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 flex items-center justify-center transition text-xs border border-amber-500/40 ml-0.5 active:scale-95 cursor-pointer" title="Fullscreen">
+          <i class="fa-solid fa-expand text-[10px]"></i>
         </button>
       </div>
     </div>
 
-    <!-- Card Image Viewport (Clean, Edge-to-Edge) -->
-    <div id="floatingCardBody" class="flex-1 relative overflow-hidden bg-neutral-950 flex items-center justify-center cursor-grab active:cursor-grabbing p-0">
-      <img id="floatingCardImg" src="" alt="Floating Wedding Card" class="max-w-none transition-transform duration-75 select-none origin-center" style="transform: translate(0px, 0px) scale(1);" draggable="false" />
+    <!-- Image Viewport Body -->
+    <div id="floatingCardBody" class="flex-1 relative overflow-hidden bg-neutral-950 flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none" style="touch-action: none;">
+      <img id="floatingCardImg" src="" alt="Wedding Card" class="max-w-none transition-transform duration-75 select-none origin-center" style="transform: translate(0px, 0px) scale(1);" draggable="false" />
 
-      <!-- Empty state if no card is uploaded yet -->
-      <div id="floatingCardEmptyState" class="hidden flex-col items-center justify-center text-center p-3 text-white/50 space-y-1">
-        <i class="fa-solid fa-image text-2xl text-amber-400/40"></i>
-        <span class="text-[11px] font-medium text-white/80">No card uploaded</span>
-        <span class="text-[9px] text-white/40">Upload card in Step 1</span>
+      <!-- Empty state -->
+      <div id="floatingCardEmptyState" class="hidden flex-col items-center justify-center text-center p-4 text-white/50 space-y-1.5">
+        <i class="fa-solid fa-image text-3xl text-amber-400/40 mb-1"></i>
+        <span class="text-xs font-semibold text-white/80">No Card Uploaded</span>
+        <span class="text-[10px] text-white/40">Upload wedding card photo in Step 1</span>
       </div>
 
-      <!-- Multi-page On-Image Nav Arrows -->
-      <button type="button" id="btnFloatingPrevPage" class="absolute left-1 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black/70 hover:bg-black text-white/90 hover:text-white flex items-center justify-center border border-white/20 transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer shadow-md">
-        <i class="fa-solid fa-chevron-left text-[9px]"></i>
+      <!-- Multi-page Nav Arrows -->
+      <button type="button" id="btnFloatingPrevPage" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/75 hover:bg-black text-white flex items-center justify-center border border-white/20 shadow-xl transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer active:scale-95">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
       </button>
-      <button type="button" id="btnFloatingNextPage" class="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black/70 hover:bg-black text-white/90 hover:text-white flex items-center justify-center border border-white/20 transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer shadow-md">
-        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+      <button type="button" id="btnFloatingNextPage" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/75 hover:bg-black text-white flex items-center justify-center border border-white/20 shadow-xl transition disabled:opacity-0 disabled:pointer-events-none z-10 cursor-pointer active:scale-95">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
       </button>
 
-      <!-- Zoom Indicator Pill -->
-      <div id="floatingZoomPill" class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/65 backdrop-blur-sm border border-white/10 text-[8px] font-mono text-amber-300 pointer-events-none select-none opacity-70">
+      <!-- Zoom indicator pill -->
+      <div id="floatingZoomPill" class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-sm border border-white/10 text-[9px] font-mono text-amber-300 pointer-events-none select-none opacity-60">
         <span id="floatingZoomVal">100%</span>
       </div>
     </div>
 
-    <!-- 4-Sided & 4-Corner Resize Handles (All 4 Sides) -->
-    <!-- Top Edge -->
-    <div class="floating-resizer absolute top-0 left-4 right-4 h-3 cursor-ns-resize z-30 flex items-center justify-center group" data-resize-dir="top" title="Resize Top">
-      <div class="h-1 w-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:w-10 transition-all shadow-sm"></div>
+    <!-- Footer Bar -->
+    <div class="px-3 py-2 bg-black/70 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60 shrink-0">
+      <span class="flex items-center gap-1.5 text-[10px]">
+        <i class="fa-solid fa-hand-pointer text-amber-400/80 text-[10px]"></i>
+        <span>Pinch to zoom / Drag to pan</span>
+      </span>
+      <button type="button" id="btnCloseSidebarBottom" class="text-amber-300 hover:text-amber-200 font-bold flex items-center gap-1 cursor-pointer active:scale-95">
+        <span>Hide</span>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+      </button>
     </div>
-    <!-- Bottom Edge -->
-    <div class="floating-resizer absolute bottom-0 left-4 right-4 h-3.5 cursor-ns-resize z-30 flex items-center justify-center group" data-resize-dir="bottom" title="Resize Bottom">
-      <div class="h-1 w-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:w-10 transition-all shadow-sm"></div>
-    </div>
-    <!-- Left Edge -->
-    <div class="floating-resizer absolute top-4 left-0 bottom-4 w-3 cursor-ew-resize z-30 flex items-center justify-center group" data-resize-dir="left" title="Resize Left">
-      <div class="w-1 h-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:h-10 transition-all shadow-sm"></div>
-    </div>
-    <!-- Right Edge -->
-    <div class="floating-resizer absolute top-4 right-0 bottom-4 w-3 cursor-ew-resize z-30 flex items-center justify-center group" data-resize-dir="right" title="Resize Right">
-      <div class="w-1 h-8 rounded-full bg-amber-400/35 group-hover:bg-amber-400 group-hover:h-10 transition-all shadow-sm"></div>
-    </div>
+  </aside>
 
-    <!-- 4 Corners -->
-    <div class="floating-resizer absolute top-0 left-0 w-4 h-4 cursor-nwse-resize z-30" data-resize-dir="top-left" title="Resize Corner"></div>
-    <div class="floating-resizer absolute top-0 right-0 w-4 h-4 cursor-nesw-resize z-30" data-resize-dir="top-right" title="Resize Corner"></div>
-    <div class="floating-resizer absolute bottom-0 left-0 w-5 h-5 cursor-nesw-resize z-30" data-resize-dir="bottom-left" title="Resize Corner"></div>
-    <div class="floating-resizer absolute bottom-0 right-0 w-7 h-7 flex items-end justify-end p-1 cursor-nwse-resize text-amber-400/80 hover:text-amber-300 hover:scale-110 transition z-30 select-none" data-resize-dir="bottom-right" title="Resize Corner">
-      <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor">
-        <path d="M9 1L1 9M9 5L5 9M9 9L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
+  <!-- 3. Smart Edge Pull Tab / Handle (Mobile Sidebar Handle) -->
+  <div id="cardSidebarEdgeTab" class="fixed right-0 z-40 hidden flex items-center select-none cursor-pointer" style="top: 50%; transform: translateY(-50%); touch-action: none;">
+    <div class="flex items-center gap-1.5 py-3.5 pl-2.5 pr-1.5 rounded-l-2xl bg-gradient-to-l from-amber-600 via-rose-600 to-amber-700 text-white shadow-2xl border-y border-l border-amber-300/50 backdrop-blur-md active:scale-95 hover:pl-3 transition-all" style="box-shadow: -4px 0 18px rgba(245,158,11,0.5);">
+      <i class="fa-solid fa-chevron-left text-[11px] text-amber-200 animate-pulse"></i>
+      <i class="fa-solid fa-image text-xs text-white"></i>
+      <span class="text-[10px] font-extrabold tracking-wider text-amber-100 uppercase" style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.1em;">CARD</span>
     </div>
   </div>
 
-  <!-- FLOATING LAUNCHER PILL (Compact sticky button when widget is minimized) -->
-  <button type="button" id="floatingLauncherPill" class="fixed right-3.5 z-40 hidden px-2.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 via-rose-600 to-brand-700 text-white font-bold text-[11px] shadow-xl border border-amber-300/40 flex items-center gap-1.5 hover:scale-105 active:scale-95 transition cursor-pointer" style="box-shadow: 0 6px 18px rgba(245,158,11,0.35); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));">
-    <i class="fa-solid fa-clone text-[10px] text-amber-300"></i>
-    <span>Float</span>
-  </button>
+  <!-- Hidden aliases for backwards compatibility -->
+  <div id="floatingCardWidget" class="hidden"></div>
+  <button type="button" id="floatingLauncherPill" class="hidden"></button>
 
   <!-- FULLSCREEN CARD VIEWER (Lightbox Modal for Image & PDF) -->
   <div id="modalCardViewer" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col hidden select-none">
