@@ -1790,7 +1790,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const apiKey = localStorage.getItem('gemini_api_key') || '';
+    let apiKey = (localStorage.getItem('gemini_api_key') || '').trim();
+    if (apiKey === 'null' || apiKey === 'undefined') apiKey = '';
     const numFiles = currentCardFiles.length;
 
     showLoading(true, 'AI Scanning Card...', `Extracting details from ${numFiles} page(s) in seconds...`);
