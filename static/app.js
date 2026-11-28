@@ -270,6 +270,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const elBadge = document.getElementById('settingsEditorTemplateBadge');
     if (elBadge) elBadge.textContent = name;
+
+    loadStudioFieldsForEditor(editorId);
+  }
+
+  function getStudioStorageKey(field, editorId = getCurrentEditorId()) {
+    return `${field}_${String(editorId || 'amar').toLowerCase()}`;
+  }
+
+  function loadStudioFieldsForEditor(editorId = getCurrentEditorId(), fallbackData = null) {
+    const elName = document.getElementById('inpStudioName');
+    const elPhone = document.getElementById('inpStudioPhone');
+    const savedName = localStorage.getItem(getStudioStorageKey('studio_name', editorId));
+    const savedPhone = localStorage.getItem(getStudioStorageKey('studio_phone', editorId));
+    if (elName) {
+      elName.value = (savedName !== null) ? savedName : (fallbackData?.studio_name ?? 'Amar Edit');
+    }
+    if (elPhone) {
+      elPhone.value = (savedPhone !== null) ? savedPhone : (fallbackData?.studio_phone ?? '7067392032');
+    }
+  }
+
+  const inpStudioNameInput = document.getElementById('inpStudioName');
+  const inpStudioPhoneInput = document.getElementById('inpStudioPhone');
+  if (inpStudioNameInput) {
+    inpStudioNameInput.addEventListener('input', (e) => {
+      localStorage.setItem(getStudioStorageKey('studio_name'), e.target.value);
+    });
+  }
+  if (inpStudioPhoneInput) {
+    inpStudioPhoneInput.addEventListener('input', (e) => {
+      localStorage.setItem(getStudioStorageKey('studio_phone'), e.target.value);
+    });
   }
 
   const editorSelectionScreen = document.getElementById('editorSelectionScreen');
@@ -1912,8 +1944,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('inpVenueDistrict').value = data.venue_district || '';
 
     document.getElementById('inpVinit').value = data.vinit_names || 'श्री लखन (पापा)\nश्रीमती लता बाई (माँ)';
-    document.getElementById('inpStudioName').value = 'Amar Edit';
-    document.getElementById('inpStudioPhone').value = '7067392032';
+    loadStudioFieldsForEditor(getCurrentEditorId(), data);
 
     // Update Header with Groom or Bride Project Name
     updateHeaderProjectName();
@@ -1967,8 +1998,8 @@ document.addEventListener('DOMContentLoaded', () => {
       venue_district: document.getElementById('inpVenueDistrict').value || 'राजनांदगांव',
 
       vinit_names: document.getElementById('inpVinit').value || 'श्री लखन (पापा)\nश्रीमती लता बाई (माँ)',
-      studio_name: 'Amar Edit',
-      studio_phone: '7067392032'
+      studio_name: (document.getElementById('inpStudioName')?.value ?? '').trim(),
+      studio_phone: (document.getElementById('inpStudioPhone')?.value ?? '').trim()
     };
   }
 
