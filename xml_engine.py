@@ -124,6 +124,223 @@ def devanagari_to_ams(text: str) -> str:
     return cleaned
 
 
+NAME_EN_OVERRIDES = {
+    'राहुल': 'Rahul', 'प्रिया': 'Priya', 'संदीप': 'Sandeep', 'पूजा': 'Pooja',
+    'राम': 'Ram', 'नेहा': 'Neha', 'श्वेता': 'Shweta', 'विनीता': 'Vinita',
+    'भागवत': 'Bhagwat', 'राकेश': 'Rakesh', 'सुरेंद्र': 'Surendra', 'हंसराज': 'Hansraj',
+    'अमित': 'Amit', 'सुनील': 'Sunil', 'अमर': 'Amar', 'अजय': 'Ajay',
+    'लक्ष्मी': 'Laxmi', 'लक्ष्मण': 'Laxman', 'पुर्षोत्तम': 'Purushottam',
+    'पुरुषोत्तम': 'Purushottam', 'दीपक': 'Deepak', 'दुर्गेश': 'Durgesh',
+    'विकास': 'Vikas', 'प्रकाश': 'Prakash', 'आकाश': 'Aakash', 'रोहित': 'Rohit',
+    'मोहित': 'Mohit', 'सुमित': 'Sumit', 'अंकित': 'Ankit', 'अंकिता': 'Ankita',
+    'रितेश': 'Ritesh', 'दिनेश': 'Dinesh', 'महेश': 'Mahesh', 'रमेश': 'Ramesh',
+    'सुरेश': 'Suresh', 'लोकेश': 'Lokesh', 'योगेश': 'Yogesh', 'नीलेश': 'Nilesh',
+    'राजेश': 'Rajesh', 'गणेश': 'Ganesh', 'धनेश': 'Dhanesh', 'मुकेश': 'Mukesh',
+    'कविता': 'Kavita', 'सरिता': 'Sarita', 'सुनीता': 'Sunita', 'अनीता': 'Anita',
+    'गीता': 'Geeta', 'सीता': 'Seeta', 'संगीता': 'Sangeeta', 'बिमलेश्वरी': 'Bimleshwari',
+    'विमलेश्वरी': 'Vimleshwari', 'यामिनी': 'Yamini', 'प्रियंका': 'Priyanka',
+    'अंजली': 'Anjali', 'अंजलि': 'Anjali', 'पूनम': 'Poonam', 'आरती': 'Aarti',
+    'सोनम': 'Sonam', 'सपना': 'Sapna', 'खुशबू': 'Khushboo', 'खुशी': 'Khushi',
+    'चांदनी': 'Chandni', 'चाँदनी': 'Chandni', 'काजल': 'Kajal', 'पायल': 'Payal',
+    'कोमल': 'Komal', 'मनीषा': 'Manisha', 'मनीष': 'Manish', 'सीमा': 'Seema',
+    'ज्योति': 'Jyoti', 'भूपेंद्र': 'Bhupendra', 'जितेंद्र': 'Jitendra',
+    'महेंद्र': 'Mahendra', 'नरेंद्र': 'Narendra', 'राजेंद्र': 'Rajendra',
+    'देवेंद्र': 'Devendra', 'वीरेंद्र': 'Virendra', 'धर्मेंद्र': 'Dharmendra',
+    'हेमंत': 'Hemant', 'हेमन्त': 'Hemant', 'पंकज': 'Pankaj', 'पवन': 'Pawan',
+    'कमल': 'Kamal', 'लखन': 'Lakhan', 'मोहन': 'Mohan', 'मनोहर': 'Manohar',
+    'संतोष': 'Santosh', 'विश्वनाथ': 'Vishwanath', 'चंद्रकांत': 'Chandrakant',
+    'चन्द्रकान्त': 'Chandrakant', 'आशीष': 'Ashish', 'अभिषेक': 'Abhishek',
+    'आकांक्षा': 'Akanksha', 'कृष्णा': 'Krishna', 'कृष्ण': 'Krishna',
+    'ऋषभ': 'Rishabh', 'सौरभ': 'Saurabh', 'गौरव': 'Gaurav', 'वैभव': 'Vaibhav',
+    'पीयूष': 'Piyush', 'आयुष': 'Ayush', 'तुलेश्वर': 'Tuleshwar', 'निशा': 'Nisha',
+    'ईशा': 'Isha', 'आशा': 'Asha', 'उषा': 'Usha', 'रेखा': 'Rekha',
+    'मीना': 'Meena', 'रीता': 'Reeta', 'साहू': 'Sahu', 'वर्मा': 'Verma',
+    'सिंह': 'Singh', 'सिन्हा': 'Sinha', 'देवांगन': 'Dewangan', 'यादव': 'Yadav',
+    'पटेल': 'Patel', 'कश्यप': 'Kashyap', 'चंद्राकर': 'Chandrakar',
+    'चन्द्रकार': 'Chandrakar', 'चौधरी': 'Chaudhary', 'कावरे': 'Kaware',
+    'ठाकुर': 'Thakur', 'शर्मा': 'Sharma', 'तिवारी': 'Tiwari'
+}
+
+_DEVA_VOWELS_INIT = {
+    'अ': 'A', 'आ': 'Aa', 'इ': 'I', 'ई': 'Ee', 'उ': 'U', 'ऊ': 'Oo',
+    'ऋ': 'Ri', 'ए': 'E', 'ऐ': 'Ai', 'ओ': 'O', 'औ': 'Au'
+}
+_DEVA_MATRAS = {
+    'ा': 'a', 'ि': 'i', 'ी': 'ee', 'ु': 'u', 'ू': 'oo',
+    'ृ': 'ri', 'े': 'e', 'ै': 'ai', 'ो': 'o', 'ौ': 'au'
+}
+_DEVA_CONSONANTS = {
+    'क': 'k', 'ख': 'kh', 'ग': 'g', 'घ': 'gh', 'ङ': 'ng',
+    'च': 'ch', 'छ': 'chh', 'ज': 'j', 'झ': 'jh', 'ञ': 'ny',
+    'ट': 't', 'ठ': 'th', 'ड': 'd', 'ढ': 'dh', 'ण': 'n',
+    'त': 't', 'थ': 'th', 'द': 'd', 'ध': 'dh', 'न': 'n',
+    'प': 'p', 'फ': 'ph', 'ब': 'b', 'भ': 'bh', 'म': 'm',
+    'य': 'y', 'र': 'r', 'ल': 'l', 'व': 'v', 'श': 'sh',
+    'ष': 'sh', 'स': 's', 'ह': 'h',
+    'क़': 'q', 'ख़': 'kh', 'ग़': 'gh', 'ज़': 'z', 'ड़': 'd', 'ढ़': 'dh', 'फ़': 'f',
+    'य़': 'y'
+}
+
+
+def _transliterate_deva_word(word: str) -> str:
+    clean = word.strip()
+    if not clean:
+        return ""
+    if clean in NAME_EN_OVERRIDES:
+        return NAME_EN_OVERRIDES[clean]
+    if re.fullmatch(r"[A-Za-z0-9_-]+", clean):
+        return clean
+
+    units = []
+    i = 0
+    n = len(clean)
+    while i < n:
+        ch = clean[i]
+        if ch in _DEVA_VOWELS_INIT:
+            v = _DEVA_VOWELS_INIT[ch]
+            nas = ""
+            i += 1
+            while i < n and clean[i] in ("ं", "ँ"):
+                nas = "n"
+                i += 1
+            units.append(("V", v.lower() if units else v, nas))
+            continue
+
+        if ch in _DEVA_CONSONANTS:
+            cons_parts = []
+            while True:
+                c_ch = clean[i]
+                if i + 1 < n and clean[i + 1] == "़" and (c_ch + "़") in _DEVA_CONSONANTS:
+                    c_rom = _DEVA_CONSONANTS[c_ch + "़"]
+                    i += 2
+                else:
+                    c_rom = _DEVA_CONSONANTS[c_ch]
+                    i += 1
+                cons_parts.append(c_rom)
+                if i < n and clean[i] == "्":
+                    i += 1
+                    if i < n and clean[i] in _DEVA_CONSONANTS:
+                        continue
+                    units.append(("C", "".join(cons_parts), "NONE", "", "", len(cons_parts) > 1))
+                    cons_parts = []
+                    break
+                break
+            if not cons_parts:
+                continue
+
+            cons_str = "".join(cons_parts).replace("jny", "gy")
+            vowel_type = "SCHWA"
+            explicit_v = "a"
+            if i < n and clean[i] in _DEVA_MATRAS:
+                vowel_type = "EXPLICIT"
+                explicit_v = _DEVA_MATRAS[clean[i]]
+                i += 1
+            nas = ""
+            while i < n and clean[i] in ("ं", "ँ"):
+                nas = "n"
+                i += 1
+            if i < n and clean[i] == "ः":
+                i += 1
+            units.append(("C", cons_str, vowel_type, explicit_v, nas, len(cons_parts) > 1))
+            continue
+
+        if ch.isascii() and ch.isalnum():
+            units.append(("V", ch, ""))
+        i += 1
+
+    out = []
+    m_len = len(units)
+    for idx, u in enumerate(units):
+        if u[0] == "V":
+            out.append(u[1] + u[2])
+            continue
+        _, cons, vtype, exp_v, nas, is_conj = u
+        if vtype == "NONE":
+            out.append(cons + nas)
+        elif vtype == "EXPLICIT":
+            v_out = exp_v
+            if idx == m_len - 1 and not nas:
+                if exp_v == "ee":
+                    v_out = "i"
+                elif exp_v == "oo":
+                    v_out = "u"
+            if nas and idx + 1 < m_len and units[idx + 1][0] == "C" and units[idx + 1][1][0] in ("p", "b", "m"):
+                nas_out = "m"
+            else:
+                nas_out = nas
+            out.append(cons + v_out + nas_out)
+        else:
+            if nas:
+                keep = True
+                nas_out = "m" if (idx + 1 < m_len and units[idx + 1][0] == "C" and units[idx + 1][1][0] in ("p", "b", "m")) else "n"
+            elif idx == m_len - 1:
+                keep = is_conj or (m_len == 1)
+                nas_out = ""
+            elif idx == 0:
+                keep = True
+                nas_out = ""
+            else:
+                next_u = units[idx + 1]
+                prev_u = units[idx - 1]
+                prev_has_vowel = (prev_u[0] == "V") or (prev_u[2] == "EXPLICIT") or (prev_u[2] == "SCHWA" and bool(out) and out[-1].endswith("a"))
+                next_has_vowel = (next_u[0] == "V") or (next_u[2] == "EXPLICIT") or (next_u[2] == "SCHWA" and idx + 1 < m_len - 1)
+                next_is_conj = (next_u[0] == "C" and bool(next_u[5]))
+                keep = not (prev_has_vowel and next_has_vowel and not is_conj and not next_is_conj)
+                nas_out = ""
+            out.append(cons + ("a" if keep else "") + nas_out)
+
+    res = "".join(out)
+    return res[:1].upper() + res[1:] if res else ""
+
+
+def devanagari_to_english(text: str) -> str:
+    """Converts Hindi/Devanagari names into clean Title-Case English text."""
+    raw = (text or "").strip()
+    if not raw:
+        return ""
+    raw = re.sub(r"^(?:चि\.|सौ\.?\s*कां\.?|कु\.?|श्री|सुश्री)\s*", "", raw).strip()
+    tokens = re.findall(r"[^\s/|,()]+", raw)
+    converted = []
+    for tok in tokens:
+        if re.search(r"[\u0900-\u097F]", tok):
+            w = _transliterate_deva_word(tok)
+        else:
+            w = re.sub(r"[^A-Za-z0-9_-]", "", tok)
+        if w:
+            converted.append(w)
+    return " ".join(converted).strip()
+
+
+def sanitize_order_filename(name: str) -> str:
+    """Normalizes an English order name into a safe cross-platform filename stem."""
+    cleaned = re.sub(r"[^A-Za-z0-9 _-]", "", (name or "")).strip()
+    cleaned = re.sub(r"\s+", "_", cleaned).strip("_")
+    return cleaned
+
+
+def get_english_order_name(data: dict) -> str:
+    """Returns the primary party's order/project name in clean English text."""
+    card_side = (data.get("card_side") or "groom").strip().lower()
+    explicit = (data.get("order_name") or "").strip()
+    if explicit:
+        en_explicit = devanagari_to_english(explicit) if re.search(r"[\u0900-\u097F]", explicit) else re.sub(r"[^\x20-\x7E]", "", explicit).strip()
+        if en_explicit:
+            return en_explicit
+
+    en_field = "bride_name_en" if card_side == "bride" else "groom_name_en"
+    explicit_side_en = (data.get(en_field) or "").strip()
+    if explicit_side_en and not re.search(r"[\u0900-\u097F]", explicit_side_en):
+        clean_side_en = re.sub(r"[^\x20-\x7E]", "", explicit_side_en).strip()
+        if clean_side_en:
+            return clean_side_en
+
+    raw_primary = (data.get("bride_name") if card_side == "bride" else data.get("groom_name")) or ""
+    converted = devanagari_to_english(raw_primary)
+    if converted:
+        return converted
+    return "Vivah"
+
+
 def adjust_functions_for_4_slots(data: dict) -> list:
     """Wrapper for backward compatibility."""
     return adjust_functions(data, target_slots=4)
@@ -570,11 +787,8 @@ def generate_wedding_xml(
     groom_name = data.get("groom_name", "राम").strip()
     bride_name = data.get("bride_name", "नेहा").strip()
 
-    # Project Title: reflects primary party first (Groom or Bride name)
-    if card_side == "bride":
-        root.set("title", f"{bride_name}" if bride_name else "Vivah")
-    else:
-        root.set("title", f"{groom_name}" if groom_name else "Vivah")
+    # Project Title: reflects primary party first in English text (Order Name)
+    root.set("title", get_english_order_name(data))
 
     # 1. Pariwar / Family Clan
     pariwar_raw = data.get("pariwar_name", "साहू परिवार").strip()
@@ -1296,11 +1510,8 @@ def generate_wedding_package(
         bride_photo_info=bride_info
     )
 
-    card_side = data.get("card_side", "groom").strip().lower()
-    groom_name = data.get("groom_name", "Groom").strip().replace(" ", "_")
-    bride_name = data.get("bride_name", "Bride").strip().replace(" ", "_")
-    primary_name = bride_name if card_side == "bride" else groom_name
-    primary_name = primary_name or "Vivah"
+    order_name_en = get_english_order_name(data)
+    safe_order_name = sanitize_order_filename(order_name_en) or "Vivah"
 
     zip_buf = io.BytesIO()
     with zipfile.ZipFile(zip_buf, "w", zipfile.ZIP_DEFLATED) as z:
@@ -1316,7 +1527,7 @@ def generate_wedding_package(
                 added_files.add(info["filename"])
 
     package_bytes = zip_buf.getvalue()
-    filename = f"{primary_name}.amzip"
+    filename = f"{safe_order_name}.amzip"
     return package_bytes, filename, "application/zip"
 
 print("Upgraded XML Engine with Card-Side precedence, dynamic ceremonies & grandparents ready.")
