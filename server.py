@@ -18,7 +18,14 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import qrcode
 
-from xml_engine import generate_wedding_xml, generate_wedding_package, get_or_create_template_map
+from xml_engine import (
+    generate_wedding_xml,
+    generate_wedding_package,
+    get_or_create_template_map,
+    devanagari_to_english,
+    get_english_order_name,
+    sanitize_order_filename,
+)
 from ai_scanner import scan_wedding_card, get_demo_sample_data, process_card_file
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -55,9 +62,9 @@ def save_scanned_card_record(extracted_data: dict, pages_list: list) -> str:
         cleanup_old_scans(7)
         now = time.time()
         dt_str = time.strftime("%Y%m%d_%H%M%S")
-        groom = (extracted_data.get("groom_name") or "Groom").strip().replace(" ", "_")
-        bride = (extracted_data.get("bride_name") or "Bride").strip().replace(" ", "_")
-        folder_name = f"{dt_str}_{groom}_{bride}"
+        groom_en = sanitize_order_filename(extracted_data.get("groom_name_en") or devanagari_to_english(extracted_data.get("groom_name") or "")) or "Groom"
+        bride_en = sanitize_order_filename(extracted_data.get("bride_name_en") or devanagari_to_english(extracted_data.get("bride_name") or "")) or "Bride"
+        folder_name = f"{dt_str}_{groom_en}_{bride_en}"
         scan_folder = os.path.join(SCANNED_CARDS_DIR, folder_name)
         os.makedirs(scan_folder, exist_ok=True)
 
@@ -979,26 +986,25 @@ async def generate_xml(
                 content=package_bytes,
                 media_type=mime_type,
                 headers={
-                    "Content-Disposition": f'attachment; filename="wedding_project.amzip"; filename*=UTF-8\'\'{encoded_filename}'
+                    "Content-Disposition": f'attachment; filename="{filename}"; filename*=UTF-8\'\'{encoded_filename}'
                 }
             )
         else:
             generated_xml = generate_wedding_xml(template_path, parsed_data, font_mode=font_mode)
-            
-            groom = parsed_data.get("groom_name", "Groom").strip().replace(" ", "_")
-            bride = parsed_data.get("bride_name", "Bride").strip().replace(" ", "_")
+
             card_side = parsed_data.get("card_side", "groom").strip().lower()
-            if card_side == "bride":
-                filename = f"{bride}.xml" if bride else "Vivah_Bride.xml"
-            else:
-                filename = f"{groom}.xml" if groom else "Vivah_Groom.xml"
+            order_name_en = get_english_order_name(parsed_data)
+            safe_order_name = sanitize_order_filename(order_name_en)
+            if not safe_order_name:
+                safe_order_name = "Vivah_Bride" if card_side == "bride" else "Vivah_Groom"
+            filename = f"{safe_order_name}.xml"
             encoded_filename = urllib.parse.quote(filename)
 
             return Response(
                 content=generated_xml.encode("utf-8"),
                 media_type="application/xml; charset=utf-8",
                 headers={
-                    "Content-Disposition": f'attachment; filename="wedding_project.xml"; filename*=UTF-8\'\'{encoded_filename}'
+                    "Content-Disposition": f'attachment; filename="{filename}"; filename*=UTF-8\'\'{encoded_filename}'
                 }
             )
     except Exception as e:
