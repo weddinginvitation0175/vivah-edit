@@ -3,6 +3,7 @@ import base64
 import os
 import requests
 from typing import Dict, Any, List, Union
+from xml_engine import devanagari_to_english, get_english_order_name
 
 CHHATTISGARHI_CARD_SYSTEM_PROMPT = """
 You are an expert OCR & Information Extraction AI specialized in Indian Wedding Cards (Lagan Patrika / Vivah Nimantran Patra / बिहाव नेवता) in Hindi, Chhattisgarhi, and English.
@@ -57,14 +58,16 @@ Return ONLY a valid JSON object matching this schema:
 {
   "card_side": "groom" or "bride",
   "pariwar_name": "Surname / Family name",
-  "groom_name": "Groom's first/full name",
+  "groom_name": "Groom's first/full name in Hindi",
+  "groom_name_en": "Groom's name in English letters (e.g. Rahul)",
   "groom_father": "Father's name with Sri",
   "groom_mother": "Mother's name with Smt",
   "groom_grandparents": "Grandfather/Grandmother if mentioned",
   "groom_village": "Village / town",
   "groom_district": "District (छः गः)",
   "groom_state": "छत्तीसगढ़",
-  "bride_name": "Bride's first/full name",
+  "bride_name": "Bride's first/full name in Hindi",
+  "bride_name_en": "Bride's name in English letters (e.g. Priya)",
   "bride_father": "Father's name with Sri",
   "bride_mother": "Mother's name with Smt",
   "bride_grandparents": "Grandfather/Grandmother if mentioned",
@@ -466,6 +469,14 @@ def scan_wedding_card(pages: Union[bytes, List[Dict[str, Any]]], mime_type: str 
     if final_data.get("card_side") not in ["groom", "bride"]:
         final_data["card_side"] = "groom"
 
+    # 7. Ensure English order names are populated for Groom & Bride
+    for hi_key, en_key in [("groom_name", "groom_name_en"), ("bride_name", "bride_name_en")]:
+        en_val = (final_data.get(en_key) or "").strip()
+        if not en_val or not en_val.isascii():
+            en_val = devanagari_to_english(final_data.get(hi_key, ""))
+        final_data[en_key] = en_val
+    final_data["order_name"] = get_english_order_name(final_data)
+
     return final_data
 
 
@@ -475,6 +486,7 @@ def get_demo_sample_data() -> Dict[str, Any]:
         "card_side": "groom",
         "pariwar_name": "साहू परिवार",
         "groom_name": "संदीप",
+        "groom_name_en": "Sandeep",
         "groom_father": "श्री मनोहर लाल साहू",
         "groom_mother": "श्रीमती कमला बाई",
         "groom_grandparents": "स्व. श्री रामरतन साहू (दादा जी) एवं श्रीमती सुमित्रा देवी",
@@ -482,6 +494,7 @@ def get_demo_sample_data() -> Dict[str, Any]:
         "groom_district": "राजनांदगांव (छः गः)",
         "groom_state": "छत्तीसगढ़",
         "bride_name": "पूजा",
+        "bride_name_en": "Pooja",
         "bride_father": "श्री रमेश कुमार साहू",
         "bride_mother": "श्रीमती गीता बाई",
         "bride_grandparents": "स्व. श्री दीनदयाल साहू (दादा जी) एवं श्रीमती शकुंतला देवी",
@@ -504,5 +517,6 @@ def get_demo_sample_data() -> Dict[str, Any]:
         "venue_district": "राजनांदगांव (छः गः)",
         "vinit_names": "श्री मनोहर लाल साहू (पापा)\nश्रीमती कमला बाई (माँ)\nसमस्त साहू परिवार",
         "studio_name": "Amar Edit",
-        "studio_phone": "7067392032"
+        "studio_phone": "7067392032",
+        "order_name": "Sandeep"
     }
