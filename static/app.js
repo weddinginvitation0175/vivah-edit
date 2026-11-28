@@ -23,6 +23,211 @@ document.addEventListener('DOMContentLoaded', () => {
   let weddingData = {};
   let groomPhotoFile = null;
   let bridePhotoFile = null;
+  let aiEnglishNames = { groomHindi: '', groomEn: '', brideHindi: '', brideEn: '' };
+  let orderNameManuallyEdited = false;
+
+  const NAME_EN_OVERRIDES = {
+    'राहुल': 'Rahul', 'प्रिया': 'Priya', 'संदीप': 'Sandeep', 'पूजा': 'Pooja',
+    'राम': 'Ram', 'नेहा': 'Neha', 'श्वेता': 'Shweta', 'विनीता': 'Vinita',
+    'भागवत': 'Bhagwat', 'राकेश': 'Rakesh', 'सुरेंद्र': 'Surendra', 'हंसराज': 'Hansraj',
+    'अमित': 'Amit', 'सुनील': 'Sunil', 'अमर': 'Amar', 'अजय': 'Ajay',
+    'लक्ष्मी': 'Laxmi', 'लक्ष्मण': 'Laxman', 'पुर्षोत्तम': 'Purushottam',
+    'पुरुषोत्तम': 'Purushottam', 'दीपक': 'Deepak', 'दुर्गेश': 'Durgesh',
+    'विकास': 'Vikas', 'प्रकाश': 'Prakash', 'आकाश': 'Aakash', 'रोहित': 'Rohit',
+    'मोहित': 'Mohit', 'सुमित': 'Sumit', 'अंकित': 'Ankit', 'अंकिता': 'Ankita',
+    'रितेश': 'Ritesh', 'दिनेश': 'Dinesh', 'महेश': 'Mahesh', 'रमेश': 'Ramesh',
+    'सुरेश': 'Suresh', 'लोकेश': 'Lokesh', 'योगेश': 'Yogesh', 'नीलेश': 'Nilesh',
+    'राजेश': 'Rajesh', 'गणेश': 'Ganesh', 'धनेश': 'Dhanesh', 'मुकेश': 'Mukesh',
+    'कविता': 'Kavita', 'सरिता': 'Sarita', 'सुनीता': 'Sunita', 'अनीता': 'Anita',
+    'गीता': 'Geeta', 'सीता': 'Seeta', 'संगीता': 'Sangeeta', 'बिमलेश्वरी': 'Bimleshwari',
+    'विमलेश्वरी': 'Vimleshwari', 'यामिनी': 'Yamini', 'प्रियंका': 'Priyanka',
+    'अंजली': 'Anjali', 'अंजलि': 'Anjali', 'पूनम': 'Poonam', 'आरती': 'Aarti',
+    'सोनम': 'Sonam', 'सपना': 'Sapna', 'खुशबू': 'Khushboo', 'खुशी': 'Khushi',
+    'चांदनी': 'Chandni', 'चाँदनी': 'Chandni', 'काजल': 'Kajal', 'पायल': 'Payal',
+    'कोमल': 'Komal', 'मनीषा': 'Manisha', 'मनीष': 'Manish', 'सीमा': 'Seema',
+    'ज्योति': 'Jyoti', 'भूपेंद्र': 'Bhupendra', 'जितेंद्र': 'Jitendra',
+    'महेंद्र': 'Mahendra', 'नरेंद्र': 'Narendra', 'राजेंद्र': 'Rajendra',
+    'देवेंद्र': 'Devendra', 'वीरेंद्र': 'Virendra', 'धर्मेंद्र': 'Dharmendra',
+    'हेमंत': 'Hemant', 'हेमन्त': 'Hemant', 'पंकज': 'Pankaj', 'पवन': 'Pawan',
+    'कमल': 'Kamal', 'लखन': 'Lakhan', 'मोहन': 'Mohan', 'मनोहर': 'Manohar',
+    'संतोष': 'Santosh', 'विश्वनाथ': 'Vishwanath', 'चंद्रकांत': 'Chandrakant',
+    'चन्द्रकान्त': 'Chandrakant', 'आशीष': 'Ashish', 'अभिषेक': 'Abhishek',
+    'आकांक्षा': 'Akanksha', 'कृष्णा': 'Krishna', 'कृष्ण': 'Krishna',
+    'ऋषभ': 'Rishabh', 'सौरभ': 'Saurabh', 'गौरव': 'Gaurav', 'वैभव': 'Vaibhav',
+    'पीयूष': 'Piyush', 'आयुष': 'Ayush', 'तुलेश्वर': 'Tuleshwar', 'निशा': 'Nisha',
+    'ईशा': 'Isha', 'आशा': 'Asha', 'उषा': 'Usha', 'रेखा': 'Rekha',
+    'मीना': 'Meena', 'रीता': 'Reeta', 'साहू': 'Sahu', 'वर्मा': 'Verma',
+    'सिंह': 'Singh', 'सिन्हा': 'Sinha', 'देवांगन': 'Dewangan', 'यादव': 'Yadav',
+    'पटेल': 'Patel', 'कश्यप': 'Kashyap', 'चंद्राकर': 'Chandrakar',
+    'चन्द्रकार': 'Chandrakar', 'चौधरी': 'Chaudhary', 'कावरे': 'Kaware',
+    'ठाकुर': 'Thakur', 'शर्मा': 'Sharma', 'तिवारी': 'Tiwari'
+  };
+
+  function transliterateDevaWord(word) {
+    const clean = (word || '').trim();
+    if (!clean) return '';
+    if (NAME_EN_OVERRIDES[clean]) return NAME_EN_OVERRIDES[clean];
+    if (/^[A-Za-z0-9_-]+$/.test(clean)) return clean;
+
+    const VOWELS = { 'अ': 'A', 'आ': 'Aa', 'इ': 'I', 'ई': 'Ee', 'उ': 'U', 'ऊ': 'Oo', 'ऋ': 'Ri', 'ए': 'E', 'ऐ': 'Ai', 'ओ': 'O', 'औ': 'Au' };
+    const MATRAS = { 'ा': 'a', 'ि': 'i', 'ी': 'ee', 'ु': 'u', 'ू': 'oo', 'ृ': 'ri', 'े': 'e', 'ै': 'ai', 'ो': 'o', 'ौ': 'au' };
+    const CONS = {
+      'क': 'k', 'ख': 'kh', 'ग': 'g', 'घ': 'gh', 'ङ': 'ng',
+      'च': 'ch', 'छ': 'chh', 'ज': 'j', 'झ': 'jh', 'ञ': 'ny',
+      'ट': 't', 'ठ': 'th', 'ड': 'd', 'ढ': 'dh', 'ण': 'n',
+      'त': 't', 'थ': 'th', 'द': 'd', 'ध': 'dh', 'न': 'n',
+      'प': 'p', 'फ': 'ph', 'ब': 'b', 'भ': 'bh', 'म': 'm',
+      'य': 'y', 'र': 'r', 'ल': 'l', 'व': 'v', 'श': 'sh',
+      'ष': 'sh', 'स': 's', 'ह': 'h',
+      'क़': 'q', 'ख़': 'kh', 'ग़': 'gh', 'ज़': 'z', 'ड़': 'd', 'ढ़': 'dh', 'फ़': 'f', 'य़': 'y'
+    };
+
+    const units = [];
+    let i = 0;
+    const n = clean.length;
+    while (i < n) {
+      const ch = clean[i];
+      if (VOWELS[ch]) {
+        const v = VOWELS[ch];
+        let nas = '';
+        i++;
+        while (i < n && (clean[i] === 'ं' || clean[i] === 'ँ')) { nas = 'n'; i++; }
+        units.push({ kind: 'V', val: units.length ? v.toLowerCase() : v, nas });
+        continue;
+      }
+      if (CONS[ch]) {
+        const parts = [];
+        let abortedHalant = false;
+        while (true) {
+          const cCh = clean[i];
+          let cRom;
+          if (i + 1 < n && clean[i + 1] === '़' && CONS[cCh + '़']) {
+            cRom = CONS[cCh + '़'];
+            i += 2;
+          } else {
+            cRom = CONS[cCh];
+            i += 1;
+          }
+          parts.push(cRom);
+          if (i < n && clean[i] === '्') {
+            i += 1;
+            if (i < n && CONS[clean[i]]) continue;
+            units.push({ kind: 'C', cons: parts.join(''), vtype: 'NONE', expV: '', nas: '', isConj: parts.length > 1 });
+            abortedHalant = true;
+          }
+          break;
+        }
+        if (abortedHalant) continue;
+
+        const consStr = parts.join('').replace(/jny/g, 'gy');
+        let vtype = 'SCHWA';
+        let expV = 'a';
+        if (i < n && MATRAS[clean[i]]) {
+          vtype = 'EXPLICIT';
+          expV = MATRAS[clean[i]];
+          i += 1;
+        }
+        let nas = '';
+        while (i < n && (clean[i] === 'ं' || clean[i] === 'ँ')) { nas = 'n'; i += 1; }
+        if (i < n && clean[i] === 'ः') i += 1;
+        units.push({ kind: 'C', cons: consStr, vtype, expV, nas, isConj: parts.length > 1 });
+        continue;
+      }
+      if (/^[A-Za-z0-9]$/.test(ch)) {
+        units.push({ kind: 'V', val: ch, nas: '' });
+      }
+      i += 1;
+    }
+
+    const out = [];
+    const mLen = units.length;
+    for (let idx = 0; idx < mLen; idx++) {
+      const u = units[idx];
+      if (u.kind === 'V') {
+        out.push(u.val + u.nas);
+        continue;
+      }
+      const nextU = units[idx + 1];
+      const prevU = units[idx - 1];
+      const nextLabial = nextU && nextU.kind === 'C' && ['p', 'b', 'm'].includes(nextU.cons[0]);
+      const nasOut = u.nas ? (nextLabial ? 'm' : 'n') : '';
+
+      if (u.vtype === 'NONE') {
+        out.push(u.cons + nasOut);
+      } else if (u.vtype === 'EXPLICIT') {
+        let vOut = u.expV;
+        if (idx === mLen - 1 && !u.nas) {
+          if (u.expV === 'ee') vOut = 'i';
+          else if (u.expV === 'oo') vOut = 'u';
+        }
+        out.push(u.cons + vOut + nasOut);
+      } else {
+        let keep = true;
+        if (u.nas) {
+          keep = true;
+        } else if (idx === mLen - 1) {
+          keep = u.isConj || (mLen === 1);
+        } else if (idx === 0) {
+          keep = true;
+        } else {
+          const prevHasVowel = (prevU.kind === 'V') || (prevU.vtype === 'EXPLICIT') || (prevU.vtype === 'SCHWA' && out.length > 0 && out[out.length - 1].endsWith('a'));
+          const nextHasVowel = (nextU.kind === 'V') || (nextU.vtype === 'EXPLICIT') || (nextU.vtype === 'SCHWA' && idx + 1 < mLen - 1);
+          const nextIsConj = (nextU.kind === 'C' && nextU.isConj);
+          keep = !(prevHasVowel && nextHasVowel && !u.isConj && !nextIsConj);
+        }
+        out.push(u.cons + (keep ? 'a' : '') + nasOut);
+      }
+    }
+    const res = out.join('');
+    return res ? res.charAt(0).toUpperCase() + res.slice(1) : '';
+  }
+
+  function devanagariToEnglish(text) {
+    let raw = (text || '').trim();
+    if (!raw) return '';
+    raw = raw.replace(/^(?:चि\.|सौ\.?\s*कां\.?|कु\.?|श्री|सुश्री)\s*/, '').trim();
+    const tokens = raw.match(/[^\s/|,()]+/g) || [];
+    const converted = [];
+    for (const tok of tokens) {
+      const w = /[\u0900-\u097F]/.test(tok)
+        ? transliterateDevaWord(tok)
+        : tok.replace(/[^A-Za-z0-9_-]/g, '');
+      if (w) converted.push(w);
+    }
+    return converted.join(' ').trim();
+  }
+
+  function sanitizeOrderFilename(name) {
+    return (name || '').replace(/[^A-Za-z0-9 _-]/g, '').trim().replace(/\s+/g, '_').replace(/^_+|_+$/g, '');
+  }
+
+  function getActiveEnglishOrderName() {
+    const inpOrder = document.getElementById('inpOrderName');
+    if (orderNameManuallyEdited && inpOrder && inpOrder.value.trim()) {
+      const val = inpOrder.value.trim();
+      return /[\u0900-\u097F]/.test(val) ? devanagariToEnglish(val) : val.replace(/[^\x20-\x7E]/g, '').trim();
+    }
+    const groomRaw = (document.getElementById('inpGroomName')?.value || '').trim();
+    const brideRaw = (document.getElementById('inpBrideName')?.value || '').trim();
+    if (currentCardSide === 'bride') {
+      if (aiEnglishNames.brideEn && brideRaw === aiEnglishNames.brideHindi.trim()) {
+        return aiEnglishNames.brideEn;
+      }
+      return devanagariToEnglish(brideRaw);
+    }
+    if (aiEnglishNames.groomEn && groomRaw === aiEnglishNames.groomHindi.trim()) {
+      return aiEnglishNames.groomEn;
+    }
+    return devanagariToEnglish(groomRaw);
+  }
+
+  function syncOrderNameField(forceResetManual = false) {
+    if (forceResetManual) orderNameManuallyEdited = false;
+    const inpOrder = document.getElementById('inpOrderName');
+    if (inpOrder && !orderNameManuallyEdited) {
+      inpOrder.value = getActiveEnglishOrderName();
+    }
+  }
 
   // Card side elements
   const btnSideGroom = document.getElementById('btnSideGroom');
@@ -35,23 +240,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const elHeaderSub = document.getElementById('headerProjectSub');
     if (!elHeaderName) return;
 
-    const groom = (document.getElementById('inpGroomName')?.value || '').trim();
-    const bride = (document.getElementById('inpBrideName')?.value || '').trim();
+    const orderNameEn = getActiveEnglishOrderName();
     const pariwar = (document.getElementById('inpPariwar')?.value || '').trim();
 
     if (currentCardSide === 'bride') {
-      const primary = bride || groom;
-      if (primary) {
-        elHeaderName.textContent = primary;
+      if (orderNameEn) {
+        elHeaderName.textContent = orderNameEn;
         if (elHeaderSub) elHeaderSub.textContent = pariwar ? `${pariwar} • Bride Side` : 'Bride Side';
       } else {
         elHeaderName.textContent = 'VivahEdit AI';
         if (elHeaderSub) elHeaderSub.textContent = 'After Motion Z Automation';
       }
     } else {
-      const primary = groom || bride;
-      if (primary) {
-        elHeaderName.textContent = primary;
+      if (orderNameEn) {
+        elHeaderName.textContent = orderNameEn;
         if (elHeaderSub) elHeaderSub.textContent = pariwar ? `${pariwar} • Groom Side` : 'Groom Side';
       } else {
         elHeaderName.textContent = 'VivahEdit AI';
@@ -84,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardSideNote.textContent = "वर पक्ष: दूल्हे और उसके परिवार का विवरण पहले दिखेगा।";
       }
     }
+    syncOrderNameField(true);
     updateHeaderProjectName();
   }
 
@@ -1893,6 +2096,14 @@ document.addEventListener('DOMContentLoaded', () => {
       setCardSide('groom');
     }
 
+    aiEnglishNames = {
+      groomHindi: (data.groom_name || '').trim(),
+      groomEn: (data.groom_name_en || '').trim() || devanagariToEnglish(data.groom_name || ''),
+      brideHindi: (data.bride_name || '').trim(),
+      brideEn: (data.bride_name_en || '').trim() || devanagariToEnglish(data.bride_name || '')
+    };
+    orderNameManuallyEdited = false;
+
     document.getElementById('inpPariwar').value = data.pariwar_name || '';
 
     document.getElementById('inpGroomName').value = data.groom_name || '';
@@ -1946,23 +2157,62 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('inpVinit').value = data.vinit_names || 'श्री लखन (पापा)\nश्रीमती लता बाई (माँ)';
     loadStudioFieldsForEditor(getCurrentEditorId(), data);
 
-    // Update Header with Groom or Bride Project Name
+    // Sync English Order Name and update Header
+    syncOrderNameField(true);
     updateHeaderProjectName();
   }
 
-  // Real-time Header update when user types names
+  // Real-time Order Name & Header update when user types names
   ['inpGroomName', 'inpBrideName', 'inpPariwar'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('input', updateHeaderProjectName);
+    if (el) {
+      el.addEventListener('input', () => {
+        if (id === 'inpGroomName' || id === 'inpBrideName') {
+          syncOrderNameField(false);
+        }
+        updateHeaderProjectName();
+      });
+    }
   });
+
+  const inpOrderNameEl = document.getElementById('inpOrderName');
+  if (inpOrderNameEl) {
+    inpOrderNameEl.addEventListener('input', (e) => {
+      orderNameManuallyEdited = Boolean((e.target.value || '').trim());
+      updateHeaderProjectName();
+    });
+    inpOrderNameEl.addEventListener('blur', (e) => {
+      const val = (e.target.value || '').trim();
+      if (val && /[\u0900-\u097F]/.test(val)) {
+        e.target.value = devanagariToEnglish(val);
+        updateHeaderProjectName();
+      }
+    });
+  }
 
   // Gather Form Data
   function getFormData() {
+    const groomRaw = document.getElementById('inpGroomName').value || 'राम';
+    const brideRaw = document.getElementById('inpBrideName').value || 'नेहा';
+    const groomEn = (aiEnglishNames.groomEn && groomRaw.trim() === aiEnglishNames.groomHindi)
+      ? aiEnglishNames.groomEn
+      : devanagariToEnglish(groomRaw);
+    const brideEn = (aiEnglishNames.brideEn && brideRaw.trim() === aiEnglishNames.brideHindi)
+      ? aiEnglishNames.brideEn
+      : devanagariToEnglish(brideRaw);
+    const orderNameRaw = (document.getElementById('inpOrderName')?.value || '').trim();
+    const orderNameEn = orderNameRaw
+      ? (/[\u0900-\u097F]/.test(orderNameRaw) ? devanagariToEnglish(orderNameRaw) : orderNameRaw.replace(/[^\x20-\x7E]/g, '').trim())
+      : (currentCardSide === 'bride' ? brideEn : groomEn);
+
     return {
       card_side: currentCardSide,
       pariwar_name: document.getElementById('inpPariwar').value || 'साहू परिवार',
-      groom_name: document.getElementById('inpGroomName').value || 'राम',
-      bride_name: document.getElementById('inpBrideName').value || 'नेहा',
+      groom_name: groomRaw,
+      groom_name_en: groomEn,
+      bride_name: brideRaw,
+      bride_name_en: brideEn,
+      order_name: orderNameEn || 'Vivah',
 
       groom_father: document.getElementById('inpGroomFather').value || 'श्री मनोहर लाल',
       groom_mother: document.getElementById('inpGroomMother').value || 'श्रीमती कमला बाई',
@@ -2145,9 +2395,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!filename) {
-      const primaryName = (data.card_side === 'bride' ? data.bride_name : data.groom_name) || 'Vivah';
+      const primaryNameEn = sanitizeOrderFilename(data.order_name || getActiveEnglishOrderName()) || 'Vivah';
       const isZip = (exportFormat === 'amzip') || (exportFormat === 'auto' && (groomPhotoFile || bridePhotoFile));
-      filename = `${primaryName}.${isZip ? 'amzip' : 'xml'}`;
+      filename = `${primaryNameEn}.${isZip ? 'amzip' : 'xml'}`;
     }
 
     return { blob, filename, data, isAmzip: filename.endsWith('.amzip') };
@@ -2166,6 +2416,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Proceed button from Step 2
   btnProceedToXml.addEventListener('click', () => {
+    syncOrderNameField(false);
     const data = getFormData();
     renderSummaryCard(data);
     showStep(3);
@@ -2296,6 +2547,10 @@ document.addEventListener('DOMContentLoaded', () => {
       externalThumbnailUrl = '';
       groomPhotoFile = null;
       bridePhotoFile = null;
+      aiEnglishNames = { groomHindi: '', groomEn: '', brideHindi: '', brideEn: '' };
+      orderNameManuallyEdited = false;
+      const inpOrder = document.getElementById('inpOrderName');
+      if (inpOrder) inpOrder.value = '';
       updatePhotoUiState();
       renderCardThumbnails();
       if (typeof closeFloatingWidget === 'function') closeFloatingWidget();
