@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vivahedit-v18';
+const CACHE_NAME = 'vivahedit-v19';
 const urlsToCache = [
   '/',
   '/index.html',
