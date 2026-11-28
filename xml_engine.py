@@ -673,10 +673,12 @@ def generate_wedding_xml(
     else:
         venue_dist = format_cg_district(venue_dist_raw) if venue_dist_raw else (bride_dist if card_side == "bride" else groom_dist)
 
-    # 6. Vinit & Branding (Permanent: Amar Edit 7067392032)
+    # 6. Vinit & Branding (Configurable per request, defaulting to Amar Edit / 7067392032)
     vinit_names = data.get("vinit_names", "श्री लखन (पापा)\nश्रीमती लता बाई (माँ)").strip()
-    studio_name = "Amar Edit"
-    studio_phone = "7067392032"
+    raw_studio_name = data.get("studio_name")
+    raw_studio_phone = data.get("studio_phone")
+    studio_name = (raw_studio_name if raw_studio_name is not None else "Amar Edit").strip()
+    studio_phone = (raw_studio_phone if raw_studio_phone is not None else "7067392032").strip()
 
     unicode_devanagari_font = "googlefonts?name=Mukta&amp;weight=700"
 
@@ -989,11 +991,12 @@ def generate_wedding_xml(
         elif tid == layers.get("branding") or tid in ["102400234", "102400235"]:
             processed_tids.add(tid)
             if tid == "102400234":
-                content_elem.text = f"{studio_phone} "
+                content_elem.text = f"{studio_phone} " if studio_phone else ""
             elif tid == "102400235":
                 content_elem.text = studio_name
             else:
-                content_elem.text = f"{studio_name} {studio_phone} "
+                combined_brand = " ".join(part for part in [studio_name, studio_phone] if part)
+                content_elem.text = f"{combined_brand} " if combined_brand else ""
 
         # 'मांगलिक कार्यक्रम' recurring subheaders
         elif tid in ["102400183", "102400194", "102400202", "102400210", "102400218"]:
